@@ -17,7 +17,7 @@ jobs:
         with:
           repository: GenXProject/GenX.jl
           ref: support/0.3.x
-          path: GenX.jl
+          path: GenX
 
       # Step 2: Install Julia
       - name: Set up Julia
@@ -31,9 +31,12 @@ jobs:
 
       # Step 3: Install GenX.jl package using the checked out directory
       - name: Install GenX.jl
-        run: |
-          cd GenX.jl
-          julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
+        uses: julia-actions/julia-buildpkg
+        with:
+          project: GenX
+        # run: |
+        #   cd GenX
+        #   julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
 
       # Step 4: Checkout the current repository
       - name: Checkout current repository
@@ -60,11 +63,11 @@ jobs:
           
 
 
-      # - name: Install Conda environment with Micromamba
-      #   uses: mamba-org/setup-micromamba@v1
-      #   with:
-      #     environment-file: ${{ github.workspace }}/current-repo/environment.yml
-      #     cache-environment: true
+      - name: Install Conda environment with Micromamba
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: ${{ github.workspace }}/PowerGenome/environment.yml
+          cache-environment: true
       
       - name: install powergenome
         run: |
@@ -88,5 +91,6 @@ jobs:
 
       - name: Run GenX
         run: |
-          julia project=${{ github.workspace }}/GenX.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
+          cd ${{ github.workspace }}/GenX
+          julia ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
           
