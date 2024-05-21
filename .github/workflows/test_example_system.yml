@@ -12,31 +12,25 @@ jobs:
       max-parallel: 5
       matrix:
         branch: [master, develop]
+    permissions:
+      actions: write
+      contents: read
     
     steps:
-      # Step 1: Checkout GenX.jl from the specified repository and branch
+      - uses: julia-actions/setup-julia@v2
+      - uses: julia-actions/cache@v2
       - name: Checkout GenX.jl repository
         uses: actions/checkout@v4
         with:
           repository: GenXProject/GenX.jl
           ref: support/0.3.x
           path: GenX
-
-      # Step 2: Install Julia
-      - name: Set up Julia
-        # run: |
-          # curl -fsSL https://install.julialang.org | sh -s -- --yes
-        uses: julia-actions/setup-julia@v2
-        # with:
-        #   version: '1.6'
-        #   arch: aarch64
-
-
       # Step 3: Install GenX.jl package using the checked out directory
       - name: Install GenX.jl
         uses: julia-actions/julia-buildpkg@v1
         with:
           project: GenX
+          precompile: yes
         # run: |
         #   cd GenX
         #   julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
