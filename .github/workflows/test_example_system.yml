@@ -77,7 +77,7 @@ jobs:
           cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
           sed -i 's/nrel_cambium_distr_pv_2022_utc.parquet/nrel_cambium_distr_pv_2022_slim.parquet/' distributed_gen.yml
           sed -i 's/eia_data_years:/eia_data_years: [2018, 2020]/' resources.yml
-          sed -i 's/  - 2021/  # - 2021/' resources.yml
+          sed -i 's/  - 2020/  # - 2020/' resources.yml
           cd ..
           run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
           cd ..
