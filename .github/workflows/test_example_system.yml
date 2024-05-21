@@ -7,79 +7,79 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    # Step 1: Checkout GenX.jl from the specified repository and branch
-    - name: Checkout GenX.jl repository
-      uses: actions/checkout@v3
-      with:
-        repository: GenXProject/GenX.jl
-        ref: support/0.3.x
-        path: GenX.jl
+      # Step 1: Checkout GenX.jl from the specified repository and branch
+      - name: Checkout GenX.jl repository
+        uses: actions/checkout@v3
+        with:
+          repository: GenXProject/GenX.jl
+          ref: support/0.3.x
+          path: GenX.jl
 
-    # Step 2: Install Julia
-    - name: Set up Julia
-      # run: |
-        # curl -fsSL https://install.julialang.org | sh -s -- --yes
-      uses: julia-actions/setup-julia@v2
-      # with:
-      #   version: '1.6'
-      #   arch: aarch64
-
-
-    # Step 3: Install GenX.jl package using the checked out directory
-    - name: Install GenX.jl
-      run: |
-        cd GenX.jl
-        julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
-
-    # Step 4: Checkout the current repository
-    - name: Checkout current repository
-      uses: actions/checkout@v4
-      with:
-        path: current-repo
-
-    - name: Checkout PowerGenome repository
-      uses: actions/checkout@v3
-      with:
-        repository: PowerGenome/PowerGenome
-        path: PowerGenome
-
-    # Step 5: Create env.yml in the specified directory
-    - name: Create env.yml file
-      run: |
-        mkdir -p ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
-        echo 'PUDL_DB: sqlite://///${{ github.workspace }}/current-repo/tests/data/pudl_test_data.db' > ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-        echo 'PG_DB: sqlite://///${{ github.workspace }}/current-repo/tests/data/pg_misc_tables.sqlite3' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-        echo 'EFS_DATA: ${{ github.workspace }}/current-repo/tests/data/efs' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-        echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/current-repo/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-        echo 'RESOURCE_GROUPS: ${{ github.workspace }}/current-repo/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-        
+      # Step 2: Install Julia
+      - name: Set up Julia
+        # run: |
+          # curl -fsSL https://install.julialang.org | sh -s -- --yes
+        uses: julia-actions/setup-julia@v2
+        # with:
+        #   version: '1.6'
+        #   arch: aarch64
 
 
-    # - name: Install Conda environment with Micromamba
-    #   uses: mamba-org/setup-micromamba@v1
-    #   with:
-    #     environment-file: ${{ github.workspace }}/current-repo/environment.yml
-    #     cache-environment: true
-    
-    - name: install powergenome
-      run: |
-        cd PowerGenome
-        pip install -e .
-        cd ..
-    
-    - name: Run PowerGenome
-      run: |
-        cd ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
-        sed -i 's/nrel_cambium_distr_pv_2022_utc.parquet/nrel_cambium_distr_pv_2022_slim.parquet/' distributed_gen.yml
-        cd ..
-        run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
-        cd ..
-        cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1
-        cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/
-        cd CONUS-3-zone
-        
+      # Step 3: Install GenX.jl package using the checked out directory
+      - name: Install GenX.jl
+        run: |
+          cd GenX.jl
+          julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
 
-    - name: Run GenX
-      run: |
-        julia project=${{ github.workspace }}/GenX.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/Run.jl
-        
+      # Step 4: Checkout the current repository
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+        with:
+          path: current-repo
+
+      - name: Checkout PowerGenome repository
+        uses: actions/checkout@v3
+        with:
+          repository: PowerGenome/PowerGenome
+          path: PowerGenome
+
+      # Step 5: Create env.yml in the specified directory
+      - name: Create env.yml file
+        run: |
+          mkdir -p ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
+          echo 'PUDL_DB: sqlite://///${{ github.workspace }}/current-repo/tests/data/pudl_test_data.db' > ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          echo 'PG_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pg_misc_tables.sqlite3' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          echo 'EFS_DATA: ${{ github.workspace }}/PowerGenome/tests/data/efs' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          
+
+
+      # - name: Install Conda environment with Micromamba
+      #   uses: mamba-org/setup-micromamba@v1
+      #   with:
+      #     environment-file: ${{ github.workspace }}/current-repo/environment.yml
+      #     cache-environment: true
+      
+      - name: install powergenome
+        run: |
+          cd PowerGenome
+          pip install -e .
+          cd ..
+      
+      - name: Run PowerGenome
+        run: |
+          cd ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
+          sed -i 's/nrel_cambium_distr_pv_2022_utc.parquet/nrel_cambium_distr_pv_2022_slim.parquet/' distributed_gen.yml
+          cd ..
+          run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
+          cd ..
+          cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1
+          cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/
+          cd CONUS-3-zone
+          
+
+      - name: Run GenX
+        run: |
+          julia project=${{ github.workspace }}/GenX.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/Run.jl
+          
