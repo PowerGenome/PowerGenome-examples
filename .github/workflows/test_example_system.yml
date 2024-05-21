@@ -5,11 +5,15 @@ on: [push]
 jobs:
   run-pg-example:
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+      matrix:
+        branch: [master, develop]
     
     steps:
       # Step 1: Checkout GenX.jl from the specified repository and branch
       - name: Checkout GenX.jl repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: GenXProject/GenX.jl
           ref: support/0.3.x
@@ -38,20 +42,21 @@ jobs:
           path: current-repo
 
       - name: Checkout PowerGenome repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: PowerGenome/PowerGenome
+          ref: ${{ matrix.branch }}
           path: PowerGenome
 
       # Step 5: Create env.yml in the specified directory
       - name: Create env.yml file
         run: |
-          mkdir -p ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
-          echo 'PUDL_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pudl_test_data.db' > ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-          echo 'PG_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pg_misc_tables.sqlite3' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-          echo 'EFS_DATA: ${{ github.workspace }}/PowerGenome/tests/data/efs' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-          echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
-          echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
+          echo 'PUDL_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pudl_test_data.db' > ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
+          echo 'PG_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pg_misc_tables.sqlite3' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
+          echo 'EFS_DATA: ${{ github.workspace }}/PowerGenome/tests/data/efs' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
+          echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
+          echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           
 
 
@@ -69,18 +74,19 @@ jobs:
       
       - name: Run PowerGenome
         run: |
-          cd ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
+          cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
           sed -i 's/nrel_cambium_distr_pv_2022_utc.parquet/nrel_cambium_distr_pv_2022_slim.parquet/' distributed_gen.yml
-          sed -i 's/  - 2021/  - 2020/' resources.yml
+          sed -i 's/eia_data_years:/eia_data_years: [2018, 2020]/' resources.yml
+          sed -i 's/  - 2021/  # - 2021/' resources.yml
           cd ..
           run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
           cd ..
-          cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1
-          cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/
-          cd CONUS-3-zone
+          cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
+          cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
+          cd CA_AZ
           
 
       - name: Run GenX
         run: |
-          julia project=${{ github.workspace }}/GenX.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/Run.jl
+          julia project=${{ github.workspace }}/GenX.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
           
