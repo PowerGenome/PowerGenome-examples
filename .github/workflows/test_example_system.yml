@@ -92,5 +92,5 @@ jobs:
       - name: Run GenX
         run: |
           cd ${{ github.workspace }}/GenX
-          julia ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
+          julia project=. ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
           
