@@ -72,9 +72,7 @@ jobs:
       
       - name: Install powergenome
         run: |
-          cd PowerGenome
-          pip install -e .
-          cd ..
+          pip install -e PowerGenome/.
       
       - name: Run PowerGenome
         run: |
