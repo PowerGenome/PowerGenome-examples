@@ -71,11 +71,13 @@ jobs:
       run: |
         cd ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
         sed -i 's/nrel_cambium_distr_pv_2022_utc.parquet/nrel_cambium_distr_pv_2022_slim.parquet/' distributed_gen.yml
-        cd ../..
-        cp Run.jl CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/
-        cp -r Settings/ CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/
-        cd CONUS-3-zone
+        cd ..
         run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
+        cd ..
+        cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1
+        cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/genx-test/p1/Inputs/Inputs_p1/
+        cd CONUS-3-zone
+        
 
     - name: Run GenX
       run: |
