@@ -31,7 +31,7 @@ jobs:
 
       # Step 3: Install GenX.jl package using the checked out directory
       - name: Install GenX.jl
-        uses: julia-actions/julia-buildpkg
+        uses: julia-actions/julia-buildpkg@v1
         with:
           project: GenX
         # run: |
