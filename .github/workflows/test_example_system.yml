@@ -68,8 +68,9 @@ jobs:
         with:
           environment-file: ${{ github.workspace }}/PowerGenome/environment.yml
           cache-environment: true
+          init-shell: bash
       
-      - name: install powergenome
+      - name: Install powergenome
         run: |
           cd PowerGenome
           pip install -e .
@@ -87,10 +88,26 @@ jobs:
           cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
           cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
           cd CA_AZ
+
+      - name: Upload Inputs
+        uses: actions/upload-artifact@v4
+        if: always()  # This ensures the step runs even if the previous step fails
+        with:
+          name: PG-outputs-${{ matrix.branch }}
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
+          if-no-files-found: ignore  # This option prevents the step from failing if no error.log file is created
           
 
       - name: Run GenX
         run: |
           cd ${{ github.workspace }}/GenX
           julia --project=. ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
+      
+      - name: Upload Results
+        uses: actions/upload-artifact@v4
+        if: always()  # This ensures the step runs even if the previous step fails
+        with:
+          name: GenX-results-${{ matrix.branch }}
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Results
+          if-no-files-found: ignore  # This option prevents the step from failing if no error.log file is created
           
