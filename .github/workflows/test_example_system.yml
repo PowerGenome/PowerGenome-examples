@@ -18,30 +18,27 @@ jobs:
       max-parallel: 5
       matrix:
         branch: [master, develop]
-    permissions:
+    permissions: # Need this to make the Julia cache work
       actions: write
       contents: read
     
     steps:
-      - uses: julia-actions/setup-julia@v2
-      - uses: julia-actions/cache@v2
+      - uses: julia-actions/setup-julia@v2 # Install latest version of Julia. Can use the matrix to run multiple versions
+      - uses: julia-actions/cache@v2 # Cache compiled packages. Saves 3-4 min each time.
       - name: Checkout GenX.jl repository
         uses: actions/checkout@v4
         with:
           repository: GenXProject/GenX.jl
-          ref: support/0.3.x
+          ref: support/0.3.x # PG is still creating inputs for 0.3.x
           path: GenX
-      # Step 3: Install GenX.jl package using the checked out directory
+      # Install GenX.jl package using the checked out directory
       - name: Install GenX.jl
         uses: julia-actions/julia-buildpkg@v1
         with:
           project: GenX
           precompile: yes
-        # run: |
-        #   cd GenX
-        #   julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
 
-      # Step 4: Checkout the current repository
+      # Checkout the current repository
       - name: Checkout current repository
         uses: actions/checkout@v4
         with:
@@ -54,7 +51,7 @@ jobs:
           ref: ${{ matrix.branch }}
           path: PowerGenome
 
-      # Step 5: Create env.yml in the specified directory
+      # Create env.yml that points to test data
       - name: Create env.yml file
         run: |
           mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
@@ -77,6 +74,7 @@ jobs:
         run: |
           pip install -e PowerGenome/.
       
+      # Need to modify some of the settings so they work with the test data
       - name: Run PowerGenome
         run: |
           cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
@@ -90,6 +88,7 @@ jobs:
           cp -r Settings/ ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
           cd CA_AZ
 
+      # Upload GenX inputs (PG outputs) as artifact in case something fails
       - name: Upload Inputs
         uses: actions/upload-artifact@v4
         if: always()  # This ensures the step runs even if the previous step fails
@@ -104,6 +103,7 @@ jobs:
           cd ${{ github.workspace }}/GenX
           julia --project=. ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
       
+      # Upload GenX results to look at and confirm everything looks good
       - name: Upload Results
         uses: actions/upload-artifact@v4
         if: always()  # This ensures the step runs even if the previous step fails
