@@ -47,7 +47,7 @@ jobs:
       - name: Create env.yml file
         run: |
           mkdir -p ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings
-          echo 'PUDL_DB: sqlite://///${{ github.workspace }}/current-repo/tests/data/pudl_test_data.db' > ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
+          echo 'PUDL_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pudl_test_data.db' > ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
           echo 'PG_DB: sqlite://///${{ github.workspace }}/PowerGenome/tests/data/pg_misc_tables.sqlite3' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
           echo 'EFS_DATA: ${{ github.workspace }}/PowerGenome/tests/data/efs' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
           echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CONUS-3-zone/settings/env.yml
