@@ -1,6 +1,12 @@
 name: Daily PowerGenome outputs test
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
 
 jobs:
   run-pg-example:
