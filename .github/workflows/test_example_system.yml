@@ -30,6 +30,7 @@ jobs:
      # Install GenX using Pkg
       - name: Install GenX.jl
         run: |
+          export GENX_PRECOMPILE=false
           julia --project -e 'using Pkg; Pkg.add(name="GenX")'
 
       # Checkout the current repository
