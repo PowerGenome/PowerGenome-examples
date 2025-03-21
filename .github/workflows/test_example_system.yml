@@ -88,7 +88,7 @@ jobs:
           run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
           cd ..
           cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
-          cp -r settings/* ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
+          cp -r genx_settings/* ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
           cd CA_AZ
       
       # Upload GenX inputs (PG outputs) as artifact in case something fails
