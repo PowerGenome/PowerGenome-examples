@@ -18,6 +18,7 @@ jobs:
       max-parallel: 5
       matrix:
         branch: [master, develop]
+        python-version: ["3.10"]
     permissions: # Need this to make the Julia cache work
       actions: write
       contents: read
@@ -61,10 +62,16 @@ jobs:
           echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           
-      - name: Install PG from pyproject.toml
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: '**/pyproject.toml'
+      - name: Install dependencies
         run: |
-          cd ${{ github.workspace }}/PowerGenome
-          pip install -e .
+          pip install -e PowerGenome/.
 
       # - name: Install Conda environment with Micromamba
       #   uses: mamba-org/setup-micromamba@v1
