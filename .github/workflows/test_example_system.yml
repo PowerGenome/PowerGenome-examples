@@ -26,18 +26,11 @@ jobs:
     steps:
       - uses: julia-actions/setup-julia@v2 # Install latest version of Julia. Can use the matrix to run multiple versions
       - uses: julia-actions/cache@v2 # Cache compiled packages. Saves 3-4 min each time.
-      - name: Checkout GenX.jl repository
-        uses: actions/checkout@v4
-        with:
-          repository: GenXProject/GenX.jl
-          ref: release/0.4.3 # PG is still creating inputs for 0.3.x
-          path: GenX
       # Install GenX.jl package using the checked out directory
+     # Install GenX using Pkg
       - name: Install GenX.jl
-        uses: julia-actions/julia-buildpkg@v1
-        with:
-          project: GenX
-          precompile: yes
+        run: |
+          julia --project -e 'using Pkg; Pkg.add(name="GenX")'
 
       # Checkout the current repository
       - name: Checkout current repository
