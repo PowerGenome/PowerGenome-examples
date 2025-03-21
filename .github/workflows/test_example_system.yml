@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: GenXProject/GenX.jl
-          ref: support/0.3.x # PG is still creating inputs for 0.3.x
+          ref: release/0.4.3 # PG is still creating inputs for 0.3.x
           path: GenX
       # Install GenX.jl package using the checked out directory
       - name: Install GenX.jl
@@ -61,18 +61,21 @@ jobs:
           echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           
-
-
-      - name: Install Conda environment with Micromamba
-        uses: mamba-org/setup-micromamba@v1
-        with:
-          environment-file: ${{ github.workspace }}/PowerGenome/environment.yml
-          cache-environment: true
-          init-shell: bash
-      
-      - name: Install powergenome
+      - name: Install PG from pyproject.toml
         run: |
-          pip install -e PowerGenome/.
+          cd ${{ github.workspace }}/PowerGenome
+          pip install -e .
+
+      # - name: Install Conda environment with Micromamba
+      #   uses: mamba-org/setup-micromamba@v1
+      #   with:
+      #     environment-file: ${{ github.workspace }}/PowerGenome/environment.yml
+      #     cache-environment: true
+      #     init-shell: bash
+      
+      # - name: Install powergenome
+      #   run: |
+      #     pip install -e PowerGenome/.
       
       # Need to modify some of the settings so they work with the test data
       - name: Run PowerGenome
