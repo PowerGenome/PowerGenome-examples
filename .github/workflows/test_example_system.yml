@@ -63,7 +63,7 @@ jobs:
       - name: Cache PowerGenome outputs
         uses: actions/cache/save@v4
         with:
-          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
           key: pg-outputs-${{ matrix.branch }}-${{ github.sha }}
 
   run-genx:
@@ -100,7 +100,7 @@ jobs:
       - name: Restore PowerGenome outputs
         uses: actions/cache/restore@v4
         with:
-          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
           key: pg-outputs-${{ matrix.branch }}-${{ github.sha }}
           fail-on-cache-miss: true
 
@@ -125,5 +125,5 @@ jobs:
         if: always()
         with:
           name: GenX-results-${{ matrix.branch }}-UC${{ matrix.unit-commitment }}-NE${{ matrix.network-expansion }}-TD${{ matrix.time-domain-reduction }}
-          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Results
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
           if-no-files-found: ignore
