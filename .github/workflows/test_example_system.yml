@@ -51,6 +51,14 @@ jobs:
           echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
 
+      - name: Restore PowerGenome data cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ github.workspace }}/PowerGenome/data/eia
+          key: pg-data-${{ matrix.branch }}-${{ hashFiles('PowerGenome/**') }}
+          restore-keys: |
+            pg-data-${{ matrix.branch }}-
+
       - name: Run PowerGenome
         run: |
           cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
@@ -60,6 +68,13 @@ jobs:
           cd ..
           run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
 
+      - name: Save PowerGenome data cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: ${{ github.workspace }}/PowerGenome/data/eia
+          key: pg-data-${{ matrix.branch }}-${{ hashFiles('PowerGenome/**') }}
+      
       - name: Cache PowerGenome outputs
         uses: actions/cache/save@v4
         with:
