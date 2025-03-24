@@ -121,14 +121,31 @@ jobs:
 
       - name: Configure GenX settings
         run: |
-          cd ${{ github.workspace }}/current-repo/example_systems
-          cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
-          mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
-          cp -r genx_settings/* ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
-          cd genx-test/p1/Inputs/Inputs_p1/settings
-          sed -i 's/UnitCommitment: 0/UnitCommitment: ${{ matrix.unit-commitment }}/' genx_settings.yml
-          sed -i 's/NetworkExpansion: 0/NetworkExpansion: ${{ matrix.network-expansion }}/' genx_settings.yml
-          sed -i 's/TimeDomainReduction: 0/TimeDomainReduction: ${{ matrix.time-domain-reduction }}/' genx_settings.yml
+          # First create base directories
+          mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings
+
+          # Copy Run.jl and settings files, being explicit about paths
+          cp ${{ github.workspace }}/current-repo/example_systems/Run.jl \
+              ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
+          
+          # Copy settings directory contents with verbose output
+          cp -rv ${{ github.workspace }}/current-repo/example_systems/genx_settings/* \
+                  ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
+          
+          # Verify file exists before attempting to modify it
+          if [ ! -f "${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/genx_settings.yml" ]; then
+            echo "genx_settings.yml not found!"
+            ls -R ${{ github.workspace }}/current-repo/example_systems/
+            exit 1
+          fi
+          
+          # Use full paths for sed commands
+          sed -i "s/UnitCommitment: 0/UnitCommitment: ${{ matrix.unit-commitment }}/" \
+              "${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/genx_settings.yml"
+          sed -i "s/NetworkExpansion: 0/NetworkExpansion: ${{ matrix.network-expansion }}/" \
+              "${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/genx_settings.yml"
+          sed -i "s/TimeDomainReduction: 0/TimeDomainReduction: ${{ matrix.time-domain-reduction }}/" \
+              "${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/genx_settings.yml"
 
       - name: Run GenX
         run: |
