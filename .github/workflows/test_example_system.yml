@@ -19,6 +19,9 @@ jobs:
       matrix:
         branch: [master, develop]
         python-version: ["3.10"]
+        unit-commitment: [0, 1]
+        network-expansion: [0, 1]
+        time-domain-reduction: [0, 1]
     permissions: # Need this to make the Julia cache work
       actions: write
       contents: read
@@ -87,10 +90,17 @@ jobs:
           sed -i 's/  - 2020/  # - 2020/' resources.yml
           cd ..
           run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
+
+      - name: GenX settings and Run.jl
+        run: |
           cd ..
           cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
           mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
           cp -r genx_settings/* ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
+          cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings
+          sed -i 's/UnitCommitment: 0/UnitCommitment: ${{ matrix.unit-commitment }}/' genx_settings.yml
+          sed -i 's/NetworkExpansion: 0/NetworkExpansion: ${{ matrix.network-expansion }}/' genx_settings.yml
+          sed -i 's/TimeDomainReduction: 0/TimeDomainReduction: ${{ matrix.time-domain-reduction }}/' genx_settings.yml
           cd CA_AZ
       
       # Upload GenX inputs (PG outputs) as artifact in case something fails
