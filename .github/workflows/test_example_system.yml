@@ -5,38 +5,20 @@ on:
     branches:
       - main
   schedule:
-    # Runs at 00:00 UTC every day
     - cron: '0 0 * * *'
 
 jobs:
-  run-pg-example:
+  generate-pg-outputs:
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash -l {0}
     strategy:
-      max-parallel: 5
       matrix:
-        branch: [master, develop]
+        branch: ${{ github.event_name == 'schedule' && fromJSON('["master", "develop"]') || fromJSON('["master"]') }}
         python-version: ["3.10"]
-        unit-commitment: [0, 1]
-        network-expansion: [0, 1]
-        time-domain-reduction: [0, 1]
-    permissions: # Need this to make the Julia cache work
-      actions: write
-      contents: read
     
     steps:
-      - uses: julia-actions/setup-julia@v2 # Install latest version of Julia. Can use the matrix to run multiple versions
-      - uses: julia-actions/cache@v2 # Cache compiled packages. Saves 3-4 min each time.
-      # Install GenX.jl package using the checked out directory
-     # Install GenX using Pkg
-      - name: Install GenX.jl
-        run: |
-          export GENX_PRECOMPILE=false
-          julia --project -e 'using Pkg; Pkg.add(name="GenX")'
-
-      # Checkout the current repository
       - name: Checkout current repository
         uses: actions/checkout@v4
         with:
@@ -49,7 +31,17 @@ jobs:
           ref: ${{ matrix.branch }}
           path: PowerGenome
 
-      # Create env.yml that points to test data
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: '**/pyproject.toml'
+
+      - name: Install dependencies
+        run: |
+          pip install -e PowerGenome/.
+
       - name: Create env.yml file
         run: |
           mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
@@ -58,30 +50,7 @@ jobs:
           echo 'EFS_DATA: ${{ github.workspace }}/PowerGenome/tests/data/efs' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           echo 'DISTRIBUTED_GEN_DATA: ${{ github.workspace }}/PowerGenome/tests/data/dist_gen' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
           echo 'RESOURCE_GROUPS: ${{ github.workspace }}/PowerGenome/tests/data/resource_groups_base' >> ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings/env.yml
-          
-      
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: pip
-          cache-dependency-path: '**/pyproject.toml'
-      - name: Install dependencies
-        run: |
-          pip install -e PowerGenome/.
 
-      # - name: Install Conda environment with Micromamba
-      #   uses: mamba-org/setup-micromamba@v1
-      #   with:
-      #     environment-file: ${{ github.workspace }}/PowerGenome/environment.yml
-      #     cache-environment: true
-      #     init-shell: bash
-      
-      # - name: Install powergenome
-      #   run: |
-      #     pip install -e PowerGenome/.
-      
-      # Need to modify some of the settings so they work with the test data
       - name: Run PowerGenome
         run: |
           cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/settings
@@ -91,39 +60,70 @@ jobs:
           cd ..
           run_powergenome_multiple -sf settings -rf genx-test -c p1 -mp
 
-      - name: GenX settings and Run.jl
+      - name: Cache PowerGenome outputs
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test
+          key: pg-outputs-${{ matrix.branch }}-${{ github.sha }}
+
+  run-genx:
+    needs: generate-pg-outputs
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      matrix:
+        branch: ${{ github.event_name == 'schedule' && fromJSON('["master", "develop"]') || fromJSON('["master"]') }}
+        python-version: ["3.10"]
+        unit-commitment: ${{ github.event_name == 'schedule' && fromJSON('[0, 1]') || fromJSON('[0]') }}
+        network-expansion: ${{ github.event_name == 'schedule' && fromJSON('[0, 1]') || fromJSON('[0]') }}
+        time-domain-reduction: ${{ github.event_name == 'schedule' && fromJSON('[0, 1]') || fromJSON('[0]') }}
+    permissions:
+      actions: write
+      contents: read
+
+    steps:
+      - uses: julia-actions/setup-julia@v2
+      - uses: julia-actions/cache@v2
+
+      - name: Install GenX.jl
         run: |
-          cd ..
-          cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
+          export GENX_PRECOMPILE=false
+          julia --project -e 'using Pkg; Pkg.add(name="GenX")'
+
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+        with:
+          path: current-repo
+
+      - name: Restore PowerGenome outputs
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test
+          key: pg-outputs-${{ matrix.branch }}-${{ github.sha }}
+          fail-on-cache-miss: true
+
+      - name: Configure GenX settings
+        run: |
+          cd ${{ github.workspace }}/current-repo/example_systems
+          cp Run.jl ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
           mkdir -p ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
           cp -r genx_settings/* ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings/
-          cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/settings
+          cd genx-test/p1/Inputs/Inputs_p1/settings
           sed -i 's/UnitCommitment: 0/UnitCommitment: ${{ matrix.unit-commitment }}/' genx_settings.yml
           sed -i 's/NetworkExpansion: 0/NetworkExpansion: ${{ matrix.network-expansion }}/' genx_settings.yml
           sed -i 's/TimeDomainReduction: 0/TimeDomainReduction: ${{ matrix.time-domain-reduction }}/' genx_settings.yml
-          cd CA_AZ
-      
-      # Upload GenX inputs (PG outputs) as artifact in case something fails
-      - name: Upload Inputs
-        uses: actions/upload-artifact@v4
-        if: always()  # This ensures the step runs even if the previous step fails
-        with:
-          name: PG-outputs-${{ matrix.branch }}
-          path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/
-          if-no-files-found: ignore  # This option prevents the step from failing if no error.log file is created
-          
 
       - name: Run GenX
         run: |
-          cd ${{ github.workspace }}/GenX
-          julia --project=. ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Run.jl
-      
-      # Upload GenX results to look at and confirm everything looks good
+          cd ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1
+          julia --project Run.jl
+
       - name: Upload Results
         uses: actions/upload-artifact@v4
-        if: always()  # This ensures the step runs even if the previous step fails
+        if: always()
         with:
-          name: GenX-results-${{ matrix.branch }}
+          name: GenX-results-${{ matrix.branch }}-UC${{ matrix.unit-commitment }}-NE${{ matrix.network-expansion }}-TD${{ matrix.time-domain-reduction }}
           path: ${{ github.workspace }}/current-repo/example_systems/CA_AZ/genx-test/p1/Inputs/Inputs_p1/Results
-          if-no-files-found: ignore  # This option prevents the step from failing if no error.log file is created
-          
+          if-no-files-found: ignore
