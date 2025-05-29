@@ -2,8 +2,8 @@
 
 # Which year of AEO to use. Note that different years have different scenario names
 # so those may need to be modified accordingly.
-fuel_eia_aeo_year: 2021
-aeo_fuel_usd_year: 2019
+fuel_eia_aeo_year: 2025
+aeo_fuel_usd_year: 2024
 
 # FUEL SCENARIOS
 # These parameters map the EIA scenario names to user names (e.g. reference is used inplace
@@ -13,11 +13,12 @@ aeo_fuel_usd_year: 2019
 # This is a subset of AEO 2020 scenarios. For a full list, look at the eia open data
 # page https://www.eia.gov/opendata/qb.php?category=3604304
 eia_series_scenario_names:
-  reference: REF2021
-  low_price: LOWPRICE
-  high_price: HIGHPRICE
-  high_resource: HIGHOGS
-  low_resource: LOWOGS
+  reference: REF2025 # Includes 111(d) policy that retires nearly all coal plants -- leads to very low coal prices
+  no_111d: nocaa111 # No 111(d) policy that would retire coal plants
+  low_price: LOWPRICE # Low oil price scenario
+  high_price: HIGHPRICE # High oil price scenario
+  high_resource: HIGHOGS # High oil and gas resource scenario -- lowest gas prices
+  low_resource: LOWOGS # Low oil and gas resource scenario -- highest gas prices
 
 eia_series_fuel_names:
   coal: STC
@@ -32,8 +33,7 @@ aeo_fuel_scenarios:
   uranium: reference
 
 # Need to make choices about fuel regions when user-defined regions cross AEO fuel regions.
-# I'm putting WECC_NW in the rockies because the PNW doesn't use as much coal/gas.
-# IPM regions are included here only as a guide. All user regions must be mapped to AEO regions.
+# Regions are included here only as a guide. All user regions must be mapped to AEO regions.
 # See the PowerGenome wiki for a map of Census Divisions and IPM regions
 # https://github.com/PowerGenome/PowerGenome/wiki/Geospatial-Mappings
 

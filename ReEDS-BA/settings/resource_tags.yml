@@ -138,6 +138,7 @@ model_tag_values:
     UtilityPV: 1
     Nuclear_Nuclear: 1
     Nuclear: -1
+    distributed_gen: -1
   CapRes_1:
     Conventional Steam Coal: 0.9
     Natural Gas Fired Combined Cycle: 0.9
@@ -209,6 +210,7 @@ model_tag_values:
     Geothermal: 1
     Wood/Wood Waste Biomass: 1
     Biomass: 1
+    distributed_gen: 1
 
 # Tags for a technology in a specific region
 # Format should be regional_tag_values: <region>: <tag name>: <technology>: <tag value>
