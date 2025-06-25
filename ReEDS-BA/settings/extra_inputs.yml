@@ -6,7 +6,7 @@ capacity_limit_spur_fn: resource_capacity_spur.csv # Max capacity and spur line 
 demand_segments_fn: demand_segments_voll.csv
 misc_gen_inputs_fn: misc_gen_inputs.csv
 user_transmission_costs: network_costs_ReEDS.csv
-user_transmission_constraints_fn: reeds_ba_tx_NARIS_avg.csv
+# user_transmission_constraints_fn: reeds_ba_tx_NARIS_avg.csv
 co2_pipeline_cost_fn: co2_pipeline_cost_percentiles.csv
 # reserves_fn: Reserves.csv
 plant_region_map_fn: reeds_plant_map.csv

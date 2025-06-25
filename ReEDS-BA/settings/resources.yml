@@ -254,6 +254,14 @@ energy_storage_duration:
 # The year of NREL ATB data to use for matching existing generators (O&M costs)
 atb_existing_year: 2020
 
+resource_attr_modifiers:
+  conventional steam coal:
+    - attribute: fom_per_mwyr
+      formula:
+        op: add
+        rate: 126 # 0.126 $/kW-yr per year of age
+        multiplier: age
+
 #####################
 # New-build generators
 #####################
@@ -262,6 +270,10 @@ atb_existing_year: 2020
 atb_data_year: 2024
 atb_financial_case: Market
 atb_cap_recovery_years: 20
+
+resource_data_year: 2024
+resource_financial_case: Market
+resource_cap_recovery_years: 20
 
 # Alternate capital recovery periods for specific technologies, which are used to calculate
 # the annual investment costs. The names are matched using str.contains rather than
@@ -272,9 +284,25 @@ alt_atb_cap_recovery_years:
   Battery: 15
   Nuclear: 40
 
+alt_resource_cap_recovery_years:
+  NaturalGas_CCAvg: 15
+  NaturalGas_CTAvg: 15
+  Battery: 15
+  Nuclear: 40
+
 # Use Class3 onshore wind, Class 3 for fixed offshore wind, and Class 12 for floating offshore wind
 # Format for each list item is <technology>, <tech_detail>, <cost_case>, <size>
 atb_new_gen:
+  - [NaturalGas, 1-on-1 Combined Cycle (H-Frame), Moderate, 500]
+  - [NaturalGas, Combustion Turbine (F-Frame), Moderate, 100]
+  - [LandbasedWind, Class3, Moderate, 1]
+  - [OffShoreWind, Class12, Moderate, 1]
+  - [OffShoreWind, Class3, Moderate, 1]
+  - [UtilityPV, Class1, Moderate, 1]
+  - [Utility-Scale Battery Storage, Lithium Ion, Moderate, 1]
+  - [Nuclear, Nuclear - Large, Moderate, 1000]
+
+new_resources:
   - [NaturalGas, 1-on-1 Combined Cycle (H-Frame), Moderate, 500]
   - [NaturalGas, Combustion Turbine (F-Frame), Moderate, 100]
   - [LandbasedWind, Class3, Moderate, 1]
@@ -364,6 +392,13 @@ atb_modifiers:
     Var_OM_Cost_per_MWh: [add, 0.15]
     Var_OM_Cost_per_MWh_In: 0.15
 
+resource_modifiers:
+  batteries:
+    technology: Utility-Scale Battery Storage
+    tech_detail: Lithium Ion
+    Var_OM_Cost_per_MWh: [add, 0.15]
+    Var_OM_Cost_per_MWh_In: 0.15
+
 
 # Copy and modify an existing ATB new generator. Set parameter to none (~) if not adding
 # any modified generators.
@@ -381,7 +416,7 @@ modified_atb_new_gen: ~
   #   fixed_o_m_mw: [add, 9670]
   #   variable_o_m_mwh: [mul, 1.076]
 
-
+modified_new_resources: ~
 
 ######################################################
 # MODIFY THESE PARAMETERS FOR NEW REGIONAL AGGREGATIONS
