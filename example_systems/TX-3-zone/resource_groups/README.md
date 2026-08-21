@@ -18,7 +18,7 @@ TX-3-zone example.
   134 ReEDS BAs including ERCOT).
 - `resource_profiles/solar_profiles_tx_3_zone.csv` /
   `onshorewind_profiles_tx_3_zone.csv` — tidy hourly profiles
-  (`site_id, time_index, value, weather_year`), 876 hours at weather year 2012
+  (`site_id, time_index, value, weather_year`), 240 hours at weather year 2012
   per site, values normalized to [0, 1].
 - `resource_profiles/*_site_map_tx_3_zone.csv` — `cpa_id` → profile site
   mapping (1:1). Site IDs use the group-style names
@@ -36,7 +36,7 @@ plausible tidy profiles:
 
 - **Solar**: diurnal daylight shape (zero at night, peaking at midday), scaled
   per-site with a small phase/shape perturbation so each site differs.
-- **Wind**: a shared 876-hour correlated wind shape with per-site amplitude
+- **Wind**: a shared 240-hour correlated wind shape with per-site amplitude
   scaling (so sites differ in capacity factor while staying correlated, a
   realistic property of regional wind).
 
@@ -47,12 +47,12 @@ and as a proof that the v0.8 resource-group pipeline works.
 ### Replacing with real profiles
 
 To use real profiles: replace the two profile CSVs (keep columns
-`site_id, time_index, value, weather_year` and the same 876-hour time index and
+`site_id, time_index, value, weather_year` and the same 240-hour time index and
 weather_year 2012, or adjust them together with the rest of the example's
 time index) and the site maps if site IDs change. No other settings change.
 
 ## Hourly time index
 
-All profiles share the example-wide 876-hour index (weather year 2012, 1 hour
-per 10), consistent with `data/reeds_load_tx_3_zone.csv` and
+All profiles share the example-wide 240-hour index (weather year 2012, 240 hours
+evenly spaced across the year), consistent with `data/reeds_load_tx_3_zone.csv` and
 `data/distributed_profiles_tx_3_zone.csv`.

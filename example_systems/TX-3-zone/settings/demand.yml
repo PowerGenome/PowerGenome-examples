@@ -1,7 +1,7 @@
 # LOAD DATA
 # Hourly demand for the 7 ERCOT ReEDS balancing areas comes from an up-front
 # ReEDS load table (powergenome / reeds_load_transformed format). It has been
-# slimmed to the model BAs and downsampled to 876 hours for weather year 2012.
+# slimmed to the model BAs and downsampled to 240 hours for weather year 2012.
 # No AEO growth maps or load-growth assumptions are used.
 
 regional_load_source: reeds
