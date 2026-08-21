@@ -1,0 +1,33 @@
+# DATA TABLE CONFIGURATION
+# Names of the input data tables (relative to `data_location`) used to build the
+# model. All files below are slimmed to the 8 ReEDS balancing areas used in
+# this example (p8-p11 -> CA, p27-p30 -> AZ), downsampled to 240 hours
+# (the first 10 days of weather year 2012) and combined with dollar-year metadata.
+
+# Resource groups define site-specific data (LCOE, capacity, interconnection cost,
+# hourly profile) for new-build solar and onshore wind. PowerGenome only applies
+# Path() (no base directory) to these two keys, so they must be absolute paths (or
+# relative to where run_powergenome is invoked). Profiles colocate with the metadata
+# in the same resource_groups/ folder, so both keys point there.
+RESOURCE_GROUPS: /Users/gs5183/Documents/github/copilot-worktrees/PowerGenome-examples/gschivley-probable-tribble/example_systems/CA_AZ/resource_groups
+RESOURCE_GROUP_PROFILES: /Users/gs5183/Documents/github/copilot-worktrees/PowerGenome-examples/gschivley-probable-tribble/example_systems/CA_AZ/resource_groups
+
+# Location of the data table files (relative to the folder that contains the
+# settings folder, i.e. example_systems/CA_AZ/).
+data_location: data
+
+generation_table: generators.csv
+plant_region_table: plant_region_map.csv
+resource_heat_rate_table: technology_heat_rates.csv
+resource_cost_table: technology_costs.csv
+operational_constraints_table: operational_constraints.csv
+transmission_constraints_table: transmission_capacity.csv
+fuel_price_table: fuel_prices.csv
+dollar_year_table: cpi_data.csv
+transmission_cost_table: network_costs.csv
+demand_table: demand_load.csv
+regional_cost_factor_table: regional_cost_multipliers.csv
+distributed_capacity_table: distributed_capacity.csv
+distributed_profile_table: distributed_profiles.csv
+
+enable_timing: true

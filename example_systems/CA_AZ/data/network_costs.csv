@@ -1,0 +1,3 @@
+start_region,dest_region,total_interconnect_annuity_mw,total_interconnect_cost_mw,total_line_loss_frac,dollar_year
+CA,AZ,31229.00231768913,656161.0698871445,0.0328,2018
+AZ,CA,31229.00231768913,656161.0698871445,0.0328,2018

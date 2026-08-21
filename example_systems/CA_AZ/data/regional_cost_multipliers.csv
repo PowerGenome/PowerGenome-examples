@@ -1,0 +1,305 @@
+region,technology,city,state,value,match_method,distance_km
+p10,Coal_new,Bakersfield,California,1.31,within,0.0
+p10,Coal_95%-CCS,Bakersfield,California,1.24,within,0.0
+p10,Coal_99%-CCS,Bakersfield,California,1.24,within,0.0
+p10,Coal_Retrofits_95%-CCS,Bakersfield,California,1.24,within,0.0
+p10,Coal_Retrofits_90%-CCS,Bakersfield,California,1.24,within,0.0
+p10,Combustion Turbine - Simple Cycle (Aeroderivative),Bakersfield,California,1.11,within,0.0
+p10,NaturalGas_Combustion Turbine,Bakersfield,California,1.14,within,0.0
+p10,NaturalGas_F-Frame CT,Bakersfield,California,1.14,within,0.0
+p10,NaturalGas_2-on-1 Combined Cycle,Bakersfield,California,1.15,within,0.0
+p10,NaturalGas_F-Frame CC,Bakersfield,California,1.15,within,0.0
+p10,NaturalGas_H-Frame CC,Bakersfield,California,1.15,within,0.0
+p10,NaturalGas_1-on-1 Combined Cycle,Bakersfield,California,1.14,within,0.0
+p10,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_F-Frame CC 95% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_H-Frame CC 95% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_F-Frame CC 97% CCS,Bakersfield,California,1.18,within,0.0
+p10,NaturalGas_H-Frame CC 97% CCS,Bakersfield,California,1.18,within,0.0
+p10,Biopower_Dedicated,Bakersfield,California,1.19,within,0.0
+p10,Nuclear_Nuclear,Bakersfield,California,1.18,within,0.0
+p10,Nuclear_Nuclear - Large,Bakersfield,California,1.18,within,0.0
+p10,Nuclear_SMR,Bakersfield,California,1.13,within,0.0
+p10,Nuclear_Nuclear - Small,Bakersfield,California,1.13,within,0.0
+p10,Geothermal,Bakersfield,California,1.14,within,0.0
+p10,Hydropower,Bakersfield,California,1.18,within,0.0
+p10,Pumped Storage Hydropower,Bakersfield,California,1.18,within,0.0
+p10,LandBasedWind,Bakersfield,California,1.15,within,0.0
+p10,Onshore Wind Repowering/Retrofit,Bakersfield,California,1.11,within,0.0
+p10,OffshoreWind,Bakersfield,California,1.15,within,0.0
+p10,UtilityPV,Bakersfield,California,1.09,within,0.0
+p10,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Bakersfield,California,1.09,within,0.0
+p10,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Bakersfield,California,1.09,within,0.0
+p10,Battery_,Bakersfield,California,1.07,within,0.0
+p10,Utility-Scale Battery Storage,Bakersfield,California,1.07,within,0.0
+p11,Coal_new,Los Angeles,California,1.33,nearest_same_state,178.63
+p11,Coal_95%-CCS,Los Angeles,California,1.27,nearest_same_state,178.63
+p11,Coal_99%-CCS,Los Angeles,California,1.27,nearest_same_state,178.63
+p11,Coal_Retrofits_95%-CCS,Los Angeles,California,1.27,nearest_same_state,178.63
+p11,Coal_Retrofits_90%-CCS,Los Angeles,California,1.27,nearest_same_state,178.63
+p11,Combustion Turbine - Simple Cycle (Aeroderivative),Los Angeles,California,1.13,nearest_same_state,178.63
+p11,NaturalGas_Combustion Turbine,Los Angeles,California,1.16,nearest_same_state,178.63
+p11,NaturalGas_F-Frame CT,Los Angeles,California,1.16,nearest_same_state,178.63
+p11,NaturalGas_2-on-1 Combined Cycle,Los Angeles,California,1.18,nearest_same_state,178.63
+p11,NaturalGas_F-Frame CC,Los Angeles,California,1.18,nearest_same_state,178.63
+p11,NaturalGas_H-Frame CC,Los Angeles,California,1.18,nearest_same_state,178.63
+p11,NaturalGas_1-on-1 Combined Cycle,Los Angeles,California,1.17,nearest_same_state,178.63
+p11,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_F-Frame CC 95% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_H-Frame CC 95% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_F-Frame CC 97% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,NaturalGas_H-Frame CC 97% CCS,Los Angeles,California,1.21,nearest_same_state,178.63
+p11,Biopower_Dedicated,Los Angeles,California,1.23,nearest_same_state,178.63
+p11,Nuclear_Nuclear,Los Angeles,California,1.19,nearest_same_state,178.63
+p11,Nuclear_Nuclear - Large,Los Angeles,California,1.19,nearest_same_state,178.63
+p11,Nuclear_SMR,Los Angeles,California,1.15,nearest_same_state,178.63
+p11,Nuclear_Nuclear - Small,Los Angeles,California,1.15,nearest_same_state,178.63
+p11,Geothermal,Los Angeles,California,1.16,nearest_same_state,178.63
+p11,Hydropower,Los Angeles,California,1.19,nearest_same_state,178.63
+p11,Pumped Storage Hydropower,Los Angeles,California,1.19,nearest_same_state,178.63
+p11,LandBasedWind,Los Angeles,California,1.18,nearest_same_state,178.63
+p11,Onshore Wind Repowering/Retrofit,Los Angeles,California,1.13,nearest_same_state,178.63
+p11,OffshoreWind,Los Angeles,California,1.18,nearest_same_state,178.63
+p11,UtilityPV,Los Angeles,California,1.1,nearest_same_state,178.63
+p11,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Los Angeles,California,1.1,nearest_same_state,178.63
+p11,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Los Angeles,California,1.1,nearest_same_state,178.63
+p11,Battery_,Los Angeles,California,1.09,nearest_same_state,178.63
+p11,Utility-Scale Battery Storage,Los Angeles,California,1.09,nearest_same_state,178.63
+p27,Coal_new,Las Vegas,Nevada,1.17,nearest_same_state,130.5
+p27,Coal_95%-CCS,Las Vegas,Nevada,1.17,nearest_same_state,130.5
+p27,Coal_99%-CCS,Las Vegas,Nevada,1.17,nearest_same_state,130.5
+p27,Coal_Retrofits_95%-CCS,Las Vegas,Nevada,1.17,nearest_same_state,130.5
+p27,Coal_Retrofits_90%-CCS,Las Vegas,Nevada,1.17,nearest_same_state,130.5
+p27,Combustion Turbine - Simple Cycle (Aeroderivative),Las Vegas,Nevada,1.08,nearest_same_state,130.5
+p27,NaturalGas_Combustion Turbine,Las Vegas,Nevada,1.1,nearest_same_state,130.5
+p27,NaturalGas_F-Frame CT,Las Vegas,Nevada,1.1,nearest_same_state,130.5
+p27,NaturalGas_2-on-1 Combined Cycle,Las Vegas,Nevada,1.11,nearest_same_state,130.5
+p27,NaturalGas_F-Frame CC,Las Vegas,Nevada,1.11,nearest_same_state,130.5
+p27,NaturalGas_H-Frame CC,Las Vegas,Nevada,1.11,nearest_same_state,130.5
+p27,NaturalGas_1-on-1 Combined Cycle,Las Vegas,Nevada,1.11,nearest_same_state,130.5
+p27,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_F-Frame CC 95% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_H-Frame CC 95% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_F-Frame CC 97% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,NaturalGas_H-Frame CC 97% CCS,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,Biopower_Dedicated,Las Vegas,Nevada,1.13,nearest_same_state,130.5
+p27,Nuclear_Nuclear,Las Vegas,Nevada,1.14,nearest_same_state,130.5
+p27,Nuclear_Nuclear - Large,Las Vegas,Nevada,1.14,nearest_same_state,130.5
+p27,Nuclear_SMR,Las Vegas,Nevada,1.1,nearest_same_state,130.5
+p27,Nuclear_Nuclear - Small,Las Vegas,Nevada,1.1,nearest_same_state,130.5
+p27,Geothermal,Las Vegas,Nevada,1.1,nearest_same_state,130.5
+p27,Hydropower,Las Vegas,Nevada,1.14,nearest_same_state,130.5
+p27,Pumped Storage Hydropower,Las Vegas,Nevada,1.14,nearest_same_state,130.5
+p27,LandBasedWind,Las Vegas,Nevada,1.12,nearest_same_state,130.5
+p27,Onshore Wind Repowering/Retrofit,Las Vegas,Nevada,1.09,nearest_same_state,130.5
+p27,OffshoreWind,Las Vegas,Nevada,,nearest_same_state,130.5
+p27,UtilityPV,Las Vegas,Nevada,1.07,nearest_same_state,130.5
+p27,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Las Vegas,Nevada,1.07,nearest_same_state,130.5
+p27,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Las Vegas,Nevada,1.07,nearest_same_state,130.5
+p27,Battery_,Las Vegas,Nevada,1.07,nearest_same_state,130.5
+p27,Utility-Scale Battery Storage,Las Vegas,Nevada,1.07,nearest_same_state,130.5
+p28,Coal_new,Phoenix,Arizona,1.09,within,0.0
+p28,Coal_95%-CCS,Phoenix,Arizona,1.03,within,0.0
+p28,Coal_99%-CCS,Phoenix,Arizona,1.03,within,0.0
+p28,Coal_Retrofits_95%-CCS,Phoenix,Arizona,1.03,within,0.0
+p28,Coal_Retrofits_90%-CCS,Phoenix,Arizona,1.03,within,0.0
+p28,Combustion Turbine - Simple Cycle (Aeroderivative),Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_Combustion Turbine,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_F-Frame CT,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_2-on-1 Combined Cycle,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_F-Frame CC,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_H-Frame CC,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_1-on-1 Combined Cycle,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_F-Frame CC 95% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_H-Frame CC 95% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_F-Frame CC 97% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,NaturalGas_H-Frame CC 97% CCS,Phoenix,Arizona,1.01,within,0.0
+p28,Biopower_Dedicated,Phoenix,Arizona,1.01,within,0.0
+p28,Nuclear_Nuclear,Phoenix,Arizona,1.0,within,0.0
+p28,Nuclear_Nuclear - Large,Phoenix,Arizona,1.0,within,0.0
+p28,Nuclear_SMR,Phoenix,Arizona,1.01,within,0.0
+p28,Nuclear_Nuclear - Small,Phoenix,Arizona,1.01,within,0.0
+p28,Geothermal,Phoenix,Arizona,,within,0.0
+p28,Hydropower,Phoenix,Arizona,,within,0.0
+p28,Pumped Storage Hydropower,Phoenix,Arizona,,within,0.0
+p28,LandBasedWind,Phoenix,Arizona,1.0,within,0.0
+p28,Onshore Wind Repowering/Retrofit,Phoenix,Arizona,0.99,within,0.0
+p28,OffshoreWind,Phoenix,Arizona,,within,0.0
+p28,UtilityPV,Phoenix,Arizona,1.01,within,0.0
+p28,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Phoenix,Arizona,1.0,within,0.0
+p28,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Phoenix,Arizona,1.0,within,0.0
+p28,Battery_,Phoenix,Arizona,0.99,within,0.0
+p28,Utility-Scale Battery Storage,Phoenix,Arizona,0.99,within,0.0
+p29,Coal_new,Albuquerque,New Mexico,1.03,nearest_same_state,247.5
+p29,Coal_95%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,247.5
+p29,Coal_99%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,247.5
+p29,Coal_Retrofits_95%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,247.5
+p29,Coal_Retrofits_90%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,247.5
+p29,Combustion Turbine - Simple Cycle (Aeroderivative),Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_Combustion Turbine,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_F-Frame CT,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_2-on-1 Combined Cycle,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_F-Frame CC,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_H-Frame CC,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_1-on-1 Combined Cycle,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_F-Frame CC 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_H-Frame CC 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_F-Frame CC 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,NaturalGas_H-Frame CC 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,Biopower_Dedicated,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,Nuclear_Nuclear,Albuquerque,New Mexico,1.07,nearest_same_state,247.5
+p29,Nuclear_Nuclear - Large,Albuquerque,New Mexico,1.07,nearest_same_state,247.5
+p29,Nuclear_SMR,Albuquerque,New Mexico,1.03,nearest_same_state,247.5
+p29,Nuclear_Nuclear - Small,Albuquerque,New Mexico,1.03,nearest_same_state,247.5
+p29,Geothermal,Albuquerque,New Mexico,,nearest_same_state,247.5
+p29,Hydropower,Albuquerque,New Mexico,,nearest_same_state,247.5
+p29,Pumped Storage Hydropower,Albuquerque,New Mexico,,nearest_same_state,247.5
+p29,LandBasedWind,Albuquerque,New Mexico,1.02,nearest_same_state,247.5
+p29,Onshore Wind Repowering/Retrofit,Albuquerque,New Mexico,1.03,nearest_same_state,247.5
+p29,OffshoreWind,Albuquerque,New Mexico,,nearest_same_state,247.5
+p29,UtilityPV,Albuquerque,New Mexico,1.01,nearest_same_state,247.5
+p29,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Albuquerque,New Mexico,1.02,nearest_same_state,247.5
+p29,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Albuquerque,New Mexico,1.02,nearest_same_state,247.5
+p29,Battery_,Albuquerque,New Mexico,1.03,nearest_same_state,247.5
+p29,Utility-Scale Battery Storage,Albuquerque,New Mexico,1.03,nearest_same_state,247.5
+p30,Coal_new,Phoenix,Arizona,1.09,nearest_same_state,168.52
+p30,Coal_95%-CCS,Phoenix,Arizona,1.03,nearest_same_state,168.52
+p30,Coal_99%-CCS,Phoenix,Arizona,1.03,nearest_same_state,168.52
+p30,Coal_Retrofits_95%-CCS,Phoenix,Arizona,1.03,nearest_same_state,168.52
+p30,Coal_Retrofits_90%-CCS,Phoenix,Arizona,1.03,nearest_same_state,168.52
+p30,Combustion Turbine - Simple Cycle (Aeroderivative),Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_Combustion Turbine,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_F-Frame CT,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_2-on-1 Combined Cycle,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_F-Frame CC,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_H-Frame CC,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_1-on-1 Combined Cycle,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_F-Frame CC 95% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_H-Frame CC 95% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_F-Frame CC 97% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,NaturalGas_H-Frame CC 97% CCS,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,Biopower_Dedicated,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,Nuclear_Nuclear,Phoenix,Arizona,1.0,nearest_same_state,168.52
+p30,Nuclear_Nuclear - Large,Phoenix,Arizona,1.0,nearest_same_state,168.52
+p30,Nuclear_SMR,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,Nuclear_Nuclear - Small,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,Geothermal,Phoenix,Arizona,,nearest_same_state,168.52
+p30,Hydropower,Phoenix,Arizona,,nearest_same_state,168.52
+p30,Pumped Storage Hydropower,Phoenix,Arizona,,nearest_same_state,168.52
+p30,LandBasedWind,Phoenix,Arizona,1.0,nearest_same_state,168.52
+p30,Onshore Wind Repowering/Retrofit,Phoenix,Arizona,0.99,nearest_same_state,168.52
+p30,OffshoreWind,Phoenix,Arizona,,nearest_same_state,168.52
+p30,UtilityPV,Phoenix,Arizona,1.01,nearest_same_state,168.52
+p30,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Phoenix,Arizona,1.0,nearest_same_state,168.52
+p30,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Phoenix,Arizona,1.0,nearest_same_state,168.52
+p30,Battery_,Phoenix,Arizona,0.99,nearest_same_state,168.52
+p30,Utility-Scale Battery Storage,Phoenix,Arizona,0.99,nearest_same_state,168.52
+p8,Coal_new,Sacramento,California,1.37,nearest_same_state,322.01
+p8,Coal_95%-CCS,Sacramento,California,1.3,nearest_same_state,322.01
+p8,Coal_99%-CCS,Sacramento,California,1.3,nearest_same_state,322.01
+p8,Coal_Retrofits_95%-CCS,Sacramento,California,1.3,nearest_same_state,322.01
+p8,Coal_Retrofits_90%-CCS,Sacramento,California,1.3,nearest_same_state,322.01
+p8,Combustion Turbine - Simple Cycle (Aeroderivative),Sacramento,California,1.14,nearest_same_state,322.01
+p8,NaturalGas_Combustion Turbine,Sacramento,California,1.17,nearest_same_state,322.01
+p8,NaturalGas_F-Frame CT,Sacramento,California,1.17,nearest_same_state,322.01
+p8,NaturalGas_2-on-1 Combined Cycle,Sacramento,California,1.19,nearest_same_state,322.01
+p8,NaturalGas_F-Frame CC,Sacramento,California,1.19,nearest_same_state,322.01
+p8,NaturalGas_H-Frame CC,Sacramento,California,1.19,nearest_same_state,322.01
+p8,NaturalGas_1-on-1 Combined Cycle,Sacramento,California,1.18,nearest_same_state,322.01
+p8,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_F-Frame CC 95% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_H-Frame CC 95% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_F-Frame CC 97% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,NaturalGas_H-Frame CC 97% CCS,Sacramento,California,1.22,nearest_same_state,322.01
+p8,Biopower_Dedicated,Sacramento,California,1.24,nearest_same_state,322.01
+p8,Nuclear_Nuclear,Sacramento,California,1.21,nearest_same_state,322.01
+p8,Nuclear_Nuclear - Large,Sacramento,California,1.21,nearest_same_state,322.01
+p8,Nuclear_SMR,Sacramento,California,1.16,nearest_same_state,322.01
+p8,Nuclear_Nuclear - Small,Sacramento,California,1.16,nearest_same_state,322.01
+p8,Geothermal,Sacramento,California,1.17,nearest_same_state,322.01
+p8,Hydropower,Sacramento,California,1.21,nearest_same_state,322.01
+p8,Pumped Storage Hydropower,Sacramento,California,1.21,nearest_same_state,322.01
+p8,LandBasedWind,Sacramento,California,1.18,nearest_same_state,322.01
+p8,Onshore Wind Repowering/Retrofit,Sacramento,California,1.13,nearest_same_state,322.01
+p8,OffshoreWind,Sacramento,California,1.18,nearest_same_state,322.01
+p8,UtilityPV,Sacramento,California,1.11,nearest_same_state,322.01
+p8,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Sacramento,California,1.1,nearest_same_state,322.01
+p8,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Sacramento,California,1.11,nearest_same_state,322.01
+p8,Battery_,Sacramento,California,1.08,nearest_same_state,322.01
+p8,Utility-Scale Battery Storage,Sacramento,California,1.08,nearest_same_state,322.01
+p9,Coal_new,Modesto,California,1.35,within,0.0
+p9,Coal_95%-CCS,Modesto,California,1.28,within,0.0
+p9,Coal_99%-CCS,Modesto,California,1.28,within,0.0
+p9,Coal_Retrofits_95%-CCS,Modesto,California,1.28,within,0.0
+p9,Coal_Retrofits_90%-CCS,Modesto,California,1.28,within,0.0
+p9,Combustion Turbine - Simple Cycle (Aeroderivative),Modesto,California,1.13,within,0.0
+p9,NaturalGas_Combustion Turbine,Modesto,California,1.16,within,0.0
+p9,NaturalGas_F-Frame CT,Modesto,California,1.16,within,0.0
+p9,NaturalGas_2-on-1 Combined Cycle,Modesto,California,1.17,within,0.0
+p9,NaturalGas_F-Frame CC,Modesto,California,1.17,within,0.0
+p9,NaturalGas_H-Frame CC,Modesto,California,1.17,within,0.0
+p9,NaturalGas_1-on-1 Combined Cycle,Modesto,California,1.17,within,0.0
+p9,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_F-Frame CC 95% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_H-Frame CC 95% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_F-Frame CC 97% CCS,Modesto,California,1.2,within,0.0
+p9,NaturalGas_H-Frame CC 97% CCS,Modesto,California,1.2,within,0.0
+p9,Biopower_Dedicated,Modesto,California,1.21,within,0.0
+p9,Nuclear_Nuclear,Modesto,California,1.2,within,0.0
+p9,Nuclear_Nuclear - Large,Modesto,California,1.2,within,0.0
+p9,Nuclear_SMR,Modesto,California,1.15,within,0.0
+p9,Nuclear_Nuclear - Small,Modesto,California,1.15,within,0.0
+p9,Geothermal,Modesto,California,1.15,within,0.0
+p9,Hydropower,Modesto,California,1.2,within,0.0
+p9,Pumped Storage Hydropower,Modesto,California,1.2,within,0.0
+p9,LandBasedWind,Modesto,California,1.16,within,0.0
+p9,Onshore Wind Repowering/Retrofit,Modesto,California,1.12,within,0.0
+p9,OffshoreWind,Modesto,California,1.16,within,0.0
+p9,UtilityPV,Modesto,California,1.1,within,0.0
+p9,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Modesto,California,1.1,within,0.0
+p9,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Modesto,California,1.1,within,0.0
+p9,Battery_,Modesto,California,1.07,within,0.0
+p9,Utility-Scale Battery Storage,Modesto,California,1.07,within,0.0
