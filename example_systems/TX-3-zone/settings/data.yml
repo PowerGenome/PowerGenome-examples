@@ -6,12 +6,13 @@
 
 # Resource groups define site-specific data (LCOE, capacity, interconnection cost,
 # hourly profile) for new-build solar and onshore wind. PowerGenome only applies
-# Path() (no base directory) to these two keys, so they must be absolute paths (or
-# relative to where run_powergenome is invoked). Relative alternatives:
-# RESOURCE_GROUPS: resource_groups
-# RESOURCE_GROUP_PROFILES: resource_profiles
-RESOURCE_GROUPS: /Users/gs5183/Documents/github/copilot-worktrees/PowerGenome-examples/gschivley-animated-happiness/example_systems/TX-3-zone/resource_groups
-RESOURCE_GROUP_PROFILES: /Users/gs5183/Documents/github/copilot-worktrees/PowerGenome-examples/gschivley-animated-happiness/example_systems/TX-3-zone/resource_profiles
+# Path() (no base directory) to these two keys, so they are resolved relative to
+# the current working directory. Run `run_powergenome` from this example's folder
+# (example_systems/TX-3-zone/) so these resolve to resource_groups/ and
+# resource_profiles/ alongside this settings directory. (Absolute paths also work
+# if you prefer to run from another directory.)
+RESOURCE_GROUPS: resource_groups
+RESOURCE_GROUP_PROFILES: resource_profiles
 
 # Location of the data table files (relative to the folder that contains the
 # settings folder, i.e. example_systems/TX-3-zone/).
