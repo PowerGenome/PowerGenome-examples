@@ -161,3 +161,5 @@ cython_debug/
 
 
 .DS_Store
+# PowerGenome generated GenX inputs (rebuilt by the CI workflow)
+example_systems/*/genx-test/

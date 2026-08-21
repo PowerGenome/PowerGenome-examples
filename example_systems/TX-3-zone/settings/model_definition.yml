@@ -33,6 +33,14 @@ utc_offset: -6
 # Derate thermal capacity used to meet planning reserves to account for outages
 cap_res_network_derate_default: 0.95
 
+# Planning reserve margin as a fraction of peak capacity, applied per model zone.
+# 13.75% is the ERCOT planning reserve margin (matches reserve_margins data).
+regional_capacity_reserves:
+  CapRes_1:
+    TX1: 0.1375
+    TX2: 0.1375
+    TX3: 0.1375
+
 ######################################################################################
 # MODEL OUTPUTS
 
@@ -47,7 +55,6 @@ generator_columns: [
             "Zone",
             "Num_VRE_Bins",
             "CapRes_1",
-            "CapRes_2",
             "THERM",
             "VRE",
             "MUST_RUN",
