@@ -17,10 +17,18 @@ RESOURCE_GROUP_PROFILES: /Users/gs5183/Documents/github/copilot-worktrees/PowerG
 # settings folder, i.e. example_systems/TX-3-zone/).
 data_location: data
 
+# NOTE: technology_costs_atb_tx_3_zone.csv is SLIMMED from the full NREL ATB
+# parquet (650k rows) to only the resources used by this example: the
+# technologies in `new_resources` (NaturalGas, LandbasedWind, UtilityPV,
+# Utility-Scale Battery Storage, Nuclear), cost_case=Moderate,
+# financial_case=Market, all data years (24,655 rows, ~2 MB). If you switch a
+# technology's cost_case/financial_case in resources.yml you must re-download
+# the full ATB table from PowerGenome-data and re-slim (see data/README.md).
+
 generation_table: reeds_generators_tx_3_zone.csv
 plant_region_table: plant_region_map_tx_3_zone.csv
 resource_heat_rate_table: technology_heat_rates_nrelatb.csv
-resource_cost_table: technology_costs_atb.parquet
+resource_cost_table: technology_costs_atb_tx_3_zone.csv
 operational_constraints_table: operational_constraints_tx_3_zone.csv
 transmission_constraints_table: transmission_capacity_tx_3_zone.csv
 fuel_price_table: fuel_prices_tx_3_zone.csv
