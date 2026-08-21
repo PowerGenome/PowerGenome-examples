@@ -1,0 +1,6 @@
+{
+    "technology": "utilitypv",
+    "metadata": "solar_lcoe_tx_3_zone.csv",
+    "profiles": "solar_profiles_tx_3_zone.csv",
+    "site_map": "solar_site_map_tx_3_zone.csv"
+}

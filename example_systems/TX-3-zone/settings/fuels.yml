@@ -1,0 +1,63 @@
+# EIA AEO FUEL PRICE VARIABLES
+# Simplified fuel price workflow: data/fuel_prices_tx_3_zone.csv already contains
+# region (ReEDS BA), scenario, fuel, and year-specific prices at fuel_data_year
+# (2025), denominated in dollar_year 2024.
+
+# Which year of AEO to use. Different AEO years use different scenario names, so
+# these may need to be modified accordingly.
+fuel_data_year: 2025
+
+# ============================================================================
+# FUEL ASSIGNMENTS (REQUIRED)
+# ============================================================================
+# Assign scenario names to base fuels. These names match the 'scenario' column
+# values in data/fuel_prices_tx_3_zone.csv.
+fuel_scenarios:
+  coal: reference
+  naturalgas: reference
+  distillate: reference
+  uranium: reference
+
+# Map technology names to fuel names. The fuel names match the 'fuel' column values
+# in the fuel price table.
+tech_fuel_map:
+  Conventional Steam Coal: coal
+  Natural Gas Fired Combined Cycle: naturalgas
+  Natural Gas Fired Combustion Turbine: naturalgas
+  Natural Gas Steam Turbine: naturalgas
+  NaturalGas: naturalgas
+  Nuclear: uranium
+  Petroleum Liquids: distillate
+  Other_peaker: naturalgas
+  hydrogen: hydrogen
+
+# The CCS fuel names (key values on right have to be in the format <fuel>_<ccslevel>,
+# where the fuel matches something from "fuel_scenarios" above)
+ccs_fuel_map:
+  NaturalGas_CCS100: naturalgas_ccs100
+  NaturalGas_CCCCS: naturalgas_ccs90
+  Coal_CCS30: coal_ccs30
+  Coal_CCS90: coal_ccs90
+
+ccs_capture_rate:
+  naturalgas_ccs100: 1.0
+  naturalgas_ccs90: 0.9
+  coal_ccs30: 0.3
+  coal_ccs90: 0.9
+
+# Pipeline and other costs, $/tonne
+ccs_disposal_cost: 10
+
+# Carbon tax, USD/tonne
+carbon_tax: 0
+
+# tonne/MMBtu
+fuel_emission_factors:
+  naturalgas: 0.05306
+  coal: 0.09552 # EIA value for electric power sector
+  distillate: 0.07315
+  hydrogen: 0.0
+
+# User-defined fuel prices for fuels not in the fuel price table
+user_fuel_price:
+  hydrogen: 16.0  # $/MMBtu

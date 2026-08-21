@@ -1,0 +1,200 @@
+######################################################
+# THESE PARAMETERS ARE OFTEN MODIFIED FOR NEW STUDIES
+######################################################
+
+#####################
+# Existing generators
+#####################
+
+# CLUSTERING
+# Existing thermal power plants are clustered to reduce the number of distinct plants.
+# The existing method (for now) is to specify the number of clusters for each type
+# of thermal plant as a default and then specify specific values for any regions
+# that are different.
+
+# Include units with planned/age-based retirements when determining clusters across periods
+cluster_with_retired_gens: true
+
+# ** Any technologies not included in num_clusters will be omitted **
+num_clusters:
+  Conventional Steam Coal: 1
+  Natural Gas Fired Combined Cycle: 1
+  Natural Gas Fired Combustion Turbine: 1
+  Nuclear: 1
+  Conventional Hydroelectric: 1
+  Wood/Wood Waste Biomass: 1
+  Natural Gas Internal Combustion Engine: 1
+  Natural Gas Steam Turbine: 1
+  Geothermal: 1
+  Solar Photovoltaic: 1
+  Onshore Wind Turbine: 1
+  Offshore Wind Turbine: 1
+  Small Hydroelectric: 1
+  Petroleum Liquids: 1
+  Landfill Gas: 1
+  Municipal Solid Waste: 1
+  Other Waste Biomass: 1
+  Hydroelectric Pumped Storage: 1
+  Biomass: 1
+  Other_peaker: 1
+  Batteries: 1
+
+
+# Group these technologies
+group_technologies: True
+tech_groups:
+  Biomass:
+    - Wood/Wood Waste Biomass
+    - Landfill Gas
+    - Municipal Solid Waste
+    - Other Waste Biomass
+  Other_peaker:
+    - Natural Gas Internal Combustion Engine
+    - Petroleum Liquids
+
+# Use this to avoid grouping technologies in some regions
+regional_no_grouping: ~
+
+# Add code to ensure region names here are included above
+alt_num_clusters: ~
+
+
+# Derate the capacity of technologies that will be set as MUST_RUN in GenX by their
+# historical capacity factor.
+derate_techs:
+  - Small Hydroelectric
+  - Biomass
+
+# Default value to limit the years used to calculate capacity factors.
+# PUDL currently has generation data from 2011 through the most recent final release of 923/860.
+capacity_factor_default_year_filter: [2016, 2017, 2018, 2019, 2020, 2021]
+
+
+# LABEL SMALL HYDRO
+small_hydro: true
+small_hydro_mw: 30
+small_hydro_regions:
+  - TX1
+  - TX2
+  - TX3
+
+
+# Factors for calculating hydro energy to power ratio in GenX. The default factors is
+# numeric and will be applied to all regions. The regional factors are a dictionary mapping
+# model region names to specific regional factors. The factors are multiplied by average
+# annual inflow rates to determine the rated number of hours of reservoir hydro
+# storage at peak discharge power output.
+hydro_factor: 4
+
+regional_hydro_factor:
+  TX1: 4
+  TX2: 4
+  TX3: 4
+
+# Energy storage duration. Provide a default value for existing resources of a given type.
+# The value of 15.5 for pumped hydro comes from https://sandia.gov/ess-ssl/gesdb/public/statistics.html
+# Default value can be numeric or a dictionary of region: numeric values. Technology names
+# here and in the dataframe are both converted to snake case and matches are made if this
+# name is contained in the dataframe technology name.
+energy_storage_duration:
+  Hydroelectric Pumped Storage: 15.5
+  Batteries: 2
+
+
+# The year of NREL ATB data to use for matching existing generators (O&M costs)
+atb_existing_year: 2020
+
+resource_attr_modifiers:
+  conventional steam coal:
+    - attribute: fom_per_mwyr
+      formula:
+        op: add
+        rate: 126 # 0.126 $/kW-yr per year of age
+        multiplier: age
+
+#####################
+# New-build generators
+#####################
+# Generator cost data from NREL ATB
+resource_data_year: 2024
+resource_financial_case: Market
+resource_cap_recovery_years: 20
+
+# Alternate capital recovery periods for specific technologies, which are used to calculate
+# the annual investment costs. The names are matched using str.contains rather than
+# exact matches. Set parameter value to none (~) if not used.
+alt_resource_cap_recovery_years:
+  NaturalGas_CCAvg: 15
+  NaturalGas_CTAvg: 15
+  Battery: 15
+  Nuclear: 40
+
+# Format for each list item is <technology>, <tech_detail>, <cost_case>, <size>
+new_resources:
+  - [NaturalGas, 1-on-1 Combined Cycle (H-Frame), Moderate, 500]
+  - [NaturalGas, Combustion Turbine (F-Frame), Moderate, 100]
+  - [LandbasedWind, Class3, Moderate, 1]
+  - [UtilityPV, Class1, Moderate, 1]
+  - [Utility-Scale Battery Storage, Lithium Ion, Moderate, 1]
+  - [Nuclear, Nuclear - Large, Moderate, 1000]
+
+# Interconnection cost per MW to connect new generators to the transmission system
+# Resource Groups (as defined in RESOURCE_GROUPS) define site-specific interconnection costs
+# (used here for solar/onshore wind). This flat value applies as the fallback to the other
+# new-build generators that are not in a resource group. Dollar year = target_usd_year (2024).
+interconnect_capex_mw: 100000
+
+cache_resource_clusters: false
+use_resource_clusters_cache: false
+
+# New-build variable renewable resource groups. Region "all" is expanded to each model
+# region. No bin is used, so every site in the resource-group metadata becomes its own
+# cluster (each row in groups/metadata = one GenX VRE bin with its own capacity, LCOE,
+# interconnection cost, and hourly profile).
+renewables_clusters:
+  - region: all
+    technology: landbasedwind
+    filter:
+      - feature: lcoe
+        max: 75
+  - region: all
+    technology: utilitypv
+    filter:
+      - feature: lcoe
+        max: 60
+
+# Add a VOM cost to battery technologies. PNNL reports a 0.03 cents per kWh VOM, which
+# is split between Var_OM_Cost_per_MWh and Var_OM_Cost_per_MWh_In
+# (https://www.pnnl.gov/main/publications/external/technical_reports/PNNL-28866.pdf).
+resource_modifiers:
+  batteries:
+    technology: Utility-Scale Battery Storage
+    tech_detail: Lithium Ion
+    Var_OM_Cost_per_MWh: [add, 0.15]
+    Var_OM_Cost_per_MWh_In: 0.15
+
+# Copy and modify an existing ATB new generator. Set to none (~) if not adding
+# any modified generators.
+modified_new_resources:
+  hydrogen_turbine:
+    technology: NaturalGas
+    tech_detail: 1-on-1 Combined Cycle (H-Frame)
+    cost_case: Moderate
+    size_mw: 100
+    new_technology: hydrogen
+    new_tech_detail: 1-on-1 Combined Cycle (H-Frame)
+    new_cost_case: Moderate
+
+######################################################
+# THESE PARAMETERS ARE RARELY MODIFIED FOR NEW STUDIES
+######################################################
+# ATB doesn't have a WACC for battery tech. Need to provide a value here.
+atb_battery_wacc: UtilityPV
+
+# Additional technologies can be specified in a csv file under data/additional_technologies
+# Provide the filename (no path needed) in the parameter below or "~" for none.
+additional_technologies_fn: ~
+
+additional_new_gen: ~
+
+new_gen_not_available: ~
