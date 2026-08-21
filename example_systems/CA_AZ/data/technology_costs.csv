@@ -1,0 +1,1089 @@
+data_year,basis_year,cap_recovery_years,cost_case,financial_case,technology,tech_detail,parameter,parameter_value,units,dollar_year
+2024,2022,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,363005.6083,,2022
+2024,2022,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,390928.5979,,2022
+2024,2022,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,9075.140208,,2022
+2024,2022,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,9773.214948,,2022
+2024,2022,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2022,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1559790.57361718,,2022
+2024,2022,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,32443.0472671293,,2022
+2024,2022,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1387817.55696598,,2022
+2024,2022,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,34500.0,,2022
+2024,2022,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.17,,2022
+2024,2022,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1237379.6493135,,2022
+2024,2022,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,26100.0,,2022
+2024,2022,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2022,20,Moderate,Market,UtilityPV,Class1,capex_mw,1415561.58326124,,2022
+2024,2022,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,23765.6034563605,,2022
+2024,2022,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1559790.57361718,,2022
+2024,2022,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,32443.0472671293,,2022
+2024,2022,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1387817.55696598,,2022
+2024,2022,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,34500.0,,2022
+2024,2022,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.17,,2022
+2024,2022,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1237379.6493135,,2022
+2024,2022,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,26100.0,,2022
+2024,2022,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2022,30,Moderate,Market,UtilityPV,Class1,capex_mw,1415561.58326124,,2022
+2024,2022,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,23765.6034563605,,2022
+2024,2022,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1387817.55696598,,2022
+2024,2022,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,34500.0,,2022
+2024,2022,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.17,,2022
+2024,2022,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1237379.6493135,,2022
+2024,2022,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,26100.0,,2022
+2024,2022,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2023,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,359282.7058,,2022
+2024,2023,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,386919.3236,,2022
+2024,2023,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,8982.067644,,2022
+2024,2023,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,9672.983089,,2022
+2024,2023,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2023,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1680317.54400702,,2022
+2024,2023,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,32045.6380021644,,2022
+2024,2023,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1375893.95984093,,2022
+2024,2023,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,34100.0,,2022
+2024,2023,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.15,,2022
+2024,2023,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1227573.3264443,,2022
+2024,2023,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,26000.0,,2022
+2024,2023,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2023,20,Moderate,Market,UtilityPV,Class1,capex_mw,1486198.74638836,,2022
+2024,2023,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,22218.8024537407,,2022
+2024,2023,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1680317.54400702,,2022
+2024,2023,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,32045.6380021644,,2022
+2024,2023,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1375893.95984093,,2022
+2024,2023,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,34100.0,,2022
+2024,2023,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.15,,2022
+2024,2023,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1227573.3264443,,2022
+2024,2023,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,26000.0,,2022
+2024,2023,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2023,30,Moderate,Market,UtilityPV,Class1,capex_mw,1486198.74638836,,2022
+2024,2023,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,22218.8024537407,,2022
+2024,2023,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1375893.95984093,,2022
+2024,2023,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,34100.0,,2022
+2024,2023,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.15,,2022
+2024,2023,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1227573.3264443,,2022
+2024,2023,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,26000.0,,2022
+2024,2023,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2024,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,346861.2149,,2022
+2024,2024,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,355753.8565,,2022
+2024,2024,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,8671.530373,,2022
+2024,2024,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,8893.846413,,2022
+2024,2024,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2024,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1570098.84535174,,2022
+2024,2024,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,31648.2287371996,,2022
+2024,2024,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1363858.92722873,,2022
+2024,2024,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33800.0,,2022
+2024,2024,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.14,,2022
+2024,2024,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1217767.0035751,,2022
+2024,2024,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25800.0,,2022
+2024,2024,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2024,20,Moderate,Market,UtilityPV,Class1,capex_mw,1428327.04067393,,2022
+2024,2024,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,21608.8888166182,,2022
+2024,2024,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1570098.84535174,,2022
+2024,2024,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,31648.2287371996,,2022
+2024,2024,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1363858.92722873,,2022
+2024,2024,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33800.0,,2022
+2024,2024,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.14,,2022
+2024,2024,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1217767.0035751,,2022
+2024,2024,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25800.0,,2022
+2024,2024,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2024,30,Moderate,Market,UtilityPV,Class1,capex_mw,1428327.04067393,,2022
+2024,2024,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,21608.8888166182,,2022
+2024,2024,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1363858.92722873,,2022
+2024,2024,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33800.0,,2022
+2024,2024,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.14,,2022
+2024,2024,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1217767.0035751,,2022
+2024,2024,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25800.0,,2022
+2024,2024,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2025,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,311359.3197,,2022
+2024,2025,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,309927.9946,,2022
+2024,2025,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7783.982992,,2022
+2024,2025,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,7748.199866,,2022
+2024,2025,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2025,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1463103.0636939,,2022
+2024,2025,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,31250.8194722348,,2022
+2024,2025,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1351823.89461654,,2022
+2024,2025,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33500.0,,2022
+2024,2025,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.12,,2022
+2024,2025,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1207960.6807059,,2022
+2024,2025,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25700.0,,2022
+2024,2025,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2025,20,Moderate,Market,UtilityPV,Class1,capex_mw,1370455.3349595,,2022
+2024,2025,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,21001.0765811561,,2022
+2024,2025,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1463103.0636939,,2022
+2024,2025,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,31250.8194722348,,2022
+2024,2025,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1351823.89461654,,2022
+2024,2025,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33500.0,,2022
+2024,2025,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.12,,2022
+2024,2025,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1207960.6807059,,2022
+2024,2025,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25700.0,,2022
+2024,2025,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2025,30,Moderate,Market,UtilityPV,Class1,capex_mw,1370455.3349595,,2022
+2024,2025,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,21001.0765811561,,2022
+2024,2025,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1351823.89461654,,2022
+2024,2025,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33500.0,,2022
+2024,2025,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.12,,2022
+2024,2025,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1207960.6807059,,2022
+2024,2025,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25700.0,,2022
+2024,2025,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2026,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,312349.9362,,2022
+2024,2026,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,297136.4948,,2022
+2024,2026,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7808.748405,,2022
+2024,2026,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,7428.41237,,2022
+2024,2026,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2026,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1430873.89371948,,2022
+2024,2026,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,30853.4102072699,,2022
+2024,2026,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1339900.29749149,,2022
+2024,2026,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33100.0,,2022
+2024,2026,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.1,,2022
+2024,2026,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1198154.3578367,,2022
+2024,2026,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25600.0,,2022
+2024,2026,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2026,20,Moderate,Market,UtilityPV,Class1,capex_mw,1312583.62924507,,2022
+2024,2026,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,20395.279725064,,2022
+2024,2026,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1430873.89371948,,2022
+2024,2026,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,30853.4102072699,,2022
+2024,2026,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1339900.29749149,,2022
+2024,2026,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33100.0,,2022
+2024,2026,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.1,,2022
+2024,2026,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1198154.3578367,,2022
+2024,2026,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25600.0,,2022
+2024,2026,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2026,30,Moderate,Market,UtilityPV,Class1,capex_mw,1312583.62924507,,2022
+2024,2026,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,20395.279725064,,2022
+2024,2026,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1339900.29749149,,2022
+2024,2026,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,33100.0,,2022
+2024,2026,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.1,,2022
+2024,2026,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1198154.3578367,,2022
+2024,2026,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25600.0,,2022
+2024,2026,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2027,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,313435.2591,,2022
+2024,2027,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,284320.3982,,2022
+2024,2027,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7835.881478,,2022
+2024,2027,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,7108.009955,,2022
+2024,2027,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2027,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1398644.72374504,,2022
+2024,2027,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,30456.0009423051,,2022
+2024,2027,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1327865.26487929,,2022
+2024,2027,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32800.0,,2022
+2024,2027,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.09,,2022
+2024,2027,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1188348.0349675,,2022
+2024,2027,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25400.0,,2022
+2024,2027,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2027,20,Moderate,Market,UtilityPV,Class1,capex_mw,1254711.92353064,,2022
+2024,2027,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,19791.4168580213,,2022
+2024,2027,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1398644.72374504,,2022
+2024,2027,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,30456.0009423051,,2022
+2024,2027,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1327865.26487929,,2022
+2024,2027,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32800.0,,2022
+2024,2027,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.09,,2022
+2024,2027,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1188348.0349675,,2022
+2024,2027,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25400.0,,2022
+2024,2027,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2027,30,Moderate,Market,UtilityPV,Class1,capex_mw,1254711.92353064,,2022
+2024,2027,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,19791.4168580213,,2022
+2024,2027,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1327865.26487929,,2022
+2024,2027,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32800.0,,2022
+2024,2027,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.09,,2022
+2024,2027,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1188348.0349675,,2022
+2024,2027,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25400.0,,2022
+2024,2027,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2028,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,314626.737,,2022
+2024,2028,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,271476.7315,,2022
+2024,2028,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7865.668425,,2022
+2024,2028,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,6786.918289,,2022
+2024,2028,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2028,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1366415.55377062,,2022
+2024,2028,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,30058.5916773403,,2022
+2024,2028,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1315830.23226709,,2022
+2024,2028,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32400.0,,2022
+2024,2028,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.07,,2022
+2024,2028,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1178541.7120983,,2022
+2024,2028,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25300.0,,2022
+2024,2028,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2028,20,Moderate,Market,UtilityPV,Class1,capex_mw,1196840.21781622,,2022
+2024,2028,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,19189.4109140506,,2022
+2024,2028,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1366415.55377062,,2022
+2024,2028,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,30058.5916773403,,2022
+2024,2028,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1315830.23226709,,2022
+2024,2028,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32400.0,,2022
+2024,2028,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.07,,2022
+2024,2028,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1178541.7120983,,2022
+2024,2028,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25300.0,,2022
+2024,2028,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2028,30,Moderate,Market,UtilityPV,Class1,capex_mw,1196840.21781622,,2022
+2024,2028,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,19189.4109140506,,2022
+2024,2028,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1315830.23226709,,2022
+2024,2028,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32400.0,,2022
+2024,2028,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.07,,2022
+2024,2028,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1178541.7120983,,2022
+2024,2028,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25300.0,,2022
+2024,2028,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2029,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,315937.7411,,2022
+2024,2029,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,258602.0221,,2022
+2024,2029,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7898.443526,,2022
+2024,2029,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,6465.050552,,2022
+2024,2029,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2029,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1334186.38379619,,2022
+2024,2029,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,29661.1824123754,,2022
+2024,2029,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1303906.63514204,,2022
+2024,2029,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32100.0,,2022
+2024,2029,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.06,,2022
+2024,2029,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1168846.82471625,,2022
+2024,2029,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25100.0,,2022
+2024,2029,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2029,20,Moderate,Market,UtilityPV,Class1,capex_mw,1138968.51210179,,2022
+2024,2029,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,18589.1888680874,,2022
+2024,2029,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1334186.38379619,,2022
+2024,2029,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,29661.1824123754,,2022
+2024,2029,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1303906.63514204,,2022
+2024,2029,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32100.0,,2022
+2024,2029,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.06,,2022
+2024,2029,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1168846.82471625,,2022
+2024,2029,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25100.0,,2022
+2024,2029,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2029,30,Moderate,Market,UtilityPV,Class1,capex_mw,1138968.51210179,,2022
+2024,2029,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,18589.1888680874,,2022
+2024,2029,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1303906.63514204,,2022
+2024,2029,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,32100.0,,2022
+2024,2029,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.06,,2022
+2024,2029,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1168846.82471625,,2022
+2024,2029,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25100.0,,2022
+2024,2029,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2030,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,317383.9866,,2022
+2024,2030,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,245692.1883,,2022
+2024,2030,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7934.599666,,2022
+2024,2030,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,6142.304707,,2022
+2024,2030,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2030,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1301957.21382177,,2022
+2024,2030,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,29263.7731474106,,2022
+2024,2030,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1291871.60252984,,2022
+2024,2030,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31800.0,,2022
+2024,2030,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.04,,2022
+2024,2030,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1159040.50184705,,2022
+2024,2030,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25000.0,,2022
+2024,2030,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2030,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7486164.79952744,,2022
+2024,2030,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2030,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2030,20,Moderate,Market,UtilityPV,Class1,capex_mw,1081096.80638736,,2022
+2024,2030,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,17990.6814745527,,2022
+2024,2030,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1301957.21382177,,2022
+2024,2030,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,29263.7731474106,,2022
+2024,2030,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1291871.60252984,,2022
+2024,2030,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31800.0,,2022
+2024,2030,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.04,,2022
+2024,2030,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1159040.50184705,,2022
+2024,2030,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25000.0,,2022
+2024,2030,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2030,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7486164.79952744,,2022
+2024,2030,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2030,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2030,30,Moderate,Market,UtilityPV,Class1,capex_mw,1081096.80638736,,2022
+2024,2030,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,17990.6814745527,,2022
+2024,2030,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1291871.60252984,,2022
+2024,2030,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31800.0,,2022
+2024,2030,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.04,,2022
+2024,2030,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1159040.50184705,,2022
+2024,2030,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,25000.0,,2022
+2024,2030,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2030,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7486164.79952744,,2022
+2024,2030,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2030,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2031,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,315228.7708,,2022
+2024,2031,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,241217.8785,,2022
+2024,2031,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7880.71927,,2022
+2024,2031,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,6030.446963,,2022
+2024,2031,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2031,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1287304.962655,,2022
+2024,2031,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,29063.2621091783,,2022
+2024,2031,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1279836.56991764,,2022
+2024,2031,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31400.0,,2022
+2024,2031,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.02,,2022
+2024,2031,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1149234.17897785,,2022
+2024,2031,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24800.0,,2022
+2024,2031,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2031,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7421067.71431415,,2022
+2024,2031,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2031,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2031,20,Moderate,Market,UtilityPV,Class1,capex_mw,1023225.10067293,,2022
+2024,2031,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,17393.8230259631,,2022
+2024,2031,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1287304.962655,,2022
+2024,2031,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,29063.2621091783,,2022
+2024,2031,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1279836.56991764,,2022
+2024,2031,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31400.0,,2022
+2024,2031,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.02,,2022
+2024,2031,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1149234.17897785,,2022
+2024,2031,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24800.0,,2022
+2024,2031,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2031,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7421067.71431415,,2022
+2024,2031,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2031,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2031,30,Moderate,Market,UtilityPV,Class1,capex_mw,1023225.10067293,,2022
+2024,2031,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,17393.8230259631,,2022
+2024,2031,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1279836.56991764,,2022
+2024,2031,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31400.0,,2022
+2024,2031,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.02,,2022
+2024,2031,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1149234.17897785,,2022
+2024,2031,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24800.0,,2022
+2024,2031,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2031,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7421067.71431415,,2022
+2024,2031,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2031,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2032,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,313057.482,,2022
+2024,2032,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,236747.7432,,2022
+2024,2032,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7826.437051,,2022
+2024,2032,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5918.693579,,2022
+2024,2032,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2032,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1272652.71148824,,2022
+2024,2032,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28862.7510709461,,2022
+2024,2032,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1267912.97279259,,2022
+2024,2032,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31100.0,,2022
+2024,2032,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.01,,2022
+2024,2032,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1139427.85610865,,2022
+2024,2032,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24700.0,,2022
+2024,2032,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2032,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7355970.62910087,,2022
+2024,2032,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2032,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2032,20,Moderate,Market,UtilityPV,Class1,capex_mw,965353.394958499,,2022
+2024,2032,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,16798.551129807,,2022
+2024,2032,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1272652.71148824,,2022
+2024,2032,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28862.7510709461,,2022
+2024,2032,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1267912.97279259,,2022
+2024,2032,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31100.0,,2022
+2024,2032,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.01,,2022
+2024,2032,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1139427.85610865,,2022
+2024,2032,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24700.0,,2022
+2024,2032,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2032,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7355970.62910087,,2022
+2024,2032,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2032,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2032,30,Moderate,Market,UtilityPV,Class1,capex_mw,965353.394958499,,2022
+2024,2032,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,16798.551129807,,2022
+2024,2032,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1267912.97279259,,2022
+2024,2032,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,31100.0,,2022
+2024,2032,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,2.01,,2022
+2024,2032,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1139427.85610865,,2022
+2024,2032,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24700.0,,2022
+2024,2032,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2032,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7355970.62910087,,2022
+2024,2032,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2032,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2033,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,310869.4941,,2022
+2024,2033,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,232281.9449,,2022
+2024,2033,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7771.737352,,2022
+2024,2033,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5807.048621,,2022
+2024,2033,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2033,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1258000.46032147,,2022
+2024,2033,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28662.2400327138,,2022
+2024,2033,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1255877.94018039,,2022
+2024,2033,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30700.0,,2022
+2024,2033,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.99,,2022
+2024,2033,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1129621.53323945,,2022
+2024,2033,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24500.0,,2022
+2024,2033,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2033,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7290873.54388759,,2022
+2024,2033,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2033,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2033,20,Moderate,Market,UtilityPV,Class1,capex_mw,907481.68924407,,2022
+2024,2033,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,16204.8065020968,,2022
+2024,2033,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1258000.46032147,,2022
+2024,2033,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28662.2400327138,,2022
+2024,2033,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1255877.94018039,,2022
+2024,2033,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30700.0,,2022
+2024,2033,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.99,,2022
+2024,2033,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1129621.53323945,,2022
+2024,2033,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24500.0,,2022
+2024,2033,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2033,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7290873.54388759,,2022
+2024,2033,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2033,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2033,30,Moderate,Market,UtilityPV,Class1,capex_mw,907481.68924407,,2022
+2024,2033,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,16204.8065020968,,2022
+2024,2033,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1255877.94018039,,2022
+2024,2033,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30700.0,,2022
+2024,2033,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.99,,2022
+2024,2033,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1129621.53323945,,2022
+2024,2033,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24500.0,,2022
+2024,2033,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2033,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7290873.54388759,,2022
+2024,2033,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2033,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2034,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,308664.1479,,2022
+2024,2034,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,227820.6548,,2022
+2024,2034,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7716.603696,,2022
+2024,2034,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5695.516369,,2022
+2024,2034,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2034,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1243348.20915471,,2022
+2024,2034,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28461.7289944816,,2022
+2024,2034,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1243842.90756819,,2022
+2024,2034,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30400.0,,2022
+2024,2034,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.98,,2022
+2024,2034,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1119815.21037026,,2022
+2024,2034,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24400.0,,2022
+2024,2034,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2034,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7225776.45867431,,2022
+2024,2034,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2034,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2034,20,Moderate,Market,UtilityPV,Class1,capex_mw,849609.983529641,,2022
+2024,2034,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,15612.5327761587,,2022
+2024,2034,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1243348.20915471,,2022
+2024,2034,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28461.7289944816,,2022
+2024,2034,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1243842.90756819,,2022
+2024,2034,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30400.0,,2022
+2024,2034,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.98,,2022
+2024,2034,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1119815.21037026,,2022
+2024,2034,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24400.0,,2022
+2024,2034,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2034,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7225776.45867431,,2022
+2024,2034,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2034,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2034,30,Moderate,Market,UtilityPV,Class1,capex_mw,849609.983529641,,2022
+2024,2034,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,15612.5327761587,,2022
+2024,2034,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1243842.90756819,,2022
+2024,2034,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30400.0,,2022
+2024,2034,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.98,,2022
+2024,2034,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1119815.21037026,,2022
+2024,2034,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24400.0,,2022
+2024,2034,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2034,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7225776.45867431,,2022
+2024,2034,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2034,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2035,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,306440.749,,2022
+2024,2035,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,223364.0532,,2022
+2024,2035,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7661.018726,,2022
+2024,2035,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5584.10133,,2022
+2024,2035,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2035,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1228695.95798795,,2022
+2024,2035,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28261.2179562493,,2022
+2024,2035,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1231919.31044315,,2022
+2024,2035,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30100.0,,2022
+2024,2035,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.96,,2022
+2024,2035,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1110008.88750106,,2022
+2024,2035,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24200.0,,2022
+2024,2035,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2035,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7160679.37346103,,2022
+2024,2035,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2035,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2035,20,Moderate,Market,UtilityPV,Class1,capex_mw,791738.277815212,,2022
+2024,2035,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,15021.6763253656,,2022
+2024,2035,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1228695.95798795,,2022
+2024,2035,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28261.2179562493,,2022
+2024,2035,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1231919.31044315,,2022
+2024,2035,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30100.0,,2022
+2024,2035,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.96,,2022
+2024,2035,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1110008.88750106,,2022
+2024,2035,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24200.0,,2022
+2024,2035,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2035,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7160679.37346103,,2022
+2024,2035,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2035,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2035,30,Moderate,Market,UtilityPV,Class1,capex_mw,791738.277815212,,2022
+2024,2035,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,15021.6763253656,,2022
+2024,2035,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1231919.31044315,,2022
+2024,2035,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,30100.0,,2022
+2024,2035,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.96,,2022
+2024,2035,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1110008.88750106,,2022
+2024,2035,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24200.0,,2022
+2024,2035,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2035,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,7160679.37346103,,2022
+2024,2035,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2035,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2036,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,304198.5658,,2022
+2024,2036,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,218912.3302,,2022
+2024,2036,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7604.964145,,2022
+2024,2036,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5472.808256,,2022
+2024,2036,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2036,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1214043.70682119,,2022
+2024,2036,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28060.7069180171,,2022
+2024,2036,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1221778.6811125,,2022
+2024,2036,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29800.0,,2022
+2024,2036,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.95,,2022
+2024,2036,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1100202.56463186,,2022
+2024,2036,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24100.0,,2022
+2024,2036,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2036,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6965388.11782118,,2022
+2024,2036,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2036,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2036,20,Moderate,Market,UtilityPV,Class1,capex_mw,777576.625286723,,2022
+2024,2036,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14869.3180938804,,2022
+2024,2036,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1214043.70682119,,2022
+2024,2036,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,28060.7069180171,,2022
+2024,2036,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1221778.6811125,,2022
+2024,2036,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29800.0,,2022
+2024,2036,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.95,,2022
+2024,2036,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1100202.56463186,,2022
+2024,2036,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24100.0,,2022
+2024,2036,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2036,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6965388.11782118,,2022
+2024,2036,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2036,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2036,30,Moderate,Market,UtilityPV,Class1,capex_mw,777576.625286723,,2022
+2024,2036,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14869.3180938804,,2022
+2024,2036,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1221778.6811125,,2022
+2024,2036,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29800.0,,2022
+2024,2036,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.95,,2022
+2024,2036,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1100202.56463186,,2022
+2024,2036,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,24100.0,,2022
+2024,2036,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2036,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6965388.11782118,,2022
+2024,2036,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2036,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2037,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,301936.8263,,2022
+2024,2037,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,214465.6863,,2022
+2024,2037,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7548.420656,,2022
+2024,2037,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5361.642159,,2022
+2024,2037,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2037,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1199391.45565443,,2022
+2024,2037,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27860.1958797848,,2022
+2024,2037,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1211638.05178185,,2022
+2024,2037,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29600.0,,2022
+2024,2037,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.94,,2022
+2024,2037,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1090507.67724981,,2022
+2024,2037,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23900.0,,2022
+2024,2037,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2037,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6770096.86218133,,2022
+2024,2037,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2037,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2037,20,Moderate,Market,UtilityPV,Class1,capex_mw,763414.972758235,,2022
+2024,2037,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14717.2406362794,,2022
+2024,2037,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1199391.45565443,,2022
+2024,2037,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27860.1958797848,,2022
+2024,2037,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1211638.05178185,,2022
+2024,2037,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29600.0,,2022
+2024,2037,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.94,,2022
+2024,2037,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1090507.67724981,,2022
+2024,2037,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23900.0,,2022
+2024,2037,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2037,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6770096.86218133,,2022
+2024,2037,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2037,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2037,30,Moderate,Market,UtilityPV,Class1,capex_mw,763414.972758235,,2022
+2024,2037,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14717.2406362794,,2022
+2024,2037,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1211638.05178185,,2022
+2024,2037,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29600.0,,2022
+2024,2037,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.94,,2022
+2024,2037,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1090507.67724981,,2022
+2024,2037,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23900.0,,2022
+2024,2037,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2037,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6770096.86218133,,2022
+2024,2037,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2037,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2038,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,299654.7156,,2022
+2024,2038,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,210024.3332,,2022
+2024,2038,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7491.36789,,2022
+2024,2038,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5250.608329,,2022
+2024,2038,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2038,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1184739.20448767,,2022
+2024,2038,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27659.6848415525,,2022
+2024,2038,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1201497.4224512,,2022
+2024,2038,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29400.0,,2022
+2024,2038,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.93,,2022
+2024,2038,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1080701.35438061,,2022
+2024,2038,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23800.0,,2022
+2024,2038,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2038,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6574805.60654149,,2022
+2024,2038,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2038,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2038,20,Moderate,Market,UtilityPV,Class1,capex_mw,749253.320229746,,2022
+2024,2038,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14565.439349712,,2022
+2024,2038,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1184739.20448767,,2022
+2024,2038,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27659.6848415525,,2022
+2024,2038,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1201497.4224512,,2022
+2024,2038,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29400.0,,2022
+2024,2038,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.93,,2022
+2024,2038,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1080701.35438061,,2022
+2024,2038,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23800.0,,2022
+2024,2038,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2038,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6574805.60654149,,2022
+2024,2038,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2038,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2038,30,Moderate,Market,UtilityPV,Class1,capex_mw,749253.320229746,,2022
+2024,2038,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14565.439349712,,2022
+2024,2038,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1201497.4224512,,2022
+2024,2038,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29400.0,,2022
+2024,2038,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.93,,2022
+2024,2038,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1080701.35438061,,2022
+2024,2038,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23800.0,,2022
+2024,2038,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2038,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6574805.60654149,,2022
+2024,2038,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2038,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2039,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,297351.3731,,2022
+2024,2039,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,205588.4942,,2022
+2024,2039,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7433.784327,,2022
+2024,2039,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5139.712355,,2022
+2024,2039,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2039,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1170086.95332091,,2022
+2024,2039,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27459.1738033203,,2022
+2024,2039,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1191245.3576334,,2022
+2024,2039,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29200.0,,2022
+2024,2039,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.91,,2022
+2024,2039,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1070895.03151141,,2022
+2024,2039,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23700.0,,2022
+2024,2039,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2039,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6379514.35090164,,2022
+2024,2039,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2039,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2039,20,Moderate,Market,UtilityPV,Class1,capex_mw,735091.667701258,,2022
+2024,2039,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14413.9097313896,,2022
+2024,2039,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1170086.95332091,,2022
+2024,2039,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27459.1738033203,,2022
+2024,2039,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1191245.3576334,,2022
+2024,2039,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29200.0,,2022
+2024,2039,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.91,,2022
+2024,2039,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1070895.03151141,,2022
+2024,2039,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23700.0,,2022
+2024,2039,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2039,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6379514.35090164,,2022
+2024,2039,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2039,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2039,30,Moderate,Market,UtilityPV,Class1,capex_mw,735091.667701258,,2022
+2024,2039,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14413.9097313896,,2022
+2024,2039,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1191245.3576334,,2022
+2024,2039,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29200.0,,2022
+2024,2039,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.91,,2022
+2024,2039,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1070895.03151141,,2022
+2024,2039,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23700.0,,2022
+2024,2039,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2039,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6379514.35090164,,2022
+2024,2039,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2039,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2040,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,295025.8889,,2022
+2024,2040,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,201158.4058,,2022
+2024,2040,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7375.647223,,2022
+2024,2040,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,5028.960145,,2022
+2024,2040,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2040,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1155434.70215413,,2022
+2024,2040,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27258.662765088,,2022
+2024,2040,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1181104.72830275,,2022
+2024,2040,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29000.0,,2022
+2024,2040,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.9,,2022
+2024,2040,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1061088.70864221,,2022
+2024,2040,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23500.0,,2022
+2024,2040,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2040,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6184223.0952618,,2022
+2024,2040,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2040,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2040,20,Moderate,Market,UtilityPV,Class1,capex_mw,720930.015172769,,2022
+2024,2040,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14262.6473758812,,2022
+2024,2040,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1155434.70215413,,2022
+2024,2040,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27258.662765088,,2022
+2024,2040,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1181104.72830275,,2022
+2024,2040,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29000.0,,2022
+2024,2040,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.9,,2022
+2024,2040,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1061088.70864221,,2022
+2024,2040,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23500.0,,2022
+2024,2040,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2040,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6184223.0952618,,2022
+2024,2040,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2040,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2040,30,Moderate,Market,UtilityPV,Class1,capex_mw,720930.015172769,,2022
+2024,2040,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14262.6473758812,,2022
+2024,2040,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1181104.72830275,,2022
+2024,2040,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,29000.0,,2022
+2024,2040,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.9,,2022
+2024,2040,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1061088.70864221,,2022
+2024,2040,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23500.0,,2022
+2024,2040,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2040,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6184223.0952618,,2022
+2024,2040,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2040,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2041,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,292677.3004,,2022
+2024,2041,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,196734.3179,,2022
+2024,2041,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7316.93251,,2022
+2024,2041,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4918.357949,,2022
+2024,2041,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2041,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1140782.45098737,,2022
+2024,2041,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27058.1517268558,,2022
+2024,2041,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1170964.0989721,,2022
+2024,2041,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28700.0,,2022
+2024,2041,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.89,,2022
+2024,2041,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1051282.38577301,,2022
+2024,2041,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23400.0,,2022
+2024,2041,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2041,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6054028.92483523,,2022
+2024,2041,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2041,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2041,20,Moderate,Market,UtilityPV,Class1,capex_mw,706768.362644281,,2022
+2024,2041,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14111.6479724963,,2022
+2024,2041,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1140782.45098737,,2022
+2024,2041,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,27058.1517268558,,2022
+2024,2041,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1170964.0989721,,2022
+2024,2041,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28700.0,,2022
+2024,2041,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.89,,2022
+2024,2041,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1051282.38577301,,2022
+2024,2041,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23400.0,,2022
+2024,2041,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2041,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6054028.92483523,,2022
+2024,2041,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2041,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2041,30,Moderate,Market,UtilityPV,Class1,capex_mw,706768.362644281,,2022
+2024,2041,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,14111.6479724963,,2022
+2024,2041,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1170964.0989721,,2022
+2024,2041,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28700.0,,2022
+2024,2041,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.89,,2022
+2024,2041,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1051282.38577301,,2022
+2024,2041,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23400.0,,2022
+2024,2041,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2041,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,6054028.92483523,,2022
+2024,2041,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2041,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2042,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,290304.5883,,2022
+2024,2042,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,192316.4954,,2022
+2024,2042,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7257.614708,,2022
+2024,2042,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4807.912384,,2022
+2024,2042,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2042,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1126130.19982061,,2022
+2024,2042,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26857.6406886235,,2022
+2024,2042,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1160823.46964145,,2022
+2024,2042,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28500.0,,2022
+2024,2042,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.88,,2022
+2024,2042,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1041476.06290381,,2022
+2024,2042,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23200.0,,2022
+2024,2042,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2042,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5923834.75440867,,2022
+2024,2042,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2042,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2042,20,Moderate,Market,UtilityPV,Class1,capex_mw,692606.710115792,,2022
+2024,2042,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13960.9073027515,,2022
+2024,2042,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1126130.19982061,,2022
+2024,2042,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26857.6406886235,,2022
+2024,2042,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1160823.46964145,,2022
+2024,2042,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28500.0,,2022
+2024,2042,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.88,,2022
+2024,2042,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1041476.06290381,,2022
+2024,2042,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23200.0,,2022
+2024,2042,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2042,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5923834.75440867,,2022
+2024,2042,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2042,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2042,30,Moderate,Market,UtilityPV,Class1,capex_mw,692606.710115792,,2022
+2024,2042,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13960.9073027515,,2022
+2024,2042,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1160823.46964145,,2022
+2024,2042,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28500.0,,2022
+2024,2042,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.88,,2022
+2024,2042,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1041476.06290381,,2022
+2024,2042,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23200.0,,2022
+2024,2042,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2042,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5923834.75440867,,2022
+2024,2042,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2042,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2043,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,287906.6726,,2022
+2024,2043,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,187905.2185,,2022
+2024,2043,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7197.666815,,2022
+2024,2043,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4697.630463,,2022
+2024,2043,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2043,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1111477.94865385,,2022
+2024,2043,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26657.1296503912,,2022
+2024,2043,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1150682.8403108,,2022
+2024,2043,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28300.0,,2022
+2024,2043,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.87,,2022
+2024,2043,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1031669.74003461,,2022
+2024,2043,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23100.0,,2022
+2024,2043,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2043,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5793640.5839821,,2022
+2024,2043,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2043,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2043,20,Moderate,Market,UtilityPV,Class1,capex_mw,678445.057587303,,2022
+2024,2043,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13810.4212379187,,2022
+2024,2043,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1111477.94865385,,2022
+2024,2043,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26657.1296503912,,2022
+2024,2043,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1150682.8403108,,2022
+2024,2043,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28300.0,,2022
+2024,2043,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.87,,2022
+2024,2043,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1031669.74003461,,2022
+2024,2043,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23100.0,,2022
+2024,2043,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2043,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5793640.5839821,,2022
+2024,2043,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2043,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2043,30,Moderate,Market,UtilityPV,Class1,capex_mw,678445.057587303,,2022
+2024,2043,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13810.4212379187,,2022
+2024,2043,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1150682.8403108,,2022
+2024,2043,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28300.0,,2022
+2024,2043,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.87,,2022
+2024,2043,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1031669.74003461,,2022
+2024,2043,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,23100.0,,2022
+2024,2043,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2043,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5793640.5839821,,2022
+2024,2043,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2043,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2044,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,285482.4077,,2022
+2024,2044,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,183500.785,,2022
+2024,2044,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7137.060191,,2022
+2024,2044,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4587.519626,,2022
+2024,2044,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2044,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1096825.69748709,,2022
+2024,2044,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26456.618612159,,2022
+2024,2044,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1140542.21098015,,2022
+2024,2044,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28100.0,,2022
+2024,2044,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.86,,2022
+2024,2044,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1021863.41716541,,2022
+2024,2044,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22900.0,,2022
+2024,2044,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2044,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5663446.41355554,,2022
+2024,2044,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2044,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2044,20,Moderate,Market,UtilityPV,Class1,capex_mw,664283.405058815,,2022
+2024,2044,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13660.18573665,,2022
+2024,2044,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1096825.69748709,,2022
+2024,2044,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26456.618612159,,2022
+2024,2044,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1140542.21098015,,2022
+2024,2044,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28100.0,,2022
+2024,2044,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.86,,2022
+2024,2044,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1021863.41716541,,2022
+2024,2044,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22900.0,,2022
+2024,2044,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2044,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5663446.41355554,,2022
+2024,2044,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2044,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2044,30,Moderate,Market,UtilityPV,Class1,capex_mw,664283.405058815,,2022
+2024,2044,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13660.18573665,,2022
+2024,2044,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1140542.21098015,,2022
+2024,2044,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,28100.0,,2022
+2024,2044,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.86,,2022
+2024,2044,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1021863.41716541,,2022
+2024,2044,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22900.0,,2022
+2024,2044,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2044,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5663446.41355554,,2022
+2024,2044,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2044,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2045,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,283030.5775,,2022
+2024,2045,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,179103.5106,,2022
+2024,2045,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7075.764437,,2022
+2024,2045,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4477.587766,,2022
+2024,2045,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2045,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1082173.44632033,,2022
+2024,2045,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26256.1075739267,,2022
+2024,2045,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1130401.5816495,,2022
+2024,2045,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27800.0,,2022
+2024,2045,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.85,,2022
+2024,2045,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1012168.52978336,,2022
+2024,2045,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22800.0,,2022
+2024,2045,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2045,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5533252.24312897,,2022
+2024,2045,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2045,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2045,20,Moderate,Market,UtilityPV,Class1,capex_mw,650121.752530326,,2022
+2024,2045,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13510.1968426785,,2022
+2024,2045,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1082173.44632033,,2022
+2024,2045,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26256.1075739267,,2022
+2024,2045,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1130401.5816495,,2022
+2024,2045,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27800.0,,2022
+2024,2045,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.85,,2022
+2024,2045,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1012168.52978336,,2022
+2024,2045,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22800.0,,2022
+2024,2045,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2045,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5533252.24312897,,2022
+2024,2045,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2045,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2045,30,Moderate,Market,UtilityPV,Class1,capex_mw,650121.752530326,,2022
+2024,2045,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13510.1968426785,,2022
+2024,2045,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1130401.5816495,,2022
+2024,2045,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27800.0,,2022
+2024,2045,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.85,,2022
+2024,2045,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1012168.52978336,,2022
+2024,2045,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22800.0,,2022
+2024,2045,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2045,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5533252.24312897,,2022
+2024,2045,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2045,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2046,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,280549.89,,2022
+2024,2046,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,174713.7309,,2022
+2024,2046,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,7013.747251,,2022
+2024,2046,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4367.843273,,2022
+2024,2046,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2046,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1067521.19515356,,2022
+2024,2046,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26055.5965356945,,2022
+2024,2046,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1120260.95231886,,2022
+2024,2046,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27600.0,,2022
+2024,2046,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.83,,2022
+2024,2046,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1002362.20691417,,2022
+2024,2046,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22600.0,,2022
+2024,2046,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2046,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5403058.07270241,,2022
+2024,2046,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2046,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2046,20,Moderate,Market,UtilityPV,Class1,capex_mw,635960.100001838,,2022
+2024,2046,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13360.4506825913,,2022
+2024,2046,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1067521.19515356,,2022
+2024,2046,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,26055.5965356945,,2022
+2024,2046,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1120260.95231886,,2022
+2024,2046,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27600.0,,2022
+2024,2046,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.83,,2022
+2024,2046,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1002362.20691417,,2022
+2024,2046,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22600.0,,2022
+2024,2046,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2046,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5403058.07270241,,2022
+2024,2046,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2046,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2046,30,Moderate,Market,UtilityPV,Class1,capex_mw,635960.100001838,,2022
+2024,2046,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13360.4506825913,,2022
+2024,2046,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1120260.95231886,,2022
+2024,2046,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27600.0,,2022
+2024,2046,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.83,,2022
+2024,2046,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,1002362.20691417,,2022
+2024,2046,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22600.0,,2022
+2024,2046,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2046,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5403058.07270241,,2022
+2024,2046,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2046,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2047,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,278038.9713,,2022
+2024,2047,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,170331.8027,,2022
+2024,2047,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,6950.974282,,2022
+2024,2047,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4258.295069,,2022
+2024,2047,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2047,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1052868.94398681,,2022
+2024,2047,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25855.0854974622,,2022
+2024,2047,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1110120.32298821,,2022
+2024,2047,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27400.0,,2022
+2024,2047,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.82,,2022
+2024,2047,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,992555.884044966,,2022
+2024,2047,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22500.0,,2022
+2024,2047,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2047,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5272863.90227585,,2022
+2024,2047,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2047,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2047,20,Moderate,Market,UtilityPV,Class1,capex_mw,621798.447473349,,2022
+2024,2047,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13210.9434636714,,2022
+2024,2047,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1052868.94398681,,2022
+2024,2047,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25855.0854974622,,2022
+2024,2047,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1110120.32298821,,2022
+2024,2047,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27400.0,,2022
+2024,2047,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.82,,2022
+2024,2047,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,992555.884044966,,2022
+2024,2047,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22500.0,,2022
+2024,2047,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2047,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5272863.90227585,,2022
+2024,2047,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2047,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2047,30,Moderate,Market,UtilityPV,Class1,capex_mw,621798.447473349,,2022
+2024,2047,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13210.9434636714,,2022
+2024,2047,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1110120.32298821,,2022
+2024,2047,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27400.0,,2022
+2024,2047,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.82,,2022
+2024,2047,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,992555.884044966,,2022
+2024,2047,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22500.0,,2022
+2024,2047,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2047,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5272863.90227585,,2022
+2024,2047,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2047,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2048,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,275496.3585,,2022
+2024,2048,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,165958.106,,2022
+2024,2048,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,6887.408962,,2022
+2024,2048,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4148.95265,,2022
+2024,2048,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2048,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1038216.69282004,,2022
+2024,2048,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25654.57445923,,2022
+2024,2048,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1099979.69365756,,2022
+2024,2048,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27200.0,,2022
+2024,2048,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.81,,2022
+2024,2048,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,982749.561175767,,2022
+2024,2048,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22300.0,,2022
+2024,2048,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2048,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5142669.73184928,,2022
+2024,2048,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2048,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2048,20,Moderate,Market,UtilityPV,Class1,capex_mw,607636.79494486,,2022
+2024,2048,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13061.6714718074,,2022
+2024,2048,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1038216.69282004,,2022
+2024,2048,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25654.57445923,,2022
+2024,2048,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1099979.69365756,,2022
+2024,2048,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27200.0,,2022
+2024,2048,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.81,,2022
+2024,2048,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,982749.561175767,,2022
+2024,2048,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22300.0,,2022
+2024,2048,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2048,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5142669.73184928,,2022
+2024,2048,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2048,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2048,30,Moderate,Market,UtilityPV,Class1,capex_mw,607636.79494486,,2022
+2024,2048,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,13061.6714718074,,2022
+2024,2048,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1099979.69365756,,2022
+2024,2048,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27200.0,,2022
+2024,2048,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.81,,2022
+2024,2048,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,982749.561175767,,2022
+2024,2048,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22300.0,,2022
+2024,2048,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2048,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5142669.73184928,,2022
+2024,2048,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2048,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2049,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,272920.493,,2022
+2024,2049,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,161593.0455,,2022
+2024,2049,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,6823.012325,,2022
+2024,2049,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,4039.826138,,2022
+2024,2049,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2049,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1023564.44165328,,2022
+2024,2049,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25454.0634209977,,2022
+2024,2049,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1089839.06432691,,2022
+2024,2049,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27000.0,,2022
+2024,2049,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.8,,2022
+2024,2049,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,972943.238306568,,2022
+2024,2049,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22200.0,,2022
+2024,2049,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2049,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5012475.56142272,,2022
+2024,2049,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2049,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2049,20,Moderate,Market,UtilityPV,Class1,capex_mw,593475.142416372,,2022
+2024,2049,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,12912.6310694675,,2022
+2024,2049,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1023564.44165328,,2022
+2024,2049,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25454.0634209977,,2022
+2024,2049,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1089839.06432691,,2022
+2024,2049,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27000.0,,2022
+2024,2049,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.8,,2022
+2024,2049,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,972943.238306568,,2022
+2024,2049,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22200.0,,2022
+2024,2049,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2049,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5012475.56142272,,2022
+2024,2049,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2049,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2049,30,Moderate,Market,UtilityPV,Class1,capex_mw,593475.142416372,,2022
+2024,2049,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,12912.6310694675,,2022
+2024,2049,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1089839.06432691,,2022
+2024,2049,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,27000.0,,2022
+2024,2049,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.8,,2022
+2024,2049,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,972943.238306568,,2022
+2024,2049,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22200.0,,2022
+2024,2049,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2049,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,5012475.56142272,,2022
+2024,2049,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2049,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2050,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mw,270309.7124,,2022
+2024,2050,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,capex_mwh,157237.053,,2022
+2024,2050,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mw,6757.74281,,2022
+2024,2050,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,fixed_o_m_mwh,3930.926325,,2022
+2024,2050,15,Moderate,Market,Utility-Scale Battery Storage,Lithium Ion,variable_o_m_mwh,0.0,,2022
+2024,2050,20,Moderate,Market,LandbasedWind,Class3,capex_mw,1008912.19048652,,2022
+2024,2050,20,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25253.5523827654,,2022
+2024,2050,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1079698.43499626,,2022
+2024,2050,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,26700.0,,2022
+2024,2050,20,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.79,,2022
+2024,2050,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,963136.915437368,,2022
+2024,2050,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22000.0,,2022
+2024,2050,20,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2050,20,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,4882281.39099616,,2022
+2024,2050,20,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2050,20,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2050,20,Moderate,Market,UtilityPV,Class1,capex_mw,579313.489887884,,2022
+2024,2050,20,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,12763.8186937359,,2022
+2024,2050,30,Moderate,Market,LandbasedWind,Class3,capex_mw,1008912.19048652,,2022
+2024,2050,30,Moderate,Market,LandbasedWind,Class3,fixed_o_m_mw,25253.5523827654,,2022
+2024,2050,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1079698.43499626,,2022
+2024,2050,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,26700.0,,2022
+2024,2050,30,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.79,,2022
+2024,2050,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,963136.915437368,,2022
+2024,2050,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22000.0,,2022
+2024,2050,30,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2050,30,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,4882281.39099616,,2022
+2024,2050,30,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2050,30,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022
+2024,2050,30,Moderate,Market,UtilityPV,Class1,capex_mw,579313.489887884,,2022
+2024,2050,30,Moderate,Market,UtilityPV,Class1,fixed_o_m_mw,12763.8186937359,,2022
+2024,2050,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),capex_mw,1079698.43499626,,2022
+2024,2050,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),fixed_o_m_mw,26700.0,,2022
+2024,2050,55,Moderate,Market,NaturalGas,2-on-1 Combined Cycle (F-Frame),variable_o_m_mwh,1.79,,2022
+2024,2050,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),capex_mw,963136.915437368,,2022
+2024,2050,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),fixed_o_m_mw,22000.0,,2022
+2024,2050,55,Moderate,Market,NaturalGas,Combustion Turbine (F-Frame),variable_o_m_mwh,6.94,,2022
+2024,2050,60,Moderate,Market,Nuclear,Nuclear - Large,capex_mw,4882281.39099616,,2022
+2024,2050,60,Moderate,Market,Nuclear,Nuclear - Large,fixed_o_m_mw,175000.0,,2022
+2024,2050,60,Moderate,Market,Nuclear,Nuclear - Large,variable_o_m_mwh,2.8,,2022

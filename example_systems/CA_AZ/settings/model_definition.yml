@@ -1,43 +1,44 @@
 # REGIONS
-# Select the regions and any regional aggregations that should be performed.
-# This currenly only works for IPM regions, either as the regions used in GenX or as
-# aggregations.
-
+# Model regions are an aggregation of 8 ReEDS balancing areas (the base
+# geography used throughout the data tables). The ReEDS BA names are verified in
+# PowerGenome-data/data/hierarchy.csv (CA BAs p8-p11, AZ BAs p27-p30).
 model_regions:
-  - CA_N
-  - CA_S
-  - WECC_AZ
+  - CA
+  - AZ
 
-# Comment out this setting if no aggregated regions are included in the study.
 region_aggregations:
-  CA_N: [WEC_CALN, WEC_BANC]
-  CA_S: [WEC_LADW, WECC_SCE, WEC_SDGE, WECC_IID]
+  CA: [p8, p9, p10, p11]
+  AZ: [p27, p28, p29, p30]
 
 # Dollar year that all outputs will be converted to
-target_usd_year: 2020
+target_usd_year: 2024
 
 # Model year(s) and first planning year(s)
 # Each of these parameters should be a list.
 # - "model_year": The final year in each planning period, used to calculate load
-# profiles, etc
+# profiles, etc.
 # - "model_first_planning_year": The first year of each planning period. Capex for
 # new-build generators from ATB are an average of costs from first to last (inclusive).
 model_year: [2030, 2045]
-model_first_planning_year: [2020, 2031]
+model_first_planning_year: [2025, 2031]
 
 # HOURS OFFSET FROM UTC
-# All time profile data are stored in UTC. Provide an offset for the model timezone.
-# US East cost is UTC-5, Pacific is UTC-8
-utc_offset: -5
+# All time profile data are stored relative to the model's local hour; provide the
+# UTC offset for the model timezone. WECC is UTC-8 (Pacific, prevailing load center).
+utc_offset: -8
 
+# Derate thermal capacity used to meet planning reserves to account for outages
+cap_res_network_derate_default: 0.95
+
+# Planning reserve margin targets by capacity-reserve constraint and model region.
+# CA (p8-p11) uses the WECC/NERC 2024 planning reserve of 16.4%; AZ (p27-p30) uses
+# 10.1%. These expand, along with `capacity_reserve_values` in resources.yml, to
+# CapRes_1/CapRes_3 (credit value) columns on each generator (see generator_columns).
 regional_capacity_reserves:
   CapRes_1:
-    CA_N: 0.137
-    CA_S: 0.137
-  CapRes_2:
-    WECC_AZ: 0.1
-
-cap_res_network_derate_default: 0.95
+    CA: 0.164
+  CapRes_3:
+    AZ: 0.101
 
 ######################################################################################
 # MODEL OUTPUTS
@@ -53,7 +54,7 @@ generator_columns: [
             "Zone",
             "Num_VRE_Bins",
             "CapRes_1",
-            "CapRes_2",
+            "CapRes_3",
             "THERM",
             "VRE",
             "MUST_RUN",
@@ -92,7 +93,6 @@ generator_columns: [
             "Var_OM_Cost_per_MWh_In",
             "Inv_Cost_Charge_per_MWyr",
             "Fixed_OM_Cost_Charge_per_MWyr",
-            # "Externality_cost_MWh",
             "Start_Cost_per_MW",
             "Start_Fuel_MMBTU_per_MW",
             "Heat_Rate_MMBTU_per_MWh",

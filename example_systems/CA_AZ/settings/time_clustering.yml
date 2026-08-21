@@ -1,5 +1,12 @@
-# Time clustering/reduction parameters
-reduce_time_domain: false # If the generator and load profiles should be clustered
+# Time clustering/reduction parameters.
+# The input time series (load, VRE profiles, distributed generation) were already
+# downsampled during data preparation to a shared 240-hour (10-day) time index -
+# the first 240 consecutive hours of weather year 2012 (Jan 1-10), preserving the
+# full diurnal cycle across 10 full days. The SAME 240-hour index is used for all
+# regions and all time-series files, so no additional clustering is applied here.
+# Set reduce_time_domain to true (with time_domain_periods etc.) if you want
+# PowerGenome to reduce the time domain further.
+reduce_time_domain: false
 time_domain_periods: 4 # The number of periods/clusters
 time_domain_days_per_period: 5 # The number of 24 hour days in each period/cluster
 include_peak_day: true # If the system-wide peak load days should always be included
