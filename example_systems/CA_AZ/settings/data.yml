@@ -5,12 +5,14 @@
 # (the first 10 days of weather year 2012) and combined with dollar-year metadata.
 
 # Resource groups define site-specific data (LCOE, capacity, interconnection cost,
-# hourly profile) for new-build solar and onshore wind. PowerGenome only applies
-# Path() (no base directory) to these two keys, so they must be absolute paths (or
-# relative to where run_powergenome is invoked). Profiles colocate with the metadata
-# in the same resource_groups/ folder, so both keys point there.
-RESOURCE_GROUPS: /Users/gs5183/Documents/github/copilot-worktrees/PowerGenome-examples/gschivley-probable-tribble/example_systems/CA_AZ/resource_groups
-RESOURCE_GROUP_PROFILES: /Users/gs5183/Documents/github/copilot-worktrees/PowerGenome-examples/gschivley-probable-tribble/example_systems/CA_AZ/resource_groups
+# hourly profile) for new-build solar and onshore wind. Unlike data_location /
+# input_folder, PowerGenome applies only Path() (no base directory) to these two
+# keys, so they resolve relative to the directory run_powergenome is invoked from
+# (the repo root in the standard invocation). They are given relative to the repo
+# root so no machine-specific absolute paths appear in this file. Profiles colocate
+# with the metadata in the same resource_groups/ folder, so both keys point there.
+RESOURCE_GROUPS: example_systems/CA_AZ/resource_groups
+RESOURCE_GROUP_PROFILES: example_systems/CA_AZ/resource_groups
 
 # Location of the data table files (relative to the folder that contains the
 # settings folder, i.e. example_systems/CA_AZ/).
