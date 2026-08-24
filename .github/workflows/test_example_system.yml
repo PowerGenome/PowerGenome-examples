@@ -45,8 +45,14 @@ jobs:
 
       - name: Run PowerGenome (TX-3-zone)
         run: |
-          cd ${{ github.workspace }}/current-repo/example_systems/TX-3-zone
-          run_powergenome -sf settings -rf genx-test -c base
+          cd ${{ github.workspace }}/current-repo
+          # Settings are a directory, so all settings file paths (data_location,
+          # input_folder, *_table, etc.) resolve relative to the folder that
+          # contains the settings dir (example_systems/TX-3-zone/). RESOURCE_GROUPS
+          # and RESOURCE_GROUP_PROFILES only get Path() applied (no base-dir
+          # resolution), so they resolve relative to this CWD (the repo root) --
+          # hence the full example_systems/TX-3-zone/... prefix below.
+          run_powergenome -sf example_systems/TX-3-zone/settings -rf example_systems/TX-3-zone/genx-test -c base
 
       - name: Set up Julia
         uses: julia-actions/setup-julia@v2
@@ -57,7 +63,12 @@ jobs:
       - name: Install GenX.jl
         run: |
           export GENX_PRECOMPILE=false
-          julia --project -e 'using Pkg; Pkg.add(name="GenX")'
+          # Pin the GenX version for reproducibility. Both TX-3-zone planning
+          # periods (2030/2045) have been verified to solve OPTIMAL on 0.4.3 and
+          # 0.4.5 (HiGHS). Newer GenX releases are stricter about the Network.csv
+          # zone-declaration rows the PowerGenome writer emits, so do not let the
+          # version drift past the tested range.
+          julia --project -e 'using Pkg; Pkg.add(name="GenX", version="0.4.5")'
 
       - name: Run GenX on both planning periods
         run: |
