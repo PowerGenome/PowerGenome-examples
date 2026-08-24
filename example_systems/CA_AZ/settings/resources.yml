@@ -168,7 +168,7 @@ renewables_clusters:
 # Planning reserve credit values by capacity-reserve constraint. Nested format: each
 # constraint maps technology names to the fraction of capacity that counts toward
 # that reserve margin. Combined with regional_capacity_reserves in model_definition.yml,
-# these expand into the CapRes_1/CapRes_3 columns.
+# these expand into the CapRes_1/CapRes_2 columns.
 capacity_reserve_values:
   CapRes_1:
     Conventional Steam Coal: 0.9
@@ -206,7 +206,7 @@ capacity_reserve_values:
     Run of River Hydroelectric: 0.8
     Battery: 0.95
     Hydroelectric Pumped Storage: 0.95
-  CapRes_3:
+  CapRes_2:
     Conventional Steam Coal: 0.9
     Natural Gas Fired Combined Cycle: 0.9
     Natural Gas Fired Combustion Turbine: 0.9

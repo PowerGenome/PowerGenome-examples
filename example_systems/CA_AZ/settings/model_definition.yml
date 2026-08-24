@@ -33,11 +33,11 @@ cap_res_network_derate_default: 0.95
 # Planning reserve margin targets by capacity-reserve constraint and model region.
 # CA (p8-p11) uses the WECC/NERC 2024 planning reserve of 16.4%; AZ (p27-p30) uses
 # 10.1%. These expand, along with `capacity_reserve_values` in resources.yml, to
-# CapRes_1/CapRes_3 (credit value) columns on each generator (see generator_columns).
+# CapRes_1/CapRes_2 (credit value) columns on each generator (see generator_columns).
 regional_capacity_reserves:
   CapRes_1:
     CA: 0.164
-  CapRes_3:
+  CapRes_2:
     AZ: 0.101
 
 ######################################################################################
@@ -54,7 +54,7 @@ generator_columns: [
             "Zone",
             "Num_VRE_Bins",
             "CapRes_1",
-            "CapRes_3",
+            "CapRes_2",
             "THERM",
             "VRE",
             "MUST_RUN",
