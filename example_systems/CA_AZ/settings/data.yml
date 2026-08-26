@@ -31,5 +31,3 @@ demand_table: demand_load.csv
 regional_cost_factor_table: regional_cost_multipliers.csv
 distributed_capacity_table: distributed_capacity.csv
 distributed_profile_table: distributed_profiles.csv
-
-enable_timing: true

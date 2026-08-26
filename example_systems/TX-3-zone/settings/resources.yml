@@ -12,9 +12,6 @@
 # of thermal plant as a default and then specify specific values for any regions
 # that are different.
 
-# Include units with planned/age-based retirements when determining clusters across periods
-cluster_with_retired_gens: true
-
 # ** Any technologies not included in num_clusters will be omitted **
 num_clusters:
   Conventional Steam Coal: 1
@@ -59,12 +56,6 @@ regional_no_grouping: ~
 alt_num_clusters: ~
 
 
-# Derate the capacity of technologies that will be set as MUST_RUN in GenX by their
-# historical capacity factor.
-derate_techs:
-  - Small Hydroelectric
-  - Biomass
-
 # Default value to limit the years used to calculate capacity factors.
 # PUDL currently has generation data from 2011 through the most recent final release of 923/860.
 capacity_factor_default_year_filter: [2016, 2017, 2018, 2019, 2020, 2021]
@@ -100,9 +91,6 @@ energy_storage_duration:
   Hydroelectric Pumped Storage: 15.5
   Batteries: 2
 
-
-# The year of NREL ATB data to use for matching existing generators (O&M costs)
-atb_existing_year: 2020
 
 resource_attr_modifiers:
   conventional steam coal:
@@ -188,9 +176,6 @@ modified_new_resources:
 ######################################################
 # THESE PARAMETERS ARE RARELY MODIFIED FOR NEW STUDIES
 ######################################################
-# ATB doesn't have a WACC for battery tech. Need to provide a value here.
-atb_battery_wacc: UtilityPV
-
 # Additional technologies can be specified in a csv file under data/additional_technologies
 # Provide the filename (no path needed) in the parameter below or "~" for none.
 additional_technologies_fn: ~

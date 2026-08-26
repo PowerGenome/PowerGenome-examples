@@ -40,5 +40,3 @@ demand_table: reeds_load_tx_3_zone.csv
 regional_cost_factor_table: regional_cost_multipliers_tx_3_zone.csv
 distributed_capacity_table: distributed_capacity_tx_3_zone.csv
 distributed_profile_table: distributed_profiles_tx_3_zone.csv
-
-enable_timing: true
