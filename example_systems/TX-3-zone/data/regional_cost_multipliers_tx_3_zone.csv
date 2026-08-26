@@ -1,0 +1,267 @@
+region,technology,city,state,value,match_method,distance_km
+p60,Coal_new,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Coal_95%-CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Coal_99%-CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Coal_Retrofits_95%-CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Coal_Retrofits_90%-CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Combustion Turbine - Simple Cycle (Aeroderivative),Oklahoma City,Oklahoma,0.97,nearest_same_state,353.75
+p60,NaturalGas_Combustion Turbine,Oklahoma City,Oklahoma,0.96,nearest_same_state,353.75
+p60,NaturalGas_F-Frame CT,Oklahoma City,Oklahoma,0.96,nearest_same_state,353.75
+p60,NaturalGas_2-on-1 Combined Cycle,Oklahoma City,Oklahoma,0.96,nearest_same_state,353.75
+p60,NaturalGas_F-Frame CC,Oklahoma City,Oklahoma,0.96,nearest_same_state,353.75
+p60,NaturalGas_H-Frame CC,Oklahoma City,Oklahoma,0.96,nearest_same_state,353.75
+p60,NaturalGas_1-on-1 Combined Cycle,Oklahoma City,Oklahoma,0.96,nearest_same_state,353.75
+p60,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_F-Frame CC 95% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_H-Frame CC 95% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_F-Frame CC 97% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,NaturalGas_H-Frame CC 97% CCS,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Biopower_Dedicated,Oklahoma City,Oklahoma,0.95,nearest_same_state,353.75
+p60,Nuclear_Nuclear,Oklahoma City,Oklahoma,0.97,nearest_same_state,353.75
+p60,Nuclear_Nuclear - Large,Oklahoma City,Oklahoma,0.97,nearest_same_state,353.75
+p60,Nuclear_SMR,Oklahoma City,Oklahoma,0.97,nearest_same_state,353.75
+p60,Nuclear_Nuclear - Small,Oklahoma City,Oklahoma,0.97,nearest_same_state,353.75
+p60,Geothermal,Oklahoma City,Oklahoma,,nearest_same_state,353.75
+p60,Hydropower,Oklahoma City,Oklahoma,,nearest_same_state,353.75
+p60,Pumped Storage Hydropower,Oklahoma City,Oklahoma,,nearest_same_state,353.75
+p60,LandBasedWind,Oklahoma City,Oklahoma,0.97,nearest_same_state,353.75
+p60,Onshore Wind Repowering/Retrofit,Oklahoma City,Oklahoma,0.98,nearest_same_state,353.75
+p60,OffshoreWind,Oklahoma City,Oklahoma,,nearest_same_state,353.75
+p60,UtilityPV,Oklahoma City,Oklahoma,0.98,nearest_same_state,353.75
+p60,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Oklahoma City,Oklahoma,0.98,nearest_same_state,353.75
+p60,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Oklahoma City,Oklahoma,0.98,nearest_same_state,353.75
+p60,Battery_,Oklahoma City,Oklahoma,0.99,nearest_same_state,353.75
+p60,Utility-Scale Battery Storage,Oklahoma City,Oklahoma,0.99,nearest_same_state,353.75
+p61,Coal_new,Albuquerque,New Mexico,1.03,nearest_same_state,618.67
+p61,Coal_95%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,618.67
+p61,Coal_99%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,618.67
+p61,Coal_Retrofits_95%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,618.67
+p61,Coal_Retrofits_90%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,618.67
+p61,Combustion Turbine - Simple Cycle (Aeroderivative),Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_Combustion Turbine,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_F-Frame CT,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_2-on-1 Combined Cycle,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_F-Frame CC,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_H-Frame CC,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_1-on-1 Combined Cycle,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_F-Frame CC 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_H-Frame CC 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_F-Frame CC 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,NaturalGas_H-Frame CC 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,Biopower_Dedicated,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,Nuclear_Nuclear,Albuquerque,New Mexico,1.07,nearest_same_state,618.67
+p61,Nuclear_Nuclear - Large,Albuquerque,New Mexico,1.07,nearest_same_state,618.67
+p61,Nuclear_SMR,Albuquerque,New Mexico,1.03,nearest_same_state,618.67
+p61,Nuclear_Nuclear - Small,Albuquerque,New Mexico,1.03,nearest_same_state,618.67
+p61,Geothermal,Albuquerque,New Mexico,,nearest_same_state,618.67
+p61,Hydropower,Albuquerque,New Mexico,,nearest_same_state,618.67
+p61,Pumped Storage Hydropower,Albuquerque,New Mexico,,nearest_same_state,618.67
+p61,LandBasedWind,Albuquerque,New Mexico,1.02,nearest_same_state,618.67
+p61,Onshore Wind Repowering/Retrofit,Albuquerque,New Mexico,1.03,nearest_same_state,618.67
+p61,OffshoreWind,Albuquerque,New Mexico,,nearest_same_state,618.67
+p61,UtilityPV,Albuquerque,New Mexico,1.01,nearest_same_state,618.67
+p61,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Albuquerque,New Mexico,1.02,nearest_same_state,618.67
+p61,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Albuquerque,New Mexico,1.02,nearest_same_state,618.67
+p61,Battery_,Albuquerque,New Mexico,1.03,nearest_same_state,618.67
+p61,Utility-Scale Battery Storage,Albuquerque,New Mexico,1.03,nearest_same_state,618.67
+p62,Coal_new,Albuquerque,New Mexico,1.03,nearest_same_state,540.12
+p62,Coal_95%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,540.12
+p62,Coal_99%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,540.12
+p62,Coal_Retrofits_95%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,540.12
+p62,Coal_Retrofits_90%-CCS,Albuquerque,New Mexico,1.04,nearest_same_state,540.12
+p62,Combustion Turbine - Simple Cycle (Aeroderivative),Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_Combustion Turbine,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_F-Frame CT,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_2-on-1 Combined Cycle,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_F-Frame CC,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_H-Frame CC,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_1-on-1 Combined Cycle,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_F-Frame CC 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_H-Frame CC 95% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_F-Frame CC 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,NaturalGas_H-Frame CC 97% CCS,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,Biopower_Dedicated,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,Nuclear_Nuclear,Albuquerque,New Mexico,1.07,nearest_same_state,540.12
+p62,Nuclear_Nuclear - Large,Albuquerque,New Mexico,1.07,nearest_same_state,540.12
+p62,Nuclear_SMR,Albuquerque,New Mexico,1.03,nearest_same_state,540.12
+p62,Nuclear_Nuclear - Small,Albuquerque,New Mexico,1.03,nearest_same_state,540.12
+p62,Geothermal,Albuquerque,New Mexico,,nearest_same_state,540.12
+p62,Hydropower,Albuquerque,New Mexico,,nearest_same_state,540.12
+p62,Pumped Storage Hydropower,Albuquerque,New Mexico,,nearest_same_state,540.12
+p62,LandBasedWind,Albuquerque,New Mexico,1.02,nearest_same_state,540.12
+p62,Onshore Wind Repowering/Retrofit,Albuquerque,New Mexico,1.03,nearest_same_state,540.12
+p62,OffshoreWind,Albuquerque,New Mexico,,nearest_same_state,540.12
+p62,UtilityPV,Albuquerque,New Mexico,1.01,nearest_same_state,540.12
+p62,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Albuquerque,New Mexico,1.02,nearest_same_state,540.12
+p62,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Albuquerque,New Mexico,1.02,nearest_same_state,540.12
+p62,Battery_,Albuquerque,New Mexico,1.03,nearest_same_state,540.12
+p62,Utility-Scale Battery Storage,Albuquerque,New Mexico,1.03,nearest_same_state,540.12
+p63,Coal_new,Houston,Texas,0.9,nearest_same_state,341.28
+p63,Coal_95%-CCS,Houston,Texas,0.9,nearest_same_state,341.28
+p63,Coal_99%-CCS,Houston,Texas,0.9,nearest_same_state,341.28
+p63,Coal_Retrofits_95%-CCS,Houston,Texas,0.9,nearest_same_state,341.28
+p63,Coal_Retrofits_90%-CCS,Houston,Texas,0.9,nearest_same_state,341.28
+p63,Combustion Turbine - Simple Cycle (Aeroderivative),Houston,Texas,0.95,nearest_same_state,341.28
+p63,NaturalGas_Combustion Turbine,Houston,Texas,0.94,nearest_same_state,341.28
+p63,NaturalGas_F-Frame CT,Houston,Texas,0.94,nearest_same_state,341.28
+p63,NaturalGas_2-on-1 Combined Cycle,Houston,Texas,0.93,nearest_same_state,341.28
+p63,NaturalGas_F-Frame CC,Houston,Texas,0.93,nearest_same_state,341.28
+p63,NaturalGas_H-Frame CC,Houston,Texas,0.93,nearest_same_state,341.28
+p63,NaturalGas_1-on-1 Combined Cycle,Houston,Texas,0.93,nearest_same_state,341.28
+p63,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_F-Frame CC 95% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_H-Frame CC 95% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_F-Frame CC 97% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,NaturalGas_H-Frame CC 97% CCS,Houston,Texas,0.91,nearest_same_state,341.28
+p63,Biopower_Dedicated,Houston,Texas,0.9,nearest_same_state,341.28
+p63,Nuclear_Nuclear,Houston,Texas,0.95,nearest_same_state,341.28
+p63,Nuclear_Nuclear - Large,Houston,Texas,0.95,nearest_same_state,341.28
+p63,Nuclear_SMR,Houston,Texas,0.95,nearest_same_state,341.28
+p63,Nuclear_Nuclear - Small,Houston,Texas,0.95,nearest_same_state,341.28
+p63,Geothermal,Houston,Texas,,nearest_same_state,341.28
+p63,Hydropower,Houston,Texas,,nearest_same_state,341.28
+p63,Pumped Storage Hydropower,Houston,Texas,,nearest_same_state,341.28
+p63,LandBasedWind,Houston,Texas,0.95,nearest_same_state,341.28
+p63,Onshore Wind Repowering/Retrofit,Houston,Texas,0.97,nearest_same_state,341.28
+p63,OffshoreWind,Houston,Texas,0.95,nearest_same_state,341.28
+p63,UtilityPV,Houston,Texas,0.96,nearest_same_state,341.28
+p63,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Houston,Texas,0.97,nearest_same_state,341.28
+p63,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Houston,Texas,0.97,nearest_same_state,341.28
+p63,Battery_,Houston,Texas,0.99,nearest_same_state,341.28
+p63,Utility-Scale Battery Storage,Houston,Texas,0.99,nearest_same_state,341.28
+p64,Coal_new,Houston,Texas,0.9,nearest_same_state,251.29
+p64,Coal_95%-CCS,Houston,Texas,0.9,nearest_same_state,251.29
+p64,Coal_99%-CCS,Houston,Texas,0.9,nearest_same_state,251.29
+p64,Coal_Retrofits_95%-CCS,Houston,Texas,0.9,nearest_same_state,251.29
+p64,Coal_Retrofits_90%-CCS,Houston,Texas,0.9,nearest_same_state,251.29
+p64,Combustion Turbine - Simple Cycle (Aeroderivative),Houston,Texas,0.95,nearest_same_state,251.29
+p64,NaturalGas_Combustion Turbine,Houston,Texas,0.94,nearest_same_state,251.29
+p64,NaturalGas_F-Frame CT,Houston,Texas,0.94,nearest_same_state,251.29
+p64,NaturalGas_2-on-1 Combined Cycle,Houston,Texas,0.93,nearest_same_state,251.29
+p64,NaturalGas_F-Frame CC,Houston,Texas,0.93,nearest_same_state,251.29
+p64,NaturalGas_H-Frame CC,Houston,Texas,0.93,nearest_same_state,251.29
+p64,NaturalGas_1-on-1 Combined Cycle,Houston,Texas,0.93,nearest_same_state,251.29
+p64,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_F-Frame CC 95% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_H-Frame CC 95% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_F-Frame CC 97% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,NaturalGas_H-Frame CC 97% CCS,Houston,Texas,0.91,nearest_same_state,251.29
+p64,Biopower_Dedicated,Houston,Texas,0.9,nearest_same_state,251.29
+p64,Nuclear_Nuclear,Houston,Texas,0.95,nearest_same_state,251.29
+p64,Nuclear_Nuclear - Large,Houston,Texas,0.95,nearest_same_state,251.29
+p64,Nuclear_SMR,Houston,Texas,0.95,nearest_same_state,251.29
+p64,Nuclear_Nuclear - Small,Houston,Texas,0.95,nearest_same_state,251.29
+p64,Geothermal,Houston,Texas,,nearest_same_state,251.29
+p64,Hydropower,Houston,Texas,,nearest_same_state,251.29
+p64,Pumped Storage Hydropower,Houston,Texas,,nearest_same_state,251.29
+p64,LandBasedWind,Houston,Texas,0.95,nearest_same_state,251.29
+p64,Onshore Wind Repowering/Retrofit,Houston,Texas,0.97,nearest_same_state,251.29
+p64,OffshoreWind,Houston,Texas,0.95,nearest_same_state,251.29
+p64,UtilityPV,Houston,Texas,0.96,nearest_same_state,251.29
+p64,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Houston,Texas,0.97,nearest_same_state,251.29
+p64,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Houston,Texas,0.97,nearest_same_state,251.29
+p64,Battery_,Houston,Texas,0.99,nearest_same_state,251.29
+p64,Utility-Scale Battery Storage,Houston,Texas,0.99,nearest_same_state,251.29
+p65,Coal_new,Houston,Texas,0.9,nearest_same_state,339.14
+p65,Coal_95%-CCS,Houston,Texas,0.9,nearest_same_state,339.14
+p65,Coal_99%-CCS,Houston,Texas,0.9,nearest_same_state,339.14
+p65,Coal_Retrofits_95%-CCS,Houston,Texas,0.9,nearest_same_state,339.14
+p65,Coal_Retrofits_90%-CCS,Houston,Texas,0.9,nearest_same_state,339.14
+p65,Combustion Turbine - Simple Cycle (Aeroderivative),Houston,Texas,0.95,nearest_same_state,339.14
+p65,NaturalGas_Combustion Turbine,Houston,Texas,0.94,nearest_same_state,339.14
+p65,NaturalGas_F-Frame CT,Houston,Texas,0.94,nearest_same_state,339.14
+p65,NaturalGas_2-on-1 Combined Cycle,Houston,Texas,0.93,nearest_same_state,339.14
+p65,NaturalGas_F-Frame CC,Houston,Texas,0.93,nearest_same_state,339.14
+p65,NaturalGas_H-Frame CC,Houston,Texas,0.93,nearest_same_state,339.14
+p65,NaturalGas_1-on-1 Combined Cycle,Houston,Texas,0.93,nearest_same_state,339.14
+p65,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_F-Frame CC 95% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_H-Frame CC 95% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_F-Frame CC 97% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,NaturalGas_H-Frame CC 97% CCS,Houston,Texas,0.91,nearest_same_state,339.14
+p65,Biopower_Dedicated,Houston,Texas,0.9,nearest_same_state,339.14
+p65,Nuclear_Nuclear,Houston,Texas,0.95,nearest_same_state,339.14
+p65,Nuclear_Nuclear - Large,Houston,Texas,0.95,nearest_same_state,339.14
+p65,Nuclear_SMR,Houston,Texas,0.95,nearest_same_state,339.14
+p65,Nuclear_Nuclear - Small,Houston,Texas,0.95,nearest_same_state,339.14
+p65,Geothermal,Houston,Texas,,nearest_same_state,339.14
+p65,Hydropower,Houston,Texas,,nearest_same_state,339.14
+p65,Pumped Storage Hydropower,Houston,Texas,,nearest_same_state,339.14
+p65,LandBasedWind,Houston,Texas,0.95,nearest_same_state,339.14
+p65,Onshore Wind Repowering/Retrofit,Houston,Texas,0.97,nearest_same_state,339.14
+p65,OffshoreWind,Houston,Texas,0.95,nearest_same_state,339.14
+p65,UtilityPV,Houston,Texas,0.96,nearest_same_state,339.14
+p65,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Houston,Texas,0.97,nearest_same_state,339.14
+p65,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Houston,Texas,0.97,nearest_same_state,339.14
+p65,Battery_,Houston,Texas,0.99,nearest_same_state,339.14
+p65,Utility-Scale Battery Storage,Houston,Texas,0.99,nearest_same_state,339.14
+p67,Coal_new,Houston,Texas,0.9,within,0.0
+p67,Coal_95%-CCS,Houston,Texas,0.9,within,0.0
+p67,Coal_99%-CCS,Houston,Texas,0.9,within,0.0
+p67,Coal_Retrofits_95%-CCS,Houston,Texas,0.9,within,0.0
+p67,Coal_Retrofits_90%-CCS,Houston,Texas,0.9,within,0.0
+p67,Combustion Turbine - Simple Cycle (Aeroderivative),Houston,Texas,0.95,within,0.0
+p67,NaturalGas_Combustion Turbine,Houston,Texas,0.94,within,0.0
+p67,NaturalGas_F-Frame CT,Houston,Texas,0.94,within,0.0
+p67,NaturalGas_2-on-1 Combined Cycle,Houston,Texas,0.93,within,0.0
+p67,NaturalGas_F-Frame CC,Houston,Texas,0.93,within,0.0
+p67,NaturalGas_H-Frame CC,Houston,Texas,0.93,within,0.0
+p67,NaturalGas_1-on-1 Combined Cycle,Houston,Texas,0.93,within,0.0
+p67,NaturalGas_1-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_1-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_2-on-1 Combined Cycle (F-Frame) 95% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_2-on-1 Combined Cycle (F-Frame) 97% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_2-on-1 Combined Cycle (H-Frame) 95% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_2-on-1 Combined Cycle (H-Frame) 97% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_F-Frame CC 95% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_H-Frame CC 95% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_F-Frame CC 97% CCS,Houston,Texas,0.91,within,0.0
+p67,NaturalGas_H-Frame CC 97% CCS,Houston,Texas,0.91,within,0.0
+p67,Biopower_Dedicated,Houston,Texas,0.9,within,0.0
+p67,Nuclear_Nuclear,Houston,Texas,0.95,within,0.0
+p67,Nuclear_Nuclear - Large,Houston,Texas,0.95,within,0.0
+p67,Nuclear_SMR,Houston,Texas,0.95,within,0.0
+p67,Nuclear_Nuclear - Small,Houston,Texas,0.95,within,0.0
+p67,Geothermal,Houston,Texas,,within,0.0
+p67,Hydropower,Houston,Texas,,within,0.0
+p67,Pumped Storage Hydropower,Houston,Texas,,within,0.0
+p67,LandBasedWind,Houston,Texas,0.95,within,0.0
+p67,Onshore Wind Repowering/Retrofit,Houston,Texas,0.97,within,0.0
+p67,OffshoreWind,Houston,Texas,0.95,within,0.0
+p67,UtilityPV,Houston,Texas,0.96,within,0.0
+p67,Solar PV w/ Single Axis Tracking + AC Coupled Battery Storage,Houston,Texas,0.97,within,0.0
+p67,"Solar PV, Single-Axis Tracking (1.6 ILR) with Battery Hybrid",Houston,Texas,0.97,within,0.0
+p67,Battery_,Houston,Texas,0.99,within,0.0
+p67,Utility-Scale Battery Storage,Houston,Texas,0.99,within,0.0

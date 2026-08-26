@@ -1,0 +1,5 @@
+{
+  "technology": "landbasedwind",
+  "metadata": "onshorewind_metadata.csv",
+  "profiles": "onshorewind_profiles.csv"
+}

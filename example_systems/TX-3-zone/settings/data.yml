@@ -1,0 +1,42 @@
+# DATA TABLE CONFIGURATION
+# Names of the input data tables (relative to `data_location`) used to build the
+# model. All files below are slimmed to the 7 ERCOT ReEDS balancing areas used in
+# this example (p60, p61, p62, p63, p64, p65, p67), downsampled to 240 hours
+# (weather year 2012), and combined with dollar-year metadata.
+
+# Resource groups define site-specific data (LCOE, capacity, interconnection cost,
+# hourly profile) for new-build solar and onshore wind. PowerGenome only applies
+# Path() (no base directory) to these two keys, so unlike data_location/input_folder
+# they resolve relative to the directory where run_powergenome is invoked. The
+# documented invocation is from the repo root (see README), so these paths are
+# relative to the repo root. Invoking from any other directory requires adjusting
+# the prefix to point at example_systems/TX-3-zone/resource_groups and
+# example_systems/TX-3-zone/resource_profiles.
+RESOURCE_GROUPS: example_systems/TX-3-zone/resource_groups
+RESOURCE_GROUP_PROFILES: example_systems/TX-3-zone/resource_profiles
+
+# Location of the data table files (relative to the folder that contains the
+# settings folder, i.e. example_systems/TX-3-zone/).
+data_location: data
+
+# NOTE: technology_costs_atb_tx_3_zone.csv is SLIMMED from the full NREL ATB
+# parquet (650k rows) to only the resources used by this example: the
+# technologies in `new_resources` (NaturalGas, LandbasedWind, UtilityPV,
+# Utility-Scale Battery Storage, Nuclear), cost_case=Moderate,
+# financial_case=Market, all data years (24,655 rows, ~2 MB). If you switch a
+# technology's cost_case/financial_case in resources.yml you must re-download
+# the full ATB table from PowerGenome-data and re-slim (see data/README.md).
+
+generation_table: reeds_generators_tx_3_zone.csv
+plant_region_table: plant_region_map_tx_3_zone.csv
+resource_heat_rate_table: technology_heat_rates_nrelatb.csv
+resource_cost_table: technology_costs_atb_tx_3_zone.csv
+operational_constraints_table: operational_constraints_tx_3_zone.csv
+transmission_constraints_table: transmission_capacity_tx_3_zone.csv
+fuel_price_table: fuel_prices_tx_3_zone.csv
+dollar_year_table: cpi_data.csv
+transmission_cost_table: network_costs_tx_3_zone.csv
+demand_table: reeds_load_tx_3_zone.csv
+regional_cost_factor_table: regional_cost_multipliers_tx_3_zone.csv
+distributed_capacity_table: distributed_capacity_tx_3_zone.csv
+distributed_profile_table: distributed_profiles_tx_3_zone.csv
