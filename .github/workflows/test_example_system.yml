@@ -52,7 +52,10 @@ jobs:
           # and RESOURCE_GROUP_PROFILES only get Path() applied (no base-dir
           # resolution), so they resolve relative to this CWD (the repo root) --
           # hence the full example_systems/TX-3-zone/... prefix below.
-          run_powergenome -sf example_systems/TX-3-zone/settings -rf example_systems/TX-3-zone/genx-test -c base
+          # --macro also writes a Macro (simpleCSVinputs) case next to the GenX
+          # inputs, at example_systems/TX-3-zone/genx-test/base. Both models are
+          # solved from this single PowerGenome run.
+          run_powergenome -sf example_systems/TX-3-zone/settings -rf example_systems/TX-3-zone/genx-test -c base --macro
 
       - name: Set up Julia
         uses: julia-actions/setup-julia@v2
@@ -69,6 +72,30 @@ jobs:
           # zone-declaration rows the PowerGenome writer emits, so do not let the
           # version drift past the tested range.
           julia --project -e 'using Pkg; Pkg.add(name="GenX", version="0.4.5")'
+
+      - name: Install MacroEnergy.jl
+        run: |
+          # Macro gets its own Julia environment so that adding it cannot perturb
+          # the GenX project above (they share no dependencies, but they do
+          # resolve against the same depot).
+          export MACRO_ENV="${{ github.workspace }}/macro-env"
+          mkdir -p "${MACRO_ENV}"
+          julia --project="${MACRO_ENV}" -e '
+            using Pkg
+            # 0.2.5 is the latest registered MacroEnergy release. The 0.3.0-rc
+            # series moves to a different input format that the PowerGenome
+            # macro writer (v0.8.0-beta) does not target yet, so pin here.
+            Pkg.add([
+              PackageSpec(name="MacroEnergy", version="0.2.5"),
+              PackageSpec(name="HiGHS"),
+              # JuMP is a dependency of MacroEnergy but not re-exported; the
+              # runner script uses it to check the termination status.
+              PackageSpec(name="JuMP"),
+            ])
+          '
+          # Precompile up front so the solve step below reports solver output
+          # rather than compilation output.
+          julia --project="${MACRO_ENV}" -e 'using MacroEnergy, HiGHS, JuMP'
 
       - name: Run GenX on both planning periods
         run: |
@@ -90,6 +117,16 @@ jobs:
             cd ${{ github.workspace }}/current-repo
           done
 
+      - name: Run Macro on the generated case
+        run: |
+          set -e
+          case_root="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base"
+          echo "== Solving Macro case: ${case_root}"
+          # RunMacro.jl solves every planning period in the case and exits
+          # non-zero unless HiGHS reports OPTIMAL.
+          julia --project="${{ github.workspace }}/macro-env" \
+            ${{ github.workspace }}/current-repo/example_systems/RunMacro.jl "${case_root}"
+
       - name: Upload GenX results (period 1)
         uses: actions/upload-artifact@v4
         if: always()
@@ -104,4 +141,15 @@ jobs:
         with:
           name: GenX-results-Inputs_p2
           path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/Inputs/Inputs_p2
+          if-no-files-found: ignore
+
+      - name: Upload Macro results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Macro-results
+          # Macro writes one results_NNN folder per run, each holding a
+          # subfolder per planning period. The case definition and inputs stay
+          # in the workspace (GenX artifacts already cover the shared inputs).
+          path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/results_*
           if-no-files-found: ignore

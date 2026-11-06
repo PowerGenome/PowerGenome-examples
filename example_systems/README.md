@@ -31,7 +31,14 @@ Run it:
 
 ```bash
 run_powergenome --settings_file example_systems/TX-3-zone/settings --results_folder <output>
+
+# Also write a Macro case (simpleCSVinputs) and solve it with MacroEnergy.jl
+run_powergenome --settings_file example_systems/TX-3-zone/settings --results_folder <output> --macro
+julia --project=<macro environment> example_systems/RunMacro.jl <output>/base
 ```
+
+See the "Solving with Macro" section of the [main README](../README.md) for the
+pinned `MacroEnergy` version and environment setup.
 
 ### Network costs placeholder
 
