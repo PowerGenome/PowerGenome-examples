@@ -25,11 +25,11 @@ jobs:
         with:
           path: current-repo
 
-      - name: Checkout PowerGenome repository (v0.8.0-beta)
+      - name: Checkout PowerGenome repository (main)
         uses: actions/checkout@v4
         with:
           repository: PowerGenome/PowerGenome
-          ref: v0.8.0-beta
+          ref: main
           path: PowerGenome
 
       - name: Set up Python 3.12
@@ -84,7 +84,7 @@ jobs:
             using Pkg
             # 0.2.5 is the latest registered MacroEnergy release. The 0.3.0-rc
             # series moves to a different input format that the PowerGenome
-            # macro writer (v0.8.0-beta) does not target yet, so pin here.
+            # macro writer does not target yet, so pin here.
             Pkg.add([
               PackageSpec(name="MacroEnergy", version="0.2.5"),
               PackageSpec(name="HiGHS"),

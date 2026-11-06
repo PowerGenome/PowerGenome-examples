@@ -26,6 +26,31 @@ TX-3-zone example.
   metadata, profile `site_id` column, and site map (10 sites per BA × 7 BAs
   = 70).
 
+## Existing resources
+
+`existing_resource_groups/` holds the groups for existing (in-place) utility PV
+and onshore wind capacity:
+
+- `regional_solar_photovoltaic_True.json` / `regional_wind_True.json` — same
+  shape as the new-build groups but with `"existing": true`. PowerGenome matches
+  existing generators against these groups, so they must be separate files from
+  the new-build groups (`existing` is part of the group match).
+- `existing_solar_metadata.csv` / `existing_onshorewind_metadata.csv` —
+  `region`, `capacity_mw`, `id` per site. Existing-resource metadata is read with
+  `id` as the index (new-build metadata uses `cpa_id`), so here `id` is the same
+  site ID (`<BA>_<tech>_g<nn>`) used by the profile `site_id` column. The `region` values
+  are the ReEDS base regions (`p60`…`p67`), which is what PowerGenome passes when
+  it looks up existing resources.
+- Profiles are the shared synthetic ones in `resource_profiles/`.
+
+PowerGenome requires hourly profiles for existing VRE: capacity that cannot be
+matched to a group with profiles is limited to
+`existing_resource_profile_fallback_max_demand_fraction` (0.5% of mean demand)
+per model region, and the TX-3-zone example has ~33 GW of existing wind + solar
+against ~3.6 GW of mean demand. Reusing the synthetic site profiles keeps
+existing VRE shapes consistent with new build; replace them together with the
+new-build profiles.
+
 ## ⚠️ Synthetic profile stand-ins
 
 The **hourly profiles are synthetic stand-ins**, not measured resource output.
