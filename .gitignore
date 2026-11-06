@@ -163,3 +163,5 @@ cython_debug/
 .DS_Store
 # PowerGenome generated GenX inputs (rebuilt by the CI workflow)
 example_systems/*/genx-test/
+# PowerGenome main caches input validation results here (rebuilt on each run)
+example_systems/*/extra_inputs/validation_cache/
