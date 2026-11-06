@@ -1,0 +1,5 @@
+case_id,year,region,ESR_1,ESR_2,ESR_3
+base,2030,CA,0.20,0.25,0
+base,2030,AZ,0.087,0.087,0
+base,2045,CA,0.15,0.15,0
+base,2045,AZ,0.087,0.087,0

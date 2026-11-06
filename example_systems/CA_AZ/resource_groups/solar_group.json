@@ -1,0 +1,5 @@
+{
+  "technology": "utilitypv",
+  "metadata": "solar_metadata.csv",
+  "profiles": "solar_profiles.csv"
+}

@@ -1,0 +1,13 @@
+# Time clustering/reduction parameters.
+# The input time series (load, VRE profiles, distributed generation) were already
+# downsampled to 240 representative hours (evenly spaced ~1 sample every
+# 36.5 hours across the full weather-year-2012 calendar, covering all seasons
+# and hours of day) on a shared time-index subset at weather year 2012 during
+# data preparation, so no additional clustering is applied here. Set
+# reduce_time_domain to true (with time_domain_periods etc.) if you want
+# PowerGenome to reduce the time domain further.
+reduce_time_domain: false
+time_domain_periods: 4 # The number of periods/clusters
+time_domain_days_per_period: 5 # The number of 24 hour days in each period/cluster
+include_peak_day: true # If the system-wide peak load days should always be included
+demand_weight_factor: 1 # Demand profiles are scaled from 0-1, then scaled up using this value.
