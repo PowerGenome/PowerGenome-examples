@@ -1,5 +1,15 @@
+# GenX multistage (myopic or dual dynamic programming) settings.
+#
+# NumStages and StageLengths must match the planning periods of the example:
+# model_first_planning_year/model_year are 2025-2030 (6 years) and 2031-2045
+# (15 years), which is also the PeriodLengths list PowerGenome derives and writes
+# to the Macro case (settings/case_settings.json).
 NumStages: 2 # Number of model investment planning stages
-StageLengths: [6, 20] # Length of each model stage (years)
-WACC: 0.00 # Weighted average cost of capital
+StageLengths: [6, 15] # Length of each model stage (years)
+# Interest and discount rate used by the multistage formulation. GenX defaults to
+# 0.045; this matches the PowerGenome default for the Macro side
+# (`macro_discount_rate` -> settings/case_settings.json DiscountRate), so both
+# models discount the future the same way.
+WACC: 0.045 # Weighted average cost of capital
 ConvergenceTolerance: 0.01 # Relative optimality gap used for convergence
 Myopic: 1 # 1 = myopic, 0 = dual dynamic programming

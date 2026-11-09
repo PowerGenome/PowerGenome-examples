@@ -43,8 +43,8 @@ the `simpleCSVinputs` format alongside the GenX inputs when it runs with
 write only the Macro case. The Macro case root is `<results_folder>/<case id>`
 and contains `system_data.json`, `settings/`, `system/` and `assets/`.
 
-`example_systems/RunMacro.jl` solves such a case (every planning period, with
-HiGHS) and exits non-zero unless the model reaches optimality:
+`example_systems/RunMacro.jl` solves such a case with HiGHS and exits non-zero
+unless every planning period it solves reaches optimality:
 
 ```bash
 mkdir -p macro-env
@@ -52,16 +52,72 @@ julia --project=macro-env -e 'using Pkg; Pkg.add([
     PackageSpec(name="MacroEnergy", version="0.2.5"),
     PackageSpec(name="HiGHS"),
     PackageSpec(name="JuMP"),
+    PackageSpec(name="JSON3"),
 ])'
+
+# every planning period, perfect foresight (Macro's Monolithic algorithm)
 julia --project=macro-env example_systems/RunMacro.jl <results_folder>/<case id>
+
+# the first planning period only
+julia --project=macro-env example_systems/RunMacro.jl <results_folder>/<case id> --periods 1
+
+# both planning periods, solved one after the other (myopic)
+julia --project=macro-env example_systems/RunMacro.jl <results_folder>/<case id> --algorithm Myopic --periods 2
 ```
+
+Options are `[case folder] [--algorithm Monolithic|Myopic] [--periods N]` and
+`[--staging FOLDER]`. When `--algorithm` or `--periods` narrows the run,
+`RunMacro.jl` solves a staged copy of the case at `<case folder>-<algorithm>-<N>p`
+instead of the case itself: `assets/` and `system/` are symlinked, and
+`settings/case_settings.json` plus `system_data.json` are rewritten for the
+requested periods and algorithm. That keeps each configuration's `results_NNN/`
+separate and leaves the PowerGenome output untouched.
 
 `MacroEnergy` is pinned to **v0.2.5** — the latest registered release, and the
 version that matches the case format PowerGenome writes. Results are
-written to `<case id>/results_NNN/results_period_N/`. JuMP is installed
+written to `<case folder>/results_NNN/results_period_N/`. JuMP is installed
 alongside MacroEnergy because MacroEnergy does not re-export the solver-status
-helpers that `RunMacro.jl` uses to check the termination status.
+helpers that `RunMacro.jl` uses to check the termination status; JSON3 is used to
+rewrite the staged case settings. For `Monolithic` runs Macro reports a single
+termination status per case, while a `Myopic` run returns one model per period —
+`RunMacro.jl` enables `ReturnModels` and checks every one of them.
+
+### Discount rate
+
+Both models discount costs across the planning periods, so the two rates should
+agree:
+
+* **Macro:** MacroEnergy's own default `DiscountRate` is `0.0`, but PowerGenome
+  always writes one: `macro_discount_rate` (default `0.045`) becomes
+  `DiscountRate` in `<case id>/settings/case_settings.json`. Add
+  `macro_discount_rate` to the settings to change it.
+* **GenX multistage:** `WACC` in
+  `example_systems/genx_settings/multi_stage_settings.yml` is the rate GenX
+  discounts *between stages* with (`0.045` here, matching PowerGenome's Macro
+  default; GenX's own multistage default is also `0.045`). Per-resource capital
+  costs use each resource's own `WACC` from `Resource_multistage_data.csv`, which
+  PowerGenome fills from the same `wacc_real` values as the single-stage inputs.
+  Existing resources carry `WACC: 0.0`, which is fine because they have no new
+  investment cost.
+
+### What the CI runs
 
 [`.github/workflows/test_example_system.yml`](.github/workflows/test_example_system.yml)
-runs this whole pipeline for TX-3-zone: PowerGenome builds GenX and Macro inputs,
-GenX solves both planning periods, then Macro solves the generated case.
+runs the whole pipeline for TX-3-zone and solves the generated case with both
+models in several configurations, so changes to the example or to PowerGenome's
+writers show up as a failing solve:
+
+| Model | Configuration | Case folder |
+|---|---|---|
+| GenX | one period (2030), single stage | `<results>/base/Inputs/Inputs_p1` |
+| GenX | both periods, myopic multistage | `<results>/genx-myopic` |
+| GenX | both periods, multistage perfect foresight (dual dynamic programming) | `<results>/genx-foresight` |
+| Macro | first period only | `<results>/base-monolithic-1p` |
+| Macro | both periods, myopic | `<results>/base-myopic-2p` |
+| Macro | both periods, perfect foresight (`Monolithic`) | `<results>/base-monolithic-2p` |
+
+The GenX multistage steps stage their own case folders next to the PowerGenome
+output because GenX's multistage runner reads `inputs/inputs_pN` (lowercase) while
+PowerGenome writes `Inputs/Inputs_pN`; the staging step links the two and rewrites
+`NumStages`/`StageLengths` from the planning periods PowerGenome actually solved,
+so the shared `multi_stage_settings.yml` cannot drift from the example.

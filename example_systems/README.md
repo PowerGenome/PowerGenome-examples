@@ -47,8 +47,25 @@ run_powergenome --settings_file example_systems/TX-3-zone/settings --results_fol
 julia --project=<macro environment> example_systems/RunMacro.jl <output>/base
 ```
 
+`RunMacro.jl` also takes `--algorithm Monolithic|Myopic` and `--periods N`, so the
+same case can be solved one period at a time or myopically, e.g.
+`--algorithm Myopic --periods 2`. Narrowed runs solve a staged copy of the case
+(`base-myopic-2p` and similar), which leaves the PowerGenome output untouched.
 See the "Solving with Macro" section of the [main README](../README.md) for the
-pinned `MacroEnergy` version and environment setup.
+pinned `MacroEnergy` version, the environment setup, and the discount-rate
+(`macro_discount_rate` / GenX multistage `WACC`) behavior.
+
+Two planning periods are modelled (2025-2030 and 2031-2045). They are solved
+
+* with GenX as a single-stage case for the first period (`MultiStage: 0`), as a
+  myopic multistage solve of both periods, and as multistage perfect foresight
+  (dual dynamic programming, `Myopic: 0`), using
+  `genx_settings/multi_stage_settings.yml` (`StageLengths: [6, 15]`,
+  `WACC: 0.045`), and
+* with Macro for the first period only, myopically, and in perfect foresight
+  (`Monolithic`).
+
+That matrix is what the CI workflow runs.
 
 ### Network costs placeholder
 
