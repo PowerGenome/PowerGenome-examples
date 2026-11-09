@@ -71,7 +71,11 @@ function parse_args(args)
 
     periods = get(options, "periods", nothing)
     if periods !== nothing
-        periods = parse(Int, periods)
+        parsed = tryparse(Int, periods)
+        parsed === nothing && usage_error(
+            "--periods must be a positive integer, got $(periods).",
+        )
+        periods = parsed
         periods > 0 || usage_error("--periods must be a positive integer.")
     end
 
@@ -101,7 +105,18 @@ function stage_case(config)
         label = "$(lowercase(algorithm))-$(periods)p"
         staging = joinpath(dirname(case_folder), "$(basename(case_folder))-$(label)")
     end
-    staging = abspath(staging)
+    staging = normpath(abspath(staging))
+    # Staging deletes its target, so refuse anything at, above, or inside the
+    # case folder: `rm` would take live case inputs with it.
+    case_root = normpath(abspath(case_folder))
+    if startswith(staging * "/", case_root * "/") ||
+       startswith(case_root * "/", staging * "/")
+        error(
+            "Refusing to stage $(algorithm) at $(staging): it overlaps the case " *
+            "folder $(case_root), and staging removes its target folder. Pass " *
+            "--staging pointing somewhere outside the case folder.",
+        )
+    end
 
     rm(staging, recursive = true, force = true)
     mkpath(joinpath(staging, "settings"))

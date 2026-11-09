@@ -43,13 +43,22 @@ and onshore wind capacity:
   it looks up existing resources.
 - Profiles are the shared synthetic ones in `resource_profiles/`.
 
+`capacity_mw` in these two tables is the supply-curve site capacity copied from
+the matching new-build metadata (3.32 TW PV / 413 GW wind across 70 sites), not
+existing capacity. PowerGenome uses an existing group only to pick a profile for
+each existing generator cluster — the group's profile is a capacity-weighted
+average of its sites, and existing capacity itself comes from the generation
+table, not from these files. The column is therefore a profile weighting, not a
+fleet size.
+
 PowerGenome requires hourly profiles for existing VRE: capacity that cannot be
 matched to a group with profiles is limited to
 `existing_resource_profile_fallback_max_demand_fraction` (0.5% of mean demand)
-per model region, and the TX-3-zone example has ~33 GW of existing wind + solar
-against ~3.6 GW of mean demand. Reusing the synthetic site profiles keeps
-existing VRE shapes consistent with new build; replace them together with the
-new-build profiles.
+per model region. All three regions exceed that budget — TX1 has ~33 GW of
+existing wind + solar against 3.6 GW of mean demand, TX2 ~24 GW against 30 GW,
+and TX3 ~20 GW against 25 GW. Reusing the synthetic site profiles keeps existing
+VRE shapes consistent with new build; replace them together with the new-build
+profiles.
 
 ## ⚠️ Synthetic profile stand-ins
 

@@ -182,7 +182,7 @@ jobs:
         with:
           name: GenX-results-multistage-myopic
           path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/genx-myopic/results
-          if-no-files-found: ignore
+          if-no-files-found: error
 
       - name: Upload GenX results (multistage, foresight)
         uses: actions/upload-artifact@v4
@@ -190,7 +190,7 @@ jobs:
         with:
           name: GenX-results-multistage-foresight
           path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/genx-foresight/results
-          if-no-files-found: ignore
+          if-no-files-found: error
 
       - name: Upload Macro results
         uses: actions/upload-artifact@v4
@@ -204,4 +204,4 @@ jobs:
             ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base-monolithic-1p/results_*
             ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base-myopic-2p/results_*
             ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base-monolithic-2p/results_*
-          if-no-files-found: ignore
+          if-no-files-found: error

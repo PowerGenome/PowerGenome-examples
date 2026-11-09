@@ -74,13 +74,15 @@ requested periods and algorithm. That keeps each configuration's `results_NNN/`
 separate and leaves the PowerGenome output untouched.
 
 `MacroEnergy` is pinned to **v0.2.5** — the latest registered release, and the
-version that matches the case format PowerGenome writes. Results are
-written to `<case folder>/results_NNN/results_period_N/`. JuMP is installed
-alongside MacroEnergy because MacroEnergy does not re-export the solver-status
-helpers that `RunMacro.jl` uses to check the termination status; JSON3 is used to
-rewrite the staged case settings. For `Monolithic` runs Macro reports a single
-termination status per case, while a `Myopic` run returns one model per period —
-`RunMacro.jl` enables `ReturnModels` and checks every one of them.
+version that matches the case format PowerGenome writes. Results land in
+`<case folder>/results_NNN/`: a single-period run writes `results/` there, and a
+multi-period run writes one `results_period_N/` per planning period. JuMP is
+installed alongside MacroEnergy because MacroEnergy does not re-export the
+solver-status helpers that `RunMacro.jl` uses to check the termination status;
+JSON3 is used to rewrite the staged case settings. For `Monolithic` runs Macro
+reports a single termination status per case, while a `Myopic` run returns one
+model per period — `RunMacro.jl` enables `ReturnModels` and checks every one of
+them.
 
 ### Discount rate
 
