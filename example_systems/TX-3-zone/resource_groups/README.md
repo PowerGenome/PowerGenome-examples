@@ -60,7 +60,11 @@ are not available in the data cache. To keep this example runnable, we generated
 plausible tidy profiles:
 
 - **Solar**: diurnal daylight shape (zero at night, peaking at midday), scaled
-  per-site with a small phase/shape perturbation so each site differs.
+  per-site with a small phase/shape perturbation so each site differs. Night
+  samples are clamped to exactly `0` (not rounded to zero): the analytic shape
+  left ~1e-17 sunrise/sunset remnants, and those became GenX availability
+  coefficients that HiGHS drops with
+  `LP matrix packed vector contains ... less than or equal to 1e-09: ignored`.
 - **Wind**: a shared 240-hour correlated wind shape with per-site amplitude
   scaling (so sites differ in capacity factor while staying correlated, a
   realistic property of regional wind).
