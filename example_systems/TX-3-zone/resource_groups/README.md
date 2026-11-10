@@ -26,6 +26,40 @@ TX-3-zone example.
   metadata, profile `site_id` column, and site map (10 sites per BA × 7 BAs
   = 70).
 
+## Existing resources
+
+`existing_resource_groups/` holds the groups for existing (in-place) utility PV
+and onshore wind capacity:
+
+- `regional_solar_photovoltaic_True.json` / `regional_wind_True.json` — same
+  shape as the new-build groups but with `"existing": true`. PowerGenome matches
+  existing generators against these groups, so they must be separate files from
+  the new-build groups (`existing` is part of the group match).
+- `existing_solar_metadata.csv` / `existing_onshorewind_metadata.csv` —
+  `region`, `capacity_mw`, `id` per site. Existing-resource metadata is read with
+  `id` as the index (new-build metadata uses `cpa_id`), so here `id` is the same
+  site ID (`<BA>_<tech>_g<nn>`) used by the profile `site_id` column. The `region` values
+  are the ReEDS base regions (`p60`…`p67`), which is what PowerGenome passes when
+  it looks up existing resources.
+- Profiles are the shared synthetic ones in `resource_profiles/`.
+
+`capacity_mw` in these two tables is the supply-curve site capacity copied from
+the matching new-build metadata (3.32 TW PV / 413 GW wind across 70 sites), not
+existing capacity. PowerGenome uses an existing group only to pick a profile for
+each existing generator cluster — the group's profile is a capacity-weighted
+average of its sites, and existing capacity itself comes from the generation
+table, not from these files. The column is therefore a profile weighting, not a
+fleet size.
+
+PowerGenome requires hourly profiles for existing VRE: capacity that cannot be
+matched to a group with profiles is limited to
+`existing_resource_profile_fallback_max_demand_fraction` (0.5% of mean demand)
+per model region. All three regions exceed that budget — TX1 has ~33 GW of
+existing wind + solar against 3.6 GW of mean demand, TX2 ~24 GW against 30 GW,
+and TX3 ~20 GW against 25 GW. Reusing the synthetic site profiles keeps existing
+VRE shapes consistent with new build; replace them together with the new-build
+profiles.
+
 ## ⚠️ Synthetic profile stand-ins
 
 The **hourly profiles are synthetic stand-ins**, not measured resource output.
@@ -35,7 +69,11 @@ are not available in the data cache. To keep this example runnable, we generated
 plausible tidy profiles:
 
 - **Solar**: diurnal daylight shape (zero at night, peaking at midday), scaled
-  per-site with a small phase/shape perturbation so each site differs.
+  per-site with a small phase/shape perturbation so each site differs. Night
+  samples are clamped to exactly `0` (not rounded to zero): the analytic shape
+  left ~1e-17 sunrise/sunset remnants, and those became GenX availability
+  coefficients that HiGHS drops with
+  `LP matrix packed vector contains ... less than or equal to 1e-09: ignored`.
 - **Wind**: a shared 240-hour correlated wind shape with per-site amplitude
   scaling (so sites differ in capacity factor while staying correlated, a
   realistic property of regional wind).

@@ -25,11 +25,11 @@ jobs:
         with:
           path: current-repo
 
-      - name: Checkout PowerGenome repository (v0.8.0-beta)
+      - name: Checkout PowerGenome repository (main)
         uses: actions/checkout@v4
         with:
           repository: PowerGenome/PowerGenome
-          ref: v0.8.0-beta
+          ref: main
           path: PowerGenome
 
       - name: Set up Python 3.12
@@ -52,7 +52,10 @@ jobs:
           # and RESOURCE_GROUP_PROFILES only get Path() applied (no base-dir
           # resolution), so they resolve relative to this CWD (the repo root) --
           # hence the full example_systems/TX-3-zone/... prefix below.
-          run_powergenome -sf example_systems/TX-3-zone/settings -rf example_systems/TX-3-zone/genx-test -c base
+          # --macro also writes a Macro (simpleCSVinputs) case next to the GenX
+          # inputs, at example_systems/TX-3-zone/genx-test/base. Both models are
+          # solved from this single PowerGenome run.
+          run_powergenome -sf example_systems/TX-3-zone/settings -rf example_systems/TX-3-zone/genx-test -c base --macro
 
       - name: Set up Julia
         uses: julia-actions/setup-julia@v2
@@ -70,38 +73,135 @@ jobs:
           # version drift past the tested range.
           julia --project -e 'using Pkg; Pkg.add(name="GenX", version="0.4.5")'
 
-      - name: Run GenX on both planning periods
+      - name: Install MacroEnergy.jl
+        run: |
+          # Macro gets its own Julia environment so that adding it cannot perturb
+          # the GenX project above (they share no dependencies, but they do
+          # resolve against the same depot).
+          export MACRO_ENV="${{ github.workspace }}/macro-env"
+          mkdir -p "${MACRO_ENV}"
+          julia --project="${MACRO_ENV}" -e '
+            using Pkg
+            # 0.2.5 is the latest registered MacroEnergy release. The 0.3.0-rc
+            # series moves to a different input format that the PowerGenome
+            # macro writer does not target yet, so pin here.
+            Pkg.add([
+              PackageSpec(name="MacroEnergy", version="0.2.5"),
+              PackageSpec(name="HiGHS"),
+              # JuMP is a dependency of MacroEnergy but not re-exported; the
+              # runner script uses it to check the termination status.
+              PackageSpec(name="JuMP"),
+              # JSON3 is a MacroEnergy dependency, but RunMacro.jl imports it
+              # directly to inspect and rewrite the case settings.
+              PackageSpec(name="JSON3"),
+            ])
+          '
+          # Precompile up front so the solve step below reports solver output
+          # rather than compilation output.
+          julia --project="${MACRO_ENV}" -e 'using MacroEnergy, HiGHS, JuMP'
+
+      - name: Run GenX on the first planning period
         run: |
           set -e
-          for period in 1 2; do
-            case_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/Inputs/Inputs_p${period}"
-            echo "== Preparing and solving GenX case: Inputs_p${period}"
-            # Run.jl uses dirname(@__FILE__) as the case folder, so it must sit
-            # directly inside the case directory.
-            cp ${{ github.workspace }}/current-repo/example_systems/Run.jl "${case_dir}/"
-            mkdir -p "${case_dir}/settings"
-            cp ${{ github.workspace }}/current-repo/example_systems/genx_settings/* "${case_dir}/settings/"
-            # The example's timeseries are already pre-downsampled to 240 hours by
-            # PowerGenome, so disable GenX's own time-domain reduction and solve
-            # the inputs as provided.
-            sed -i 's/^TimeDomainReduction: 1/TimeDomainReduction: 0/' "${case_dir}/settings/genx_settings.yml"
-            cd "${case_dir}"
-            julia --project Run.jl
-            cd ${{ github.workspace }}/current-repo
+          # A single-stage GenX run of the first planning period, i.e. the same
+          # perfect-foresight-in-one-period problem PowerGenome's settings define
+          # by default (MultiStage: 0).
+          case_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/Inputs/Inputs_p1"
+          echo "== Preparing and solving GenX case: Inputs_p1"
+          # Run.jl uses dirname(@__FILE__) as the case folder, so it must sit
+          # directly inside the case directory.
+          cp ${{ github.workspace }}/current-repo/example_systems/Run.jl "${case_dir}/"
+          mkdir -p "${case_dir}/settings"
+          cp ${{ github.workspace }}/current-repo/example_systems/genx_settings/* "${case_dir}/settings/"
+          # The example's timeseries are already pre-downsampled to 240 hours by
+          # PowerGenome, so disable GenX's own time-domain reduction and solve
+          # the inputs as provided.
+          sed -i 's/^TimeDomainReduction: 1/TimeDomainReduction: 0/' "${case_dir}/settings/genx_settings.yml"
+          cd "${case_dir}"
+          julia --project Run.jl
+
+      - name: Run GenX with both planning periods (myopic and foresight)
+        run: |
+          set -e
+          results_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test"
+          base_dir="${results_dir}/base"
+          settings_dir="${{ github.workspace }}/current-repo/example_systems/genx_settings"
+          # GenX's multistage runner looks for `inputs/inputs_pN` inside the case
+          # folder, but PowerGenome writes `Inputs/Inputs_pN` in the results
+          # folder. Stage one case folder per mode that links those inputs and
+          # holds the settings, so each mode keeps its own `results/` folder.
+          for mode in myopic foresight; do
+            if [ "${mode}" = myopic ]; then myopic_flag=1; else myopic_flag=0; fi
+            stage="${results_dir}/genx-${mode}"
+            rm -rf "${stage}"
+            mkdir -p "${stage}/settings" "${stage}/inputs"
+            cp ${{ github.workspace }}/current-repo/example_systems/Run.jl "${stage}/"
+            cp "${settings_dir}"/*.yml "${stage}/settings/"
+            sed -i 's/^MultiStage: 0/MultiStage: 1/; s/^TimeDomainReduction: 1/TimeDomainReduction: 0/' "${stage}/settings/genx_settings.yml"
+            sed -i "s/^Myopic: 1/Myopic: ${myopic_flag}/" "${stage}/settings/multi_stage_settings.yml"
+            # NumStages/StageLengths are taken from the planning periods
+            # PowerGenome actually solved, so they cannot drift from the example.
+            # Everything else (WACC, ConvergenceTolerance) comes from the shared
+            # genx_settings/multi_stage_settings.yml.
+            python -c 'import json, sys, yaml; ms_path, cs_path = sys.argv[1], sys.argv[2]; settings = yaml.safe_load(open(ms_path)); lengths = json.load(open(cs_path))["PeriodLengths"]; settings["NumStages"] = len(lengths); settings["StageLengths"] = lengths; yaml.safe_dump(settings, open(ms_path, "w"), sort_keys=False)' "${stage}/settings/multi_stage_settings.yml" "${base_dir}/settings/case_settings.json"
+            num_periods="$(python -c 'import json, sys; print(len(json.load(open(sys.argv[1]))["PeriodLengths"]))' "${base_dir}/settings/case_settings.json")"
+            for period in $(seq 1 "${num_periods}"); do
+              ln -s "${base_dir}/Inputs/Inputs_p${period}" "${stage}/inputs/inputs_p${period}"
+            done
+            echo "== Solving GenX multistage case: ${mode}"
+            (cd "${stage}" && julia --project Run.jl)
           done
 
-      - name: Upload GenX results (period 1)
+      - name: Run Macro (first period, myopic, and foresight)
+        run: |
+          set -e
+          base_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base"
+          macro_env="${{ github.workspace }}/macro-env"
+          run_macro="${{ github.workspace }}/current-repo/example_systems/RunMacro.jl"
+          # RunMacro.jl solves a staging copy of the case
+          # (`base-<algorithm>-<n>p`), so the PowerGenome output is untouched and
+          # each configuration keeps its own results folder.
+          echo "== Solving Macro case: first planning period only"
+          julia --project="${macro_env}" "${run_macro}" "${base_dir}" --periods 1
+          echo "== Solving Macro case: both periods, myopic"
+          julia --project="${macro_env}" "${run_macro}" "${base_dir}" --algorithm Myopic --periods 2
+          echo "== Solving Macro case: both periods, perfect foresight"
+          julia --project="${macro_env}" "${run_macro}" "${base_dir}" --algorithm Monolithic --periods 2
+
+      - name: Upload GenX results (single stage, period 1)
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: GenX-results-Inputs_p1
+          name: GenX-results-single-stage-p1
           path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/Inputs/Inputs_p1
           if-no-files-found: ignore
 
-      - name: Upload GenX results (period 2)
+      - name: Upload GenX results (multistage, myopic)
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: GenX-results-Inputs_p2
-          path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/Inputs/Inputs_p2
-          if-no-files-found: ignore
+          name: GenX-results-multistage-myopic
+          path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/genx-myopic/results
+          if-no-files-found: error
+
+      - name: Upload GenX results (multistage, foresight)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: GenX-results-multistage-foresight
+          path: ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/genx-foresight/results
+          if-no-files-found: error
+
+      - name: Upload Macro results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Macro-results
+          # One results_NNN folder per run, each holding a subfolder per planning
+          # period. The case definitions and inputs stay in the workspace (the
+          # GenX artifacts already cover the shared inputs).
+          path: |
+            ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base-monolithic-1p/results_*
+            ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base-myopic-2p/results_*
+            ${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base-monolithic-2p/results_*
+          if-no-files-found: error
