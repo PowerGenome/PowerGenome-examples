@@ -34,9 +34,16 @@ model regions `[CA, AZ]`. All files are CSV, each well under 1 MB.
 - `solar_group.json`, `onshorewind_group.json`: new-build UtilityPV / LandbasedWind
   clusters, one per site (cpa_id) in the 8 BAs (16 solar + 16 wind). Metadata carries
   `interconnect_capex_mw` (from PowerGenome-data WECC metadata); LCOE/annuity/FOM.
-- `existing_resource_groups/`: existing solar (8 BAs) and onshore wind (5 BAs) clusters.
-- **Profiles are SYNTHETIC STAND-INS.** The PowerGenome-data resource-group `path`
-  column points at multi-GB raw profile parquets that are excluded from this repo.
+- `existing_resource_groups/`: existing solar (8 BAs), onshore wind (5 BAs), and
+  hydro clusters. Hydro uses two groups: `regional_hydro_True.json` (conventional
+  hydroelectric) and `regional_small_hydro_True.json` (run-of-river hydroelectric),
+  with metadata/profiles derived from PowerGenome-data
+  `existing_resource_groups/hydro_conventional_2007_2013.parquet`,
+  `hydro_run_of_river_2007_2013.parquet`, and `existing_hydro_reeds_ba_metadata.csv`
+  (weather year 2012, first 240 hours, capacity-factor values).
+- **Wind/solar profiles are SYNTHETIC STAND-INS; hydro profiles are real.** The
+  PowerGenome-data resource-group `path` column points at multi-GB raw profile
+  parquets that are excluded from this repo.
   Instead, tidy hourly profiles (site_id, time_index 1..240, value, weather_year 2012)
   are generated per site with physically plausible shapes (solar: summer-weighted
   daily cosine peak ~2pm; wind: walk with night-favoring diurnal), phase-aligned to the
@@ -47,4 +54,6 @@ model regions `[CA, AZ]`. All files are CSV, each well under 1 MB.
 Regenerate every file deterministically with
 `/Users/gs5183/.copilot/session-state/2f901050-94c1-4546-96ac-d24b3a51a9ce/files/build_ca_az_data.py`
 (then move the four `*_profiles.csv` / `*_metadata.csv` pairs from `data/` into
-`resource_groups/` and `resource_groups/existing_resource_groups/`).
+`resource_groups/` and `resource_groups/existing_resource_groups/`). The hydro
+metadata/profile CSVs in `existing_resource_groups/` are instead extracted from
+PowerGenome-data (weather year 2012, first 240 hours), not from that script.
