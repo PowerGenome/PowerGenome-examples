@@ -21,19 +21,19 @@ jobs:
         shell: bash -l {0}
     steps:
       - name: Checkout current repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: current-repo
 
       - name: Checkout PowerGenome repository (main)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: PowerGenome/PowerGenome
           ref: main
           path: PowerGenome
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -58,10 +58,10 @@ jobs:
           run_powergenome -sf example_systems/TX-3-zone/settings -rf example_systems/TX-3-zone/genx-test -c base --macro
 
       - name: Set up Julia
-        uses: julia-actions/setup-julia@v2
+        uses: julia-actions/setup-julia@v3
 
       - name: Cache Julia packages
-        uses: julia-actions/cache@v2
+        uses: julia-actions/cache@v3
 
       - name: Install GenX.jl
         run: |
@@ -169,7 +169,7 @@ jobs:
           julia --project="${macro_env}" "${run_macro}" "${base_dir}" --algorithm Monolithic --periods 2
 
       - name: Upload GenX results (single stage, period 1)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: GenX-results-single-stage-p1
@@ -177,7 +177,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Upload GenX results (multistage, myopic)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: GenX-results-multistage-myopic
@@ -185,7 +185,7 @@ jobs:
           if-no-files-found: error
 
       - name: Upload GenX results (multistage, foresight)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: GenX-results-multistage-foresight
@@ -193,7 +193,7 @@ jobs:
           if-no-files-found: error
 
       - name: Upload Macro results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: Macro-results
