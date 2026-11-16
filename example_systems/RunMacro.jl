@@ -186,5 +186,13 @@ else
 end
 
 @info "Solving Macro case" case_path
-(case, solution) = run_case(case_path; optimizer = HiGHS.Optimizer)
+# Macro's default IPM settings (crossover off, 1e-3 optimality tolerance)
+# produced an uncertified period-2 myopic solution in prior local tests of this
+# example (HiGHS Unknown / JuMP OTHER_ERROR). Simplex avoided that failure in
+# the tested cases; check_statuses still requires OPTIMAL.
+(case, solution) = run_case(
+    case_path;
+    optimizer = HiGHS.Optimizer,
+    optimizer_attributes = (("solver" => "simplex"),),
+)
 check_statuses(solution)

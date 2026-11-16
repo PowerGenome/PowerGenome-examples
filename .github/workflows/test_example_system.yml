@@ -100,42 +100,37 @@ jobs:
           # rather than compilation output.
           julia --project="${MACRO_ENV}" -e 'using MacroEnergy, HiGHS, JuMP'
 
-      - name: Run GenX on the first planning period
+      - name: Run GenX (single stage, myopic, and foresight)
         run: |
-          set -e
+          # Fail fast on preparation/replay errors; collect solve failures below.
+          set -euo pipefail
+          repo="${{ github.workspace }}/current-repo"
+          results_dir="${repo}/example_systems/TX-3-zone/genx-test"
+          base_dir="${results_dir}/base"
+          settings_dir="${repo}/example_systems/genx_settings"
+          log_dir="${RUNNER_TEMP}/genx-logs"
+          mkdir -p "${log_dir}"
+
           # A single-stage GenX run of the first planning period, i.e. the same
           # perfect-foresight-in-one-period problem PowerGenome's settings define
-          # by default (MultiStage: 0).
-          case_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base/Inputs/Inputs_p1"
-          echo "== Preparing and solving GenX case: Inputs_p1"
-          # Run.jl uses dirname(@__FILE__) as the case folder, so it must sit
-          # directly inside the case directory.
-          cp ${{ github.workspace }}/current-repo/example_systems/Run.jl "${case_dir}/"
-          mkdir -p "${case_dir}/settings"
-          cp ${{ github.workspace }}/current-repo/example_systems/genx_settings/* "${case_dir}/settings/"
-          # The example's timeseries are already pre-downsampled to 240 hours by
-          # PowerGenome, so disable GenX's own time-domain reduction and solve
-          # the inputs as provided.
-          sed -i 's/^TimeDomainReduction: 1/TimeDomainReduction: 0/' "${case_dir}/settings/genx_settings.yml"
-          cd "${case_dir}"
-          julia --project Run.jl
+          # by default (MultiStage: 0). Run.jl uses dirname(@__FILE__) as the
+          # case folder, so it must sit directly inside the case directory.
+          single_dir="${base_dir}/Inputs/Inputs_p1"
+          cp "${repo}/example_systems/Run.jl" "${single_dir}/"
+          mkdir -p "${single_dir}/settings"
+          cp "${settings_dir}"/* "${single_dir}/settings/"
 
-      - name: Run GenX with both planning periods (myopic and foresight)
-        run: |
-          set -e
-          results_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test"
-          base_dir="${results_dir}/base"
-          settings_dir="${{ github.workspace }}/current-repo/example_systems/genx_settings"
           # GenX's multistage runner looks for `inputs/inputs_pN` inside the case
           # folder, but PowerGenome writes `Inputs/Inputs_pN` in the results
           # folder. Stage one case folder per mode that links those inputs and
           # holds the settings, so each mode keeps its own `results/` folder.
-          for mode in myopic foresight; do
-            if [ "${mode}" = myopic ]; then myopic_flag=1; else myopic_flag=0; fi
-            stage="${results_dir}/genx-${mode}"
+          num_periods="$(python -c 'import json, sys; print(len(json.load(open(sys.argv[1]))["PeriodLengths"]))' "${base_dir}/settings/case_settings.json")"
+          stage_multistage() {
+            local mode=$1 myopic_flag=$2
+            local stage="${results_dir}/genx-${mode}"
             rm -rf "${stage}"
             mkdir -p "${stage}/settings" "${stage}/inputs"
-            cp ${{ github.workspace }}/current-repo/example_systems/Run.jl "${stage}/"
+            cp "${repo}/example_systems/Run.jl" "${stage}/"
             cp "${settings_dir}"/*.yml "${stage}/settings/"
             sed -i 's/^MultiStage: 0/MultiStage: 1/; s/^TimeDomainReduction: 1/TimeDomainReduction: 0/' "${stage}/settings/genx_settings.yml"
             sed -i "s/^Myopic: 1/Myopic: ${myopic_flag}/" "${stage}/settings/multi_stage_settings.yml"
@@ -144,29 +139,95 @@ jobs:
             # Everything else (WACC, ConvergenceTolerance) comes from the shared
             # genx_settings/multi_stage_settings.yml.
             python -c 'import json, sys, yaml; ms_path, cs_path = sys.argv[1], sys.argv[2]; settings = yaml.safe_load(open(ms_path)); lengths = json.load(open(cs_path))["PeriodLengths"]; settings["NumStages"] = len(lengths); settings["StageLengths"] = lengths; yaml.safe_dump(settings, open(ms_path, "w"), sort_keys=False)' "${stage}/settings/multi_stage_settings.yml" "${base_dir}/settings/case_settings.json"
-            num_periods="$(python -c 'import json, sys; print(len(json.load(open(sys.argv[1]))["PeriodLengths"]))' "${base_dir}/settings/case_settings.json")"
+            local period
             for period in $(seq 1 "${num_periods}"); do
               ln -s "${base_dir}/Inputs/Inputs_p${period}" "${stage}/inputs/inputs_p${period}"
             done
-            echo "== Solving GenX multistage case: ${mode}"
-            (cd "${stage}" && julia --project Run.jl)
+          }
+          stage_multistage myopic 1
+          stage_multistage foresight 0
+
+          # The example's timeseries are already pre-downsampled to 240 hours by
+          # PowerGenome, so disable GenX's own time-domain reduction and solve
+          # the inputs as provided.
+          sed -i 's/^TimeDomainReduction: 1/TimeDomainReduction: 0/' "${single_dir}/settings/genx_settings.yml"
+
+          # Run three at a time to limit memory; the Macro group runs next.
+          solve() {
+            local name=$1 dir=$2 code=0
+            ( cd "${dir}" && julia --project Run.jl ) > "${log_dir}/${name}.log" 2>&1 || code=$?
+            printf '%s\n' "${code}" > "${log_dir}/${name}.status"
+          }
+          solve single-stage "${single_dir}" &
+          single_pid=$!
+          solve myopic "${results_dir}/genx-myopic" &
+          myopic_pid=$!
+          solve foresight "${results_dir}/genx-foresight" &
+          foresight_pid=$!
+
+          status=0
+          # Wait for every sibling, including wrappers that failed to write status.
+          for pid in "${single_pid}" "${myopic_pid}" "${foresight_pid}"; do
+            wait "${pid}" || status=1
           done
+          for name in single-stage myopic foresight; do
+            echo "===== GenX solve: ${name}"
+            # Logs are replayed in a fixed order: concurrent output would be
+            # interleaved and unreadable.
+            cat "${log_dir}/${name}.log"
+            code="$(cat "${log_dir}/${name}.status")"
+            if [ "${code}" != "0" ]; then
+              echo "::error::GenX solve '${name}' failed with exit code ${code}"
+              status=1
+            fi
+          done
+          exit "${status}"
 
       - name: Run Macro (first period, myopic, and foresight)
         run: |
-          set -e
+          # Fail fast on preparation/replay errors; collect solve failures below.
+          set -euo pipefail
           base_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base"
           macro_env="${{ github.workspace }}/macro-env"
           run_macro="${{ github.workspace }}/current-repo/example_systems/RunMacro.jl"
+          log_dir="${RUNNER_TEMP}/macro-logs"
+          mkdir -p "${log_dir}"
           # RunMacro.jl solves a staging copy of the case
           # (`base-<algorithm>-<n>p`), so the PowerGenome output is untouched and
-          # each configuration keeps its own results folder.
-          echo "== Solving Macro case: first planning period only"
-          julia --project="${macro_env}" "${run_macro}" "${base_dir}" --periods 1
-          echo "== Solving Macro case: both periods, myopic"
-          julia --project="${macro_env}" "${run_macro}" "${base_dir}" --algorithm Myopic --periods 2
-          echo "== Solving Macro case: both periods, perfect foresight"
-          julia --project="${macro_env}" "${run_macro}" "${base_dir}" --algorithm Monolithic --periods 2
+          # each configuration keeps its own results folder. Distinct stagings
+          # are also what makes the three solves safe to run concurrently.
+          # This group runs after GenX to limit peak memory.
+          solve() {
+            local name=$1 code=0
+            shift
+            julia --project="${macro_env}" "${run_macro}" "${base_dir}" "$@" \
+              > "${log_dir}/${name}.log" 2>&1 || code=$?
+            printf '%s\n' "${code}" > "${log_dir}/${name}.status"
+          }
+          solve first-period --periods 1 &
+          first_pid=$!
+          solve myopic --algorithm Myopic --periods 2 &
+          myopic_pid=$!
+          solve foresight --algorithm Monolithic --periods 2 &
+          foresight_pid=$!
+
+          status=0
+          # Wait for every sibling, including wrappers that failed to write status.
+          for pid in "${first_pid}" "${myopic_pid}" "${foresight_pid}"; do
+            wait "${pid}" || status=1
+          done
+          for name in first-period myopic foresight; do
+            echo "===== Macro solve: ${name}"
+            # Logs are replayed in a fixed order: concurrent output would be
+            # interleaved and unreadable.
+            cat "${log_dir}/${name}.log"
+            code="$(cat "${log_dir}/${name}.status")"
+            if [ "${code}" != "0" ]; then
+              echo "::error::Macro solve '${name}' failed with exit code ${code}"
+              status=1
+            fi
+          done
+          exit "${status}"
 
       - name: Upload GenX results (single stage, period 1)
         uses: actions/upload-artifact@v7
