@@ -114,6 +114,9 @@ jobs:
         run: |
           # Fail fast on preparation/replay errors; collect solve failures below.
           set -euo pipefail
+          # A step can fail with no diagnostic if the shell exits for a reason
+          # outside the verdict below, so report the real exit path.
+          trap 'rc=$?; echo "GenX step exiting rc=${rc} verdict=${status:-unset}"; exit "${rc}"' EXIT
           repo="${{ github.workspace }}/current-repo"
           results_dir="${repo}/example_systems/TX-3-zone/genx-test"
           base_dir="${results_dir}/base"
@@ -197,12 +200,18 @@ jobs:
                 ;;
             esac
           done
-          exit "${status}"
+          echo "GenX step verdict: ${status}"
+          if [ "${status}" -ne 0 ]; then
+            exit "${status}"
+          fi
 
       - name: Run Macro (first period, myopic, and foresight)
         run: |
           # Fail fast on preparation/replay errors; collect solve failures below.
           set -euo pipefail
+          # A step can fail with no diagnostic if the shell exits for a reason
+          # outside the verdict below, so report the real exit path.
+          trap 'rc=$?; echo "Macro step exiting rc=${rc} verdict=${status:-unset}"; exit "${rc}"' EXIT
           base_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base"
           macro_env="${{ github.workspace }}/macro-env"
           run_macro="${{ github.workspace }}/current-repo/example_systems/RunMacro.jl"
@@ -249,7 +258,10 @@ jobs:
                 ;;
             esac
           done
-          exit "${status}"
+          echo "Macro step verdict: ${status}"
+          if [ "${status}" -ne 0 ]; then
+            exit "${status}"
+          fi
 
       - name: Upload GenX results (single stage, period 1)
         uses: actions/upload-artifact@v7
