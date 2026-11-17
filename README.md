@@ -123,3 +123,21 @@ output because GenX's multistage runner reads `inputs/inputs_pN` (lowercase) whi
 PowerGenome writes `Inputs/Inputs_pN`; the staging step links the two and rewrites
 `NumStages`/`StageLengths` from the planning periods PowerGenome actually solved,
 so the shared `multi_stage_settings.yml` cannot drift from the example.
+
+The three GenX configurations solve concurrently in one step, and the three Macro
+configurations do the same in the next one. The two groups run in sequence to
+limit peak memory. Prior local macOS measurements were roughly 2.5–3 GB per
+solve; these are not a memory guarantee for Linux hosted runners. Each solve
+writes its own log, replayed in a fixed order afterwards.
+
+CI uses a non-login Bash shell. Ubuntu's login-shell `.bash_logout` can run
+`clear_console` without a terminal and turn a successful solve step into exit
+code 1, even after an exit trap reports success.
+
+`RunMacro.jl` solves with HiGHS dual simplex rather than Macro's default IPM
+settings (interior point, crossover off, `ipm_optimality_tolerance = 1e-3`).
+In prior local tests of this example, those defaults sometimes left the
+period-2 myopic LP with an uncertified primal-dual objective gap: HiGHS reported
+`Unknown` and JuMP surfaced `OTHER_ERROR`. Selecting simplex avoided that failure
+in the tested cases; it does not guarantee optimality for every input. The runner
+still requires an `OPTIMAL` termination status for every solved period.
