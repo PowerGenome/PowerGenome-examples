@@ -166,20 +166,34 @@ jobs:
           foresight_pid=$!
 
           status=0
-          # Wait for every sibling, including wrappers that failed to write status.
-          for pid in "${single_pid}" "${myopic_pid}" "${foresight_pid}"; do
-            wait "${pid}" || status=1
+          # Wait for every sibling so its log is complete before replay. The
+          # .status file written by solve() is the sole verdict; a wait status
+          # is reported for diagnosis only, since the wrapper can exit nonzero
+          # after the solve succeeded and recorded 0.
+          for entry in "single-stage:${single_pid}" "myopic:${myopic_pid}" \
+            "foresight:${foresight_pid}"; do
+            name="${entry%%:*}"
+            wrapper_status=0
+            wait "${entry##*:}" || wrapper_status=$?
+            echo "GenX solve '${name}' wrapper wait status: ${wrapper_status} (informational)"
           done
           for name in single-stage myopic foresight; do
             echo "===== GenX solve: ${name}"
             # Logs are replayed in a fixed order: concurrent output would be
             # interleaved and unreadable.
             cat "${log_dir}/${name}.log"
-            code="$(cat "${log_dir}/${name}.status")"
-            if [ "${code}" != "0" ]; then
-              echo "::error::GenX solve '${name}' failed with exit code ${code}"
-              status=1
-            fi
+            code="$(cat "${log_dir}/${name}.status" 2>/dev/null || true)"
+            case "${code}" in
+              0) ;;
+              ''|*[!0-9]*)
+                echo "::error::GenX solve '${name}' did not record a numeric status (${log_dir}/${name}.status contains '${code}')"
+                status=1
+                ;;
+              *)
+                echo "::error::GenX solve '${name}' failed with exit code ${code}"
+                status=1
+                ;;
+            esac
           done
           exit "${status}"
 
@@ -212,20 +226,34 @@ jobs:
           foresight_pid=$!
 
           status=0
-          # Wait for every sibling, including wrappers that failed to write status.
-          for pid in "${first_pid}" "${myopic_pid}" "${foresight_pid}"; do
-            wait "${pid}" || status=1
+          # Wait for every sibling so its log is complete before replay. The
+          # .status file written by solve() is the sole verdict; a wait status
+          # is reported for diagnosis only, since the wrapper can exit nonzero
+          # after the solve succeeded and recorded 0.
+          for entry in "first-period:${first_pid}" "myopic:${myopic_pid}" \
+            "foresight:${foresight_pid}"; do
+            name="${entry%%:*}"
+            wrapper_status=0
+            wait "${entry##*:}" || wrapper_status=$?
+            echo "Macro solve '${name}' wrapper wait status: ${wrapper_status} (informational)"
           done
           for name in first-period myopic foresight; do
             echo "===== Macro solve: ${name}"
             # Logs are replayed in a fixed order: concurrent output would be
             # interleaved and unreadable.
             cat "${log_dir}/${name}.log"
-            code="$(cat "${log_dir}/${name}.status")"
-            if [ "${code}" != "0" ]; then
-              echo "::error::Macro solve '${name}' failed with exit code ${code}"
-              status=1
-            fi
+            code="$(cat "${log_dir}/${name}.status" 2>/dev/null || true)"
+            case "${code}" in
+              0) ;;
+              ''|*[!0-9]*)
+                echo "::error::Macro solve '${name}' did not record a numeric status (${log_dir}/${name}.status contains '${code}')"
+                status=1
+                ;;
+              *)
+                echo "::error::Macro solve '${name}' failed with exit code ${code}"
+                status=1
+                ;;
+            esac
           done
           exit "${status}"
 
