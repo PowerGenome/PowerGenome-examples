@@ -24,7 +24,8 @@ jobs:
       contents: read
     defaults:
       run:
-        shell: bash -l {0}
+        # A login shell runs Ubuntu's .bash_logout, which can fail without a TTY.
+        shell: bash
     steps:
       # Every action below declares `runs.using: node24`, so the "Node.js 20 is
       # deprecated" annotation is resolved. Actions pinned to a runtime older
@@ -112,11 +113,8 @@ jobs:
 
       - name: Run GenX (single stage, myopic, and foresight)
         run: |
-          # Fail fast on preparation/replay errors; collect solve failures below.
+          # Fail fast on preparation errors; collect solve failures below.
           set -euo pipefail
-          # A step can fail with no diagnostic if the shell exits for a reason
-          # outside the verdict below, so report the real exit path.
-          trap 'rc=$?; echo "GenX step exiting rc=${rc} verdict=${status:-unset}"; exit "${rc}"' EXIT
           repo="${{ github.workspace }}/current-repo"
           results_dir="${repo}/example_systems/TX-3-zone/genx-test"
           base_dir="${results_dir}/base"
@@ -174,9 +172,7 @@ jobs:
           solve single-stage "${single_dir}" &
           solve myopic "${results_dir}/genx-myopic" &
           solve foresight "${results_dir}/genx-foresight" &
-          # Wait for all three so their logs are complete before replay. The
-          # recorded status file is the sole verdict, so a nonzero wait status
-          # is not fatal: a wrapper can exit nonzero after the solve succeeded.
+          # Wait for every solve; inspect its recorded exit code below.
           wait || true
 
           status=0
@@ -201,17 +197,12 @@ jobs:
             esac
           done
           echo "GenX step verdict: ${status}"
-          if [ "${status}" -ne 0 ]; then
-            exit "${status}"
-          fi
+          exit "${status}"
 
       - name: Run Macro (first period, myopic, and foresight)
         run: |
-          # Fail fast on preparation/replay errors; collect solve failures below.
+          # Fail fast on preparation errors; collect solve failures below.
           set -euo pipefail
-          # A step can fail with no diagnostic if the shell exits for a reason
-          # outside the verdict below, so report the real exit path.
-          trap 'rc=$?; echo "Macro step exiting rc=${rc} verdict=${status:-unset}"; exit "${rc}"' EXIT
           base_dir="${{ github.workspace }}/current-repo/example_systems/TX-3-zone/genx-test/base"
           macro_env="${{ github.workspace }}/macro-env"
           run_macro="${{ github.workspace }}/current-repo/example_systems/RunMacro.jl"
@@ -232,9 +223,7 @@ jobs:
           solve first-period --periods 1 &
           solve myopic --algorithm Myopic --periods 2 &
           solve foresight --algorithm Monolithic --periods 2 &
-          # Wait for all three so their logs are complete before replay. The
-          # recorded status file is the sole verdict, so a nonzero wait status
-          # is not fatal: a wrapper can exit nonzero after the solve succeeded.
+          # Wait for every solve; inspect its recorded exit code below.
           wait || true
 
           status=0
@@ -259,9 +248,7 @@ jobs:
             esac
           done
           echo "Macro step verdict: ${status}"
-          if [ "${status}" -ne 0 ]; then
-            exit "${status}"
-          fi
+          exit "${status}"
 
       - name: Upload GenX results (single stage, period 1)
         uses: actions/upload-artifact@v7

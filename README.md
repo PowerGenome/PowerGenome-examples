@@ -130,6 +130,10 @@ limit peak memory. Prior local macOS measurements were roughly 2.5–3 GB per
 solve; these are not a memory guarantee for Linux hosted runners. Each solve
 writes its own log, replayed in a fixed order afterwards.
 
+CI uses a non-login Bash shell. Ubuntu's login-shell `.bash_logout` can run
+`clear_console` without a terminal and turn a successful solve step into exit
+code 1, even after an exit trap reports success.
+
 `RunMacro.jl` solves with HiGHS dual simplex rather than Macro's default IPM
 settings (interior point, crossover off, `ipm_optimality_tolerance = 1e-3`).
 In prior local tests of this example, those defaults sometimes left the
